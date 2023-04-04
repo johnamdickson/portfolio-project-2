@@ -170,5 +170,6 @@ The live link can be found [here.](https://johnamdickson.github.io/Portfolio-Pro
 ### Media
 
 - The site logo was created using Hatchful, a free logo design service offered by Shopify.
+- The site background image is from Freepik - <a href="https://www.freepik.com/free-vector/wild-animal-cartoon-character-forest-scene_14801768.htm#query=cartoon%20jungle&position=49&from_view=search&track=ais">Image by brgfx</a> on Freepik
 <br><br>
 <a href="#top">BACK TO TOP 🔼</a>
