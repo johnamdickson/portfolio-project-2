@@ -84,6 +84,7 @@ body {
     margin: 1vmax 10px;
     padding: 10px;
     font-family: 'Raleway', sans-serif;
+    box-shadow:  inset 2px 2px 4px 1px rgba(255,255,255,0.5), inset -1px -4px 2px 1px rgba(32,52,108,0.5);
 }
 
 #scores-area {
