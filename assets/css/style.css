@@ -79,12 +79,12 @@ body {
     font-weight: bold;
     color: #BADDE9;
     background-color: #20346C;
-    border: 1px solid #BADDE9;
+    /* border: 1px solid #BADDE9; */
     border-radius: 5px;
     margin: 1vmax 10px;
     padding: 10px;
     font-family: 'Raleway', sans-serif;
-    box-shadow:  inset 2px 2px 4px 1px rgba(255,255,255,0.5), inset -1px -4px 2px 1px rgba(32,52,108,0.5);
+    box-shadow: 0 2px 2px rgba(0,0,0,0.7), inset 3px 3px 3px 0 rgba(255,255,255,0.7), inset -3px -3px 3px 0 rgba(255,255,255,0.5);
 }
 
 #scores-area {
@@ -184,8 +184,8 @@ margin: 10px 25px;
 display: grid;
 grid-template-columns: repeat(4, 20%);
 grid-template-rows: repeat(4, 125px);
-column-gap: 2.5%;
-row-gap: 10px;
+column-gap: 3.5%;
+row-gap: 15px;
 grid-template-areas:
     "a1 a2 a3 a4"
     "b1 b2 b3 b4"
@@ -194,9 +194,20 @@ grid-template-areas:
 max-width: 100%;
 justify-content: center;
 }
+
+/* Card flip code from this site: https://dev.to/mugas/flip-cards-with-javascript-2ad0 */
+.card {
+    display: flex;
+    background-color: #BADDE9;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    border: 0;
+}
 /* Style for reverse of game cards. */
 .card-reverse {
     display: flex;
+    height: 100%;
+    width: 100%;
     align-items: center;
     justify-content: center;
     background-color: #E9D358;
@@ -205,14 +216,32 @@ justify-content: center;
     color: #20346C;
     border-radius: 5px;
     border: 1px solid #20346C;
-    margin: 0 10px;
     font-size: 4rem;
+    backface-visibility: hidden;
 }
 
 .card-reverse > p {
     margin-bottom: 0;
 }
 
+.card-front {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #20346C;
+    border-radius: 5px;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+    transition-duration: 2s;
+  }
+  
 footer a{
 position: absolute;
 bottom: 0;
