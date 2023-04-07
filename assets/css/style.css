@@ -15,9 +15,7 @@ body {
     background-attachment: fixed;
     font-family: 'Love Ya Like A Sister', cursive;
 }
-h2 {
-    font-family: 'Love Ya Like A Sister';
-}
+
 .logo-and-title {
     margin: auto;
     padding-top: 25px;
@@ -61,9 +59,31 @@ h2 {
     box-shadow: inset 5px 5px 8px 1px rgba(255,255,255,0.5), inset -3px -7px 5px 2px rgba(32,52,108,0.5);
 }
 
-#player-selector {
-    height:300px;
+.player-divs h2{
+   margin: 10px 5px 5px 5px;
+}
+
+#game-info{
+    height:24vmax;
     text-align: center;
+    text-align: center;
+    font-size: 2vmax;
+}
+
+#game-info p{
+    margin: 1vmax  5px;
+}
+
+#start-game-button {
+    font-size: 1.5vmax;
+    font-weight: bold;
+    color: #BADDE9;
+    background-color: #20346C;
+    border: 1px solid #BADDE9;
+    border-radius: 5px;
+    margin: 1vmax 10px;
+    padding: 10px;
+    font-family: 'Raleway', sans-serif;
 }
 
 #scores-area {
@@ -82,6 +102,7 @@ h2 {
 .player-scores {
     display: inline-block;
     font-family: 'Raleway' , sans-serif;
+    border: 1px solid #BADDE9;
     border-radius: 5px;
     font-size: 1.75vmax;
     width: 1.8vmax;
@@ -90,6 +111,7 @@ h2 {
     color: #BADDE9;
     background-color: #20346C;
 }
+
 /* Assign grid area names. Each grid will represent a card. */
 
 #card-a1 {
