@@ -19,7 +19,7 @@ body {
 .logo-and-title {
     margin: auto;
     padding-top: 25px;
-    width: 25%;
+    width: 22.5%;
 }
 
 .logo-and-title > img {
@@ -61,17 +61,18 @@ body {
 
 .player-divs h2{
    margin: 10px 5px 5px 5px;
+   font-size: 3vmax;
 }
 
 #game-info{
-    height:24vmax;
+    height:25vmax;
     text-align: center;
     text-align: center;
     font-size: 2vmax;
 }
 
 #game-info p{
-    margin: 1vmax  5px;
+    margin: 0.75vmax  5px;
 }
 
 #start-game-button {
@@ -79,7 +80,6 @@ body {
     font-weight: bold;
     color: #BADDE9;
     background-color: #20346C;
-    /* border: 1px solid #BADDE9; */
     border-radius: 5px;
     margin: 1vmax 10px;
     padding: 10px;
@@ -200,6 +200,7 @@ justify-content: center;
     display: flex;
     background-color: #BADDE9;
     transform-style: preserve-3d;
+    transition-duration: 2s;
     cursor: pointer;
     border: 0;
 }
@@ -208,6 +209,7 @@ justify-content: center;
     display: flex;
     height: 100%;
     width: 100%;
+    margin: 0 10px;
     align-items: center;
     justify-content: center;
     background-color: #E9D358;
@@ -227,6 +229,8 @@ justify-content: center;
 .card-front {
     display: flex;
     position: absolute;
+    margin: 0 10px;
+    right: 0;
     height: 100%;
     width:100%;
     align-items: center;

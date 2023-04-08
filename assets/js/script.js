@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
         gameButton.addEventListener("mousedown", function(){
             this.style.boxShadow = "inset 3px 3px 3px 0 rgba(255,255,255,0.7), inset -3px -3px 3px 0 rgba(255,255,255,0.5)";
             this.style.color = "rgba(186, 221, 233, 0.9)";
-            runGame()
+            setUpCards()
         })
         // How to return styling to CSS: https://stackoverflow.com/questions/3506050/how-to-reset-the-style-properties-to-their-css-defaults-in-javascript
         gameButton.addEventListener("mouseup", function(){
@@ -19,22 +19,34 @@ document.addEventListener("DOMContentLoaded", function() {
  * The main game "loop", called when the start game button is pressed
  * allowing player one to select two cards.
  */
-    function runGame() {
+    function setUpCards() {
         let cards = document.getElementsByClassName("card");
-      console.log(cards);
       for (let card of cards) {
         card.addEventListener("click", flipCard);
       }
-
       function flipCard() {
         this.classList.toggle("flip");
-        console.log("Clicked card");
       }
+      runGame()
     }
 
-    
+    function runGame() {
+      let cardsTurned = document.getElementsByClassName("card");
+      for (let card of cardsTurned) {
+        let visibility = getComputedStyle(card).transform;
+        if (visibility === "none") {
+          console.log("Visibile")
+        } else {
+          console.log("turned")
+        }
+        if (window.getComputedStyle(card).visibility === "hidden") {
+        //  console.log(`Here is the card ${card}`)
+        } else {
+          // console.log("Visible")
+        }
+      }
+    }
     function incrementScores() {
-
     }
 
     function calculateWinner() {
