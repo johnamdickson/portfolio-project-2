@@ -7,44 +7,62 @@ document.addEventListener("DOMContentLoaded", function() {
         gameButton.addEventListener("mousedown", function(){
             this.style.boxShadow = "inset 3px 3px 3px 0 rgba(255,255,255,0.7), inset -3px -3px 3px 0 rgba(255,255,255,0.5)";
             this.style.color = "rgba(186, 221, 233, 0.9)";
-            setUpCards()
+            
         })
         // How to return styling to CSS: https://stackoverflow.com/questions/3506050/how-to-reset-the-style-properties-to-their-css-defaults-in-javascript
         gameButton.addEventListener("mouseup", function(){
             this.style.boxShadow = "";
             this.style.color = "";
         })
+        gameButton.addEventListener("click", function(){
+          setUpGame();
+        })
     })
 /**
- * The main game "loop", called when the start game button is pressed
- * allowing player one to select two cards.
+ * Function to set up game on press of the start game button.
  */
-    function setUpCards() {
+    function setUpGame() {
         let cards = document.getElementsByClassName("card");
+        let cardsVisible = cardsVisibleCalculator()
+        console.log(`Here is visible cards ${cardsVisible}`)
       for (let card of cards) {
+        /*
+        pictureShowing variable to detect if the picture side is showing and then the if loop 
+        detects any cards that do not have the "none" property for transform. On that basis, 
+        the cards are then flipped back around to the starting position.
+        */
+       let pictureShowing = getComputedStyle(card).transform;
+        if (pictureShowing != "none") {
+          card.className = "card";
+          console.log("Got this far");
+        }
         card.addEventListener("click", flipCard);
       }
+      // function flips card 180 degrees in y axis to show picture side when clicked.
       function flipCard() {
-        this.classList.toggle("flip");
+        this.classList = "card flip";
       }
-      runGame()
+      playersGo(1)
     }
 
-    function runGame() {
-      let cardsTurned = document.getElementsByClassName("card");
-      for (let card of cardsTurned) {
+    function cardsVisibleCalculator() {
+      let cardsReverse = 0;
+      let cardsPicture = 0;
+      let cards = document.getElementsByClassName("card");
+      for (let card of cards) {
         let visibility = getComputedStyle(card).transform;
         if (visibility === "none") {
-          console.log("Visibile")
+          cardsReverse += 1;
         } else {
-          console.log("turned")
-        }
-        if (window.getComputedStyle(card).visibility === "hidden") {
-        //  console.log(`Here is the card ${card}`)
-        } else {
-          // console.log("Visible")
+          cardsPicture += 1;
         }
       }
+      console.log(cardsReverse);
+      console.log(cardsPicture);
+      return cardsPicture
+    }
+    function playersGo(playerNumber) {
+      // startGame();
     }
     function incrementScores() {
     }
