@@ -22,28 +22,23 @@ document.addEventListener("DOMContentLoaded", function() {
  * Function to set up game on press of the start game button.
  */
     function setUpGame() {
-        let cards = document.getElementsByClassName("card");
-        let cardsVisible = cardsVisibleCalculator()
-        console.log(`Here is visible cards ${cardsVisible}`)
-      for (let card of cards) {
+      
+      let cards = document.getElementsByClassName("card");
+        for (let card of cards) {
         /*
         pictureShowing variable to detect if the picture side is showing and then the if loop 
         detects any cards that do not have the "none" property for transform. On that basis, 
         the cards are then flipped back around to the starting position.
         */
-       let pictureShowing = getComputedStyle(card).transform;
-        if (pictureShowing != "none") {
+          let pictureShowing = getComputedStyle(card).transform;
+          if (pictureShowing != "none") {
           card.className = "card";
-          console.log("Got this far");
-        }
-        card.addEventListener("click", flipCard);
-      }
-      // function flips card 180 degrees in y axis to show picture side when clicked.
-      function flipCard() {
-        this.classList = "card flip";
+           }
       }
      let playerInfoArea = document.getElementById("player-info-area");
      let gameStatusCheck = document.getElementById("game-status-div");
+    //  check if the game status div has been added. If not, add this div above player scores.
+
      if (gameStatusCheck === null) {
       let gameStatus = document.createElement('div');
       gameStatus.className = "game-control-divs";
@@ -70,10 +65,13 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     
   }
-      playersGo(1);
+      playGame(1);
     }
 
-    function cardsVisibleCalculator() {
+/**
+ * Helper function that can be called to return the number of cards with pictures visible.
+ */
+    function cardsPicturesVisibleCalculator() {
       let cardsReverse = 0;
       let cardsPicture = 0;
       let cards = document.getElementsByClassName("card");
@@ -89,13 +87,47 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log(cardsPicture);
       return cardsPicture
     }
-    function playersGo(playerNumber) {
-      // startGame();
+
+/**
+ * playGame function takes in the player number, counts the number of cards turned and stores the card elements
+ *  in an array to be passed on to the checkForMatch function.
+ */
+
+    function playGame(playerNumber) {
+      let numberOfCardsTurned = 0;
+      let cardsTurned = [];
+      let cards = document.getElementsByClassName("card");
+      for (let card of cards){
+        card.addEventListener("click", flipCard);
+        card.addEventListener("click", count);
+      }
+      function flipCard() {
+        this.classList = "card flip";
+      }
+      function count() { 
+        cardsTurned.push(this);
+        // remove event listener once card selected so that it is not counted twice.
+        this.removeEventListener('click', count)
+        numberOfCardsTurned ++;
+        if (numberOfCardsTurned === 2) {
+          checkForMatch(playerNumber, cardsTurned);
+          for (let card of cards){
+            // remove this event listener to ensure no more cards can be flipped prior to checking for a match.
+            card.removeEventListener("click", flipCard);
+          }
+          }
+        }
+      }
+    
+
+    function checkForMatch(playerNumber, cardsTurned) {
+      console.log(`here is the player number!!! ${playerNumber}`)
+      console.log(cardsTurned)
     }
+
     function incrementScores() {
     }
 
     function calculateWinner() {
 
     }
-
