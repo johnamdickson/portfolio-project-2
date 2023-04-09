@@ -64,11 +64,11 @@ All fonts were sourced from Google Fonts:
 ## Features 
 
 ### Existing Features
-- __The Title__
+- __The Start Button__
 <br>
 <img src=""  width="300" > 
 
-  - 
+  - The start button commences the game. It is styled to have an embossed look using inset box shadows along with an outset shadow. The button has mousedown and mouseup event listeners where the mousedown removes the outset shadow and the mouseup returns the styling to normal. This creates the impression of the button being pressed and springing back to position once released.
 <br><br>
 
 

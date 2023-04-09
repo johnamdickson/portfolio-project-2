@@ -68,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // timing options
         duration: 500,
     });
+    
   }
       playersGo(1);
     }
