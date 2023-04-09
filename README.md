@@ -50,6 +50,9 @@ The wirframes for the project can be found [here.]
 - 
 
 ## Design
+### Logo
+![Site Logo](/assets/README-files/logo.png)
+- The choice of site logo was based upon one that would be fun and engaging for children and have an immediate connection with the content. 
 ### Colour Scheme
 - 
 - 
@@ -64,11 +67,10 @@ All fonts were sourced from Google Fonts:
 ## Features 
 
 ### Existing Features
-- __The Start Button__
-<br>
-<img src=""  width="300" > 
 
-  - The start button commences the game. It is styled to have an embossed look using inset box shadows along with an outset shadow. The button has mousedown and mouseup event listeners where the mousedown removes the outset shadow and the mouseup returns the styling to normal. This creates the impression of the button being pressed and springing back to position once released.
+- __The Game Information Div__
+![Game-Information](/assets/README-files/game-info-and-start-button.png)
+  - The game information div contains an `<h2>` welcome message and short `<p>` giving anoverview of the game. The start button commences the game. It is styled to have an embossed look using inset box shadows along with an outset shadow. The button has mousedown and mouseup event listeners where the mousedown removes the outset shadow and the mouseup returns the styling to normal. This creates the impression of the button being pressed and springing back to position once released.
 <br><br>
 
 
