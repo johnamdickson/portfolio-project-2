@@ -42,7 +42,34 @@ document.addEventListener("DOMContentLoaded", function() {
       function flipCard() {
         this.classList = "card flip";
       }
-      playersGo(1)
+     let playerInfoArea = document.getElementById("player-info-area");
+     let gameStatusCheck = document.getElementById("game-status-div");
+     if (gameStatusCheck === null) {
+      let gameStatus = document.createElement('div');
+      gameStatus.className = "game-control-divs";
+      gameStatus.id = "game-status-div";
+      gameStatusInnerHTML =
+      `
+      <p>Player <span>One</span>'s Go!</p>
+      `;
+      gameStatus.innerHTML = gameStatusInnerHTML;
+      /* solution to adding the game status div before the scores area div found here: 
+      https://stackoverflow.com/questions/2007357/how-to-set-dom-element-as-first-child
+      */
+      playerInfoArea.insertBefore(gameStatus, playerInfoArea.firstChild);
+      /* solution to animating in the game status div: 
+     https://stackoverflow.com/questions/14300210/animation-with-node-appendchild-html
+      */
+      gameStatus.animate([
+        // keyframes
+        { opacity: '0' },
+        { opacity: '1' }
+    ], {
+        // timing options
+        duration: 500,
+    });
+  }
+      playersGo(1);
     }
 
     function cardsVisibleCalculator() {
