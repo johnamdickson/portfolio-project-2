@@ -261,6 +261,11 @@ justify-content: center;
     backface-visibility: hidden;
 }
 
+.card-front > img {
+    width: auto;
+    height: 90%;
+}
+
 .card.flip {
     transform: rotateY(180deg);
     transition-duration: 2s;

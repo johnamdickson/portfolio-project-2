@@ -35,6 +35,18 @@ document.addEventListener("DOMContentLoaded", function() {
           card.className = "card";
            }
       }
+   
+     removeOldImages()
+
+     let pictureCards = document.getElementsByClassName("card-front");
+      for (let pictureCard of pictureCards){
+        let picture = document.createElement('img');
+        picture.className = "animal-image"
+        // picture.source = 
+        picture.src = "assets/images/lion.png";
+        pictureCard.appendChild(picture);
+        // pictureCard.style.backgroundImage = 'url("assets/images/lion.png")';
+      }
      let playerInfoArea = document.getElementById("player-info-area");
      let gameStatusCheck = document.getElementById("game-status-div");
     //  check if the game status div has been added. If not, add this div above player scores.
@@ -118,7 +130,17 @@ document.addEventListener("DOMContentLoaded", function() {
           }
         }
       }
-    
+    /**
+ * Helper function to remove old images from previous game and maintain readability of setUpGame function.
+ */
+    function removeOldImages () {
+      let oldImages = document.getElementsByClassName("animal-image");
+      for (let oldImage of oldImages) {
+       if (oldImage != null) {
+         oldImage.remove()
+       }
+      }
+    }
 
     function checkForMatch(playerNumber, cardsTurned) {
       console.log(`here is the player number!!! ${playerNumber}`)
