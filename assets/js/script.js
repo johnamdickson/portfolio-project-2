@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
  * Function to set up game on press of the start game button.
  */
     function setUpGame() {
-      
       let cards = document.getElementsByClassName("card");
         for (let card of cards) {
         /*
@@ -35,17 +34,14 @@ document.addEventListener("DOMContentLoaded", function() {
           card.className = "card";
            }
       }
-   
-     removeOldImages()
+      removeOldImages();
 
      let pictureCards = document.getElementsByClassName("card-front");
       for (let pictureCard of pictureCards){
         let picture = document.createElement('img');
         picture.className = "animal-image"
-        // picture.source = 
         picture.src = "assets/images/lion.png";
         pictureCard.appendChild(picture);
-        // pictureCard.style.backgroundImage = 'url("assets/images/lion.png")';
       }
      let playerInfoArea = document.getElementById("player-info-area");
      let gameStatusCheck = document.getElementById("game-status-div");
@@ -130,17 +126,24 @@ document.addEventListener("DOMContentLoaded", function() {
           }
         }
       }
+
     /**
  * Helper function to remove old images from previous game and maintain readability of setUpGame function.
  */
     function removeOldImages () {
-      let oldImages = document.getElementsByClassName("animal-image");
-      for (let oldImage of oldImages) {
-       if (oldImage != null) {
-         oldImage.remove()
-       }
-      }
-    }
+      let pictureCards = document.getElementsByClassName("card-front");
+      for (let pictureCard of pictureCards){
+        // Used query selector to check if card-front div contains anything of class animal image before removing. Solution found at link below.
+        // https://bobbyhadz.com/blog/javascript-check-if-element-has-child-with-id#:~:text=Use%20the%20querySelector()%20method,null%20if%20no%20element%20matches.
+       if (pictureCard.querySelector('.animal-image') !== null){
+        let oldImages = document.getElementsByClassName("animal-image");
+        for (let oldImage of oldImages){
+            oldImage.remove()
+            }
+          }
+        }
+      } 
+    
 
     function checkForMatch(playerNumber, cardsTurned) {
       console.log(`here is the player number!!! ${playerNumber}`)
