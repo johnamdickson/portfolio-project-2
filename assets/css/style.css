@@ -259,7 +259,7 @@ justify-content: center;
 .card-reverse > p {
     margin-bottom: 0;
 }
-
+/* styling for div that will display the animal image. */
 .card-front {
     display: flex;
     position: absolute;
@@ -285,15 +285,47 @@ justify-content: center;
     transform: rotateY(180deg);
     transition-duration: 2s;
   }
-  
+  /* feedback star styling with animation to zoom out when display is changed from none to block by JS. */
+  #feedback {
+    text-align: center;
+    color: #badde9;
+    opacity: 0.95;
+    position: absolute;
+    top: 25%;
+    left: 30%; 
+    transform: translateY(-50%) translateX(-50%);
+    font-size: 25rem;
+    display: none;
+    animation-name: feedback-zoom;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes feedback-zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1.5);
+    }
+}
+#feedback p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+    color: #20346C;
+    font-size: 2.2rem;
+}
 footer a{
-position: absolute;
+width: 100px;
+position: fixed;
 bottom: 0;
 right: 0;
-float: right;
 color:#BADDE9;
 background-color: #20346C;
 opacity: 0.75;
-padding: 2px;
+font-size: 0.75rem;
+padding: 5px;
 font-family: 'Raleway', sans-serif;
 }

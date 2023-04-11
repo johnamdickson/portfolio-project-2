@@ -74,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
   setTimeout(function(){
     addAnimalImages();
   }, 750); 
+  document.getElementById('player-number-span').innerText = '1';
       playGame(1);
     }
 
@@ -203,57 +204,79 @@ document.addEventListener("DOMContentLoaded", function() {
     return array;
 }
 
-    function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
-      console.log(`here is the player number!!! ${playerNumber}`)
-      let playerOneScore = parseInt(document.getElementById('player-one-score').innerText);
-      console.log(playerOneScore);
-      let playerTwoScore = parseInt(document.getElementById('player-two-score').innerText);
-      console.log(playerTwoScore);
-      let playerStatus = document.getElementById('player-number-span');
-      if (cardsTurnedInfo[0] === cardsTurnedInfo[1]) 
-        console.log("MATCH!")
-        switch(playerNumber) {
-          case 1:
-            if (cardsTurnedInfo[0] === cardsTurnedInfo[1]){
-              document.getElementById('player-one-score').innerText = ++ playerOneScore;
-              console.log(`Player one match ${playerOneScore}`)
-              playGame(1);
-            }
-           else {
-            for (let card of cardsTurned) {
-              setTimeout(function(){
-               card.className = "card";
-           }, 2000); }
-           setTimeout(function(){
-            playGame(2)
-            playerStatus.innerHTML = "2"
-        }, 2250); }
-           break;
-          case 2: 
-            if (cardsTurnedInfo[0] === cardsTurnedInfo[1]){
-              document.getElementById('player-two-score').innerText = ++ playerTwoScore;
-              console.log(`Player two match ${playerTwoScore}`)
-              playGame(2);
-            }
-           else {
-              //  Turn cards back around if they do not match. Time delay to stop this happening straight away.
-            for (let card of cardsTurned) {
-              setTimeout(function(){
-               card.className = "card";
-           }, 2000); }
-           setTimeout(function(){
-            playGame(1)
-            playerStatus.innerHTML = "1"
-        }, 2250); }
-            break;
-          default:
-            console.log("Fell through");
+function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
+  console.log(`here is the player number!!! ${playerNumber}`)
+  let cardsVisible = cardsPicturesVisibleCalculator()
+  let playerOneScore = parseInt(document.getElementById('player-one-score').innerText);
+  let playerTwoScore = parseInt(document.getElementById('player-two-score').innerText);
+  let playerStatus = document.getElementById('player-number-span');
+  if (cardsTurnedInfo[0] === cardsTurnedInfo[1]) 
+    console.log("MATCH!")
+    switch(playerNumber) {
+      case 1:
+        if (cardsTurnedInfo[0] === cardsTurnedInfo[1]){
+          document.getElementById('player-one-score').innerText = ++ playerOneScore;
+          if (cardsVisible === 16) {
+            calculateWinner(playerOneScore, playerTwoScore)
+          } else {
+            feedbackMatch(cardsTurnedInfo[0], 1)
+          }
+         
+          // playGame(1);
         }
-      }
+       else {
+        for (let card of cardsTurned) {
+          setTimeout(function(){
+           card.className = "card";
+       }, 2000); }
+       setTimeout(function(){
+        playGame(2)
+        playerStatus.innerHTML = "2"
+    }, 2250); }
+       break;
+      case 2: 
+        if (cardsTurnedInfo[0] === cardsTurnedInfo[1]){
+          document.getElementById('player-two-score').innerText = ++ playerTwoScore;
+          if (cardsVisible === 16) {
+            calculateWinner(playerOneScore, playerTwoScore)
+          } else {
+            feedbackMatch(cardsTurnedInfo[0], 1)
+          }
+        }
+       else {
+          //  Turn cards back around if they do not match. Time delay to stop this happening straight away.
+        for (let card of cardsTurned) {
+          setTimeout(function(){
+           card.className = "card";
+       }, 2000); }
+       setTimeout(function(){
+        playGame(1)
+        playerStatus.innerHTML = "1"
+    }, 2250); }
+        break;
+      default:
+        console.log("Fell through");
+    }
+  }
 
-    function incrementScores() {
+
+  /**
+   * function to present a feedback star and message when a match is made.
+ */
+    function feedbackMatch(info, player) {
+      let star = document.getElementById("feedback");
+      star.style.display = 'block';
+      // solution to getting last word from string from here:
+      // https://bobbyhadz.com/blog/javascript-get-last-word-of-string
+      let animal = info.split(' ').pop();
+      let animalSpan = document.getElementById("animal-name");
+      animalSpan.innerHTML = animal;
+      setTimeout(function(){
+      star.style.display = 'none';
+      playGame(player);
+    }, 3200);
     }
 
-    function calculateWinner() {
-
+    function calculateWinner(playerOneScore, playerTwoScore) {
+      console.log(playerOneScore, playerTwoScore);
     }
