@@ -35,14 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
            }
       }
       removeOldImages();
-
-     let pictureCards = document.getElementsByClassName("card-front");
-      for (let pictureCard of pictureCards){
-        let picture = document.createElement('img');
-        picture.className = "animal-image"
-        picture.src = "assets/images/elephant.png";
-        pictureCard.appendChild(picture);
-      }
+   
      let playerInfoArea = document.getElementById("player-info-area");
      let gameStatusCheck = document.getElementById("game-status-div");
     //  check if the game status div has been added. If not, add this div above player scores.
@@ -71,9 +64,16 @@ document.addEventListener("DOMContentLoaded", function() {
         // timing options
         duration: 500,
     });
-    
   }
+  // function below ensures that the animal images are not visible on card turn 
+  // when new game is started from Start New Game Button click. 
+  // Solution found here: https://stackoverflow.com/questions/17883692/how-to-set-time-delay-in-javascript
+  setTimeout(function(){
+    addAnimalImages();
+  }, 750); 
+      
       playGame(1);
+
     }
 
 /**
@@ -143,7 +143,56 @@ document.addEventListener("DOMContentLoaded", function() {
           }
         }
       } 
-    
+      /**
+   * addAnimalImages function creates an array of animal images and applies a shuffle function.
+   * before adding random images to each card-front div.
+ */
+    function addAnimalImages() {
+      let monkey = "assets/images/monkey.png";
+      let elephant = "assets/images/elephant.png";
+      let tiger = "assets/images/tiger.png";
+      let lion = "assets/images/lion.png";
+      let panda = "assets/images/panda.png";
+      let zebra = "assets/images/zebra.png";
+      let giraffe = "assets/images/giraffe.png";
+      let turtle = "assets/images/turtle.png";
+
+      let animalCards = [monkey, monkey, elephant, elephant,tiger, tiger, lion, lion, panda, panda, zebra, zebra, giraffe, giraffe, turtle, turtle];
+      let shuffledAnimalCards = shuffle(animalCards);
+      let i = 0
+      let pictureCards = document.getElementsByClassName("card-front");
+      for (let pictureCard of pictureCards){
+        let picture = document.createElement('img');
+        picture.className = "animal-image"
+        picture.src = shuffledAnimalCards[i];
+        pictureCard.appendChild(picture);
+        i++
+      }
+    }
+
+  /**
+   * shuffle function to randomise order of game cards.
+ */
+    // Solution for this function found in stack overflow.
+    // https://bost.ocks.org/mike/shuffle/  
+   
+  function shuffle(array) {
+   var m = array.length, t, i;
+
+    // While there remain elements to shuffle…
+   while (m) {
+
+    // Pick a remaining element…
+    i = Math.floor(Math.random() * m--);
+
+    // And swap it with the current element.
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  }
+
+    return array;
+}
 
     function checkForMatch(playerNumber, cardsTurned) {
       console.log(`here is the player number!!! ${playerNumber}`)
