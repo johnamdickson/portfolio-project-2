@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
       gameStatus.id = "game-status-div";
       gameStatusInnerHTML =
       `
-      <p>Player <span>One</span>'s Go!</p>
+      <p>Player <span id="player-number-span">One</span>'s Go!</p>
       `;
       gameStatus.innerHTML = gameStatusInnerHTML;
       /* solution to adding the game status div before the scores area div found here: 
@@ -71,9 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
   setTimeout(function(){
     addAnimalImages();
   }, 750); 
-      
       playGame(1);
-
     }
 
 /**
@@ -102,8 +100,10 @@ document.addEventListener("DOMContentLoaded", function() {
  */
 
     function playGame(playerNumber) {
+      console.log(`player number ${playerNumber}`)
       let numberOfCardsTurned = 0;
       let cardsTurned = [];
+      let cardsTurnedInfo = [];
       let cards = document.getElementsByClassName("card");
       for (let card of cards){
         card.addEventListener("click", flipCard);
@@ -113,12 +113,15 @@ document.addEventListener("DOMContentLoaded", function() {
         this.classList = "card flip";
       }
       function count() { 
-        cardsTurned.push(this);
+        // obtain alt text from images using query selector and add to cardsTurned array.
+        cardsTurned.push(this)
+        let image = this.querySelector('.animal-image').alt;
+        cardsTurnedInfo.push(image);
         // remove event listener once card selected so that it is not counted twice.
         this.removeEventListener('click', count)
         numberOfCardsTurned ++;
         if (numberOfCardsTurned === 2) {
-          checkForMatch(playerNumber, cardsTurned);
+          checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo);
           for (let card of cards){
             // remove this event listener to ensure no more cards can be flipped prior to checking for a match.
             card.removeEventListener("click", flipCard);
@@ -166,6 +169,8 @@ document.addEventListener("DOMContentLoaded", function() {
         picture.className = "animal-image"
         picture.src = shuffledAnimalCards[i].image;
         picture.alt = shuffledAnimalCards[i].alt;
+        // picture.src = monkey.image;
+        // picture.alt = monkey.alt;
         pictureCard.appendChild(picture);
         i++
       }
@@ -195,9 +200,43 @@ document.addEventListener("DOMContentLoaded", function() {
     return array;
 }
 
-    function checkForMatch(playerNumber, cardsTurned) {
+    function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
       console.log(`here is the player number!!! ${playerNumber}`)
       console.log(cardsTurned)
+      let playerOneScore = parseInt(document.getElementById('player-one-score').innerText);
+      let playerTwoScore = parseInt(document.getElementById('player-two-score').innerText);
+      let playerStatus = document.getElementById('player-number-span');
+      if (cardsTurnedInfo[0] === cardsTurnedInfo[1]) {
+        switch(playerNumber) {
+          case 1:
+            document.getElementById('player-one-score').innerText = ++ playerOneScore
+            playGame(1)
+            case 2: 
+            document.getElementById('player-one-score').innerText = ++ playerTwoScore
+            playGame(2)
+        }
+      } else {
+      //  Turn cards back around if they do not match. Time delay to stop this happening straight away.
+        for (let card of cardsTurned) {
+           setTimeout(function(){
+            card.className = "card";
+        }, 2000); 
+      }
+      
+        switch(playerNumber) {
+          case 1:
+            console.log("should be player two!")
+            playGame(2)
+            playerStatus.innerHTML = "Two"
+            case 2: 
+            playerStatus.innerHTML = "One"
+            playGame(1)
+        }
+        
+      }
+
+    
+
     }
 
     function incrementScores() {
