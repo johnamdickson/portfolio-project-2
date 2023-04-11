@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
       for (let pictureCard of pictureCards){
         let picture = document.createElement('img');
         picture.className = "animal-image"
-        picture.src = "assets/images/lion.png";
+        picture.src = "assets/images/elephant.png";
         pictureCard.appendChild(picture);
       }
      let playerInfoArea = document.getElementById("player-info-area");
