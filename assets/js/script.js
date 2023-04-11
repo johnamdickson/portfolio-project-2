@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
       gameStatus.id = "game-status-div";
       gameStatusInnerHTML =
       `
-      <p>Player <span id="player-number-span">One</span>'s Go!</p>
+      <p>Player<br><span id="player-number-span">1</span><br>turn.</p>
       `;
       gameStatus.innerHTML = gameStatusInnerHTML;
       /* solution to adding the game status div before the scores area div found here: 
@@ -226,7 +226,7 @@ document.addEventListener("DOMContentLoaded", function() {
            }, 2000); }
            setTimeout(function(){
             playGame(2)
-            playerStatus.innerHTML = "Two"
+            playerStatus.innerHTML = "2"
         }, 2250); }
            break;
           case 2: 
@@ -243,7 +243,7 @@ document.addEventListener("DOMContentLoaded", function() {
            }, 2000); }
            setTimeout(function(){
             playGame(1)
-            playerStatus.innerHTML = "One"
+            playerStatus.innerHTML = "1"
         }, 2250); }
             break;
           default:

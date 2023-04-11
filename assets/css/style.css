@@ -59,9 +59,14 @@ body {
 }
 
 .game-control-divs h2{
-   margin: 1.75vmax 5px;
+   margin: 1.5vmax 5px;
    font-size: 3vmax;
 }
+
+.game-control-divs h3{
+    margin: 1.25vmax 5px;
+    font-size: 2vmax;
+ }
 
 #game-info{
     height:30vmax;
@@ -71,11 +76,13 @@ body {
 }
 
 #game-info p{
-    margin: 1.5vmax  5px;
+    margin: 0.5vmax  5px;
+    font-size: 1.25vmax;
 }
 
 #start-game-button {
     font-size: 1.75vmax;
+    width: 70%;
     font-weight: bold;
     color: #BADDE9;
     background-color: #20346C;
@@ -89,14 +96,19 @@ body {
 #game-status-div{
     width: 75%;
     margin-bottom: 30px;
-    height: 9vmax;
+    height: 17.5vmax;
     text-align: center;
-    font-size: 2.5vmax;
+    font-size: 3vmax;
     background-color: #20346C;
     color: #BADDE9;
 }
 #game-status-div p{
-    margin-top: 5px;
+    margin: 4px;
+}
+#game-status-div span{
+    color: #E9D358;
+    font-size: 5vmax;
+    font-weight: bold;
 }
 
 #player-info-area {
