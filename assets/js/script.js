@@ -148,14 +148,14 @@ document.addEventListener("DOMContentLoaded", function() {
    * before adding random images to each card-front div.
  */
     function addAnimalImages() {
-      let monkey = "assets/images/monkey.png";
-      let elephant = "assets/images/elephant.png";
-      let tiger = "assets/images/tiger.png";
-      let lion = "assets/images/lion.png";
-      let panda = "assets/images/panda.png";
-      let zebra = "assets/images/zebra.png";
-      let giraffe = "assets/images/giraffe.png";
-      let turtle = "assets/images/turtle.png";
+      let monkey = {image: "assets/images/monkey.png", alt: "Cartoon image of a monkey"};
+      let elephant = {image: "assets/images/elephant.png", alt: "Cartoon image of an elephant"};
+      let tiger = {image: "assets/images/tiger.png", alt: "Cartoon image of a tiger"};
+      let lion = {image: "assets/images/lion.png", alt: "Cartoon image of a lion"};
+      let panda = {image: "assets/images/panda.png", alt: "Cartoon image of a panda"};
+      let zebra = {image: "assets/images/zebra.png", alt: "Cartoon image of a zebra"};
+      let giraffe = {image: "assets/images/giraffe.png", alt: "Cartoon image of a giraffe"};
+      let turtle = {image: "assets/images/turtle.png", alt: "Cartoon image of a turtle"};
 
       let animalCards = [monkey, monkey, elephant, elephant,tiger, tiger, lion, lion, panda, panda, zebra, zebra, giraffe, giraffe, turtle, turtle];
       let shuffledAnimalCards = shuffle(animalCards);
@@ -164,7 +164,8 @@ document.addEventListener("DOMContentLoaded", function() {
       for (let pictureCard of pictureCards){
         let picture = document.createElement('img');
         picture.className = "animal-image"
-        picture.src = shuffledAnimalCards[i];
+        picture.src = shuffledAnimalCards[i].image;
+        picture.alt = shuffledAnimalCards[i].alt;
         pictureCard.appendChild(picture);
         i++
       }
