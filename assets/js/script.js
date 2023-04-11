@@ -65,6 +65,9 @@ document.addEventListener("DOMContentLoaded", function() {
         duration: 500,
     });
   }
+  // reset scores on start of new game.
+  document.getElementById('player-one-score').innerText = "0"
+  document.getElementById('player-two-score').innerText = "0"
   // function below ensures that the animal images are not visible on card turn 
   // when new game is started from Start New Game Button click. 
   // Solution found here: https://stackoverflow.com/questions/17883692/how-to-set-time-delay-in-javascript
@@ -121,13 +124,13 @@ document.addEventListener("DOMContentLoaded", function() {
         this.removeEventListener('click', count)
         numberOfCardsTurned ++;
         if (numberOfCardsTurned === 2) {
-          checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo);
           for (let card of cards){
             // remove this event listener to ensure no more cards can be flipped prior to checking for a match.
             card.removeEventListener("click", flipCard);
           }
+          checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo);
+      }
           }
-        }
       }
 
     /**
@@ -202,42 +205,51 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
       console.log(`here is the player number!!! ${playerNumber}`)
-      console.log(cardsTurned)
       let playerOneScore = parseInt(document.getElementById('player-one-score').innerText);
+      console.log(playerOneScore);
       let playerTwoScore = parseInt(document.getElementById('player-two-score').innerText);
+      console.log(playerTwoScore);
       let playerStatus = document.getElementById('player-number-span');
-      if (cardsTurnedInfo[0] === cardsTurnedInfo[1]) {
+      if (cardsTurnedInfo[0] === cardsTurnedInfo[1]) 
+        console.log("MATCH!")
         switch(playerNumber) {
           case 1:
-            document.getElementById('player-one-score').innerText = ++ playerOneScore
-            playGame(1)
-            case 2: 
-            document.getElementById('player-one-score').innerText = ++ playerTwoScore
-            playGame(2)
-        }
-      } else {
-      //  Turn cards back around if they do not match. Time delay to stop this happening straight away.
-        for (let card of cardsTurned) {
+            if (cardsTurnedInfo[0] === cardsTurnedInfo[1]){
+              document.getElementById('player-one-score').innerText = ++ playerOneScore;
+              console.log(`Player one match ${playerOneScore}`)
+              playGame(1);
+            }
+           else {
+            for (let card of cardsTurned) {
+              setTimeout(function(){
+               card.className = "card";
+           }, 2000); }
            setTimeout(function(){
-            card.className = "card";
-        }, 2000); 
-      }
-      
-        switch(playerNumber) {
-          case 1:
-            console.log("should be player two!")
             playGame(2)
             playerStatus.innerHTML = "Two"
-            case 2: 
-            playerStatus.innerHTML = "One"
+        }, 2250); }
+           break;
+          case 2: 
+            if (cardsTurnedInfo[0] === cardsTurnedInfo[1]){
+              document.getElementById('player-two-score').innerText = ++ playerTwoScore;
+              console.log(`Player two match ${playerTwoScore}`)
+              playGame(2);
+            }
+           else {
+              //  Turn cards back around if they do not match. Time delay to stop this happening straight away.
+            for (let card of cardsTurned) {
+              setTimeout(function(){
+               card.className = "card";
+           }, 2000); }
+           setTimeout(function(){
             playGame(1)
+            playerStatus.innerHTML = "One"
+        }, 2250); }
+            break;
+          default:
+            console.log("Fell through");
         }
-        
       }
-
-    
-
-    }
 
     function incrementScores() {
     }
