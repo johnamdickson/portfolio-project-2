@@ -240,7 +240,7 @@ function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
           if (cardsVisible === 16) {
             calculateWinner(playerOneScore, playerTwoScore)
           } else {
-            feedbackMatch(cardsTurnedInfo[0], 1)
+            feedbackMatch(cardsTurnedInfo[0], 2)
           }
         }
        else {
