@@ -16,13 +16,17 @@ document.addEventListener("DOMContentLoaded", function() {
     })
     }
     let howToPlaySection = document.getElementById('how-to-play-section');
+    let gameArea = document.getElementById('game-area');
     let gameGrid = document.getElementById('game-grid');
     let gameInstructions = document.getElementById('game-area-instructions')
     let howToPlayStartButton = buttons[0];
     howToPlayStartButton.addEventListener("click", function(){
         gameGrid.style.visibility = 'visible';
+        gameArea.style.opacity = '1';
         gameInstructions.style.visibility = 'hidden';
         howToPlaySection.style.visibility = 'hidden';
+        this.innerText = "Start Again?"
+        gameButton.innerText = "Start Again?"
       setUpGame();
     })
     let goBackButton = buttons[1];
@@ -32,8 +36,10 @@ document.addEventListener("DOMContentLoaded", function() {
     let gameButton = buttons[2];
     gameButton.addEventListener("click", function(){
       gameGrid.style.visibility = 'visible';
+      gameArea.style.opacity = '1';
       gameInstructions.style.visibility = 'hidden';
       this.innerText = "Start Again?"
+      howToPlayStartButton.innerText = "Start Again?"
         setUpGame();
     })
     let howToPlayButton = buttons[3];
@@ -86,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { opacity: '1' }
     ], {
         // timing options
-        duration: 500,
+        duration: 250,
     });
   }
   // reset scores on start of new game.

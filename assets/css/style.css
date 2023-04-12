@@ -44,7 +44,7 @@ body {
     width: 33%;
     background-color: #E9D358;
     border-radius: 10px;
-    border: 3px solid #20346C;
+    border: 3px solid #1B316D;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -86,13 +86,14 @@ body {
     flex-grow:2;
     width: 100%;
     height: 100%;
-    background-color: #20346C;
+    background-color: #1B316D;
     border-radius: 10px;
 /* Creating an embossed effect - solution from Stack Overflow: https://stackoverflow.com/questions/24744776/creating-bevel-effect-for-content-box */
     box-shadow: inset 5px 5px 8px 1px rgba(255,255,255,0.5), inset -3px -7px 5px 2px rgba(32,52,108,0.5);
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
 }
 
 #game-area-instructions {
@@ -100,10 +101,10 @@ body {
     width: 55%;
     background-color: #E9D358;
     border-radius: 10px;
-    border: 3px solid #20346C;
+    border: 3px solid #1B316D;
     position: absolute;
     left: 50%;
-    top: 60%;
+    top: 500px;
     transform: translateY(-50%) translateX(-50%);
 }
 
@@ -155,7 +156,7 @@ button {
     width: 70%;
     font-weight: bold;
     color: #BADDE9;
-    background-color: #20346C;
+    background-color: #1B316D;
     border-radius: 5px;
     margin: 1vmax 10px;
     padding: 10px;
@@ -164,7 +165,7 @@ button {
 }
 
 button:hover {
-    opacity: 0.8;
+    opacity: 0.9;
 }
 #start-game-button {
     font-size: 1.75vmax;
@@ -181,7 +182,7 @@ button:hover {
     height: 17.5vmax;
     text-align: center;
     font-size: 3vmax;
-    background-color: #20346C;
+    background-color: #1B316D;
     color: #BADDE9;
 }
 #game-status-div p{
@@ -226,7 +227,7 @@ button:hover {
     text-align: center;
     font-weight: bold;
     color: #BADDE9;
-    background-color: #20346C;
+    background-color: #1B316D;
 }
 
 /* Assign grid area names. Each grid will represent a card. */
@@ -315,7 +316,7 @@ visibility: hidden;
 /* Card flip code from this site: https://dev.to/mugas/flip-cards-with-javascript-2ad0 */
 .card {
     display: flex;
-    background-color: #20346C;
+    background-color: #1B316D;
     transform-style: preserve-3d;
     transition-duration: 2s;
     cursor: pointer;
@@ -332,11 +333,16 @@ visibility: hidden;
     background-color: #E9D358;
     text-align: center;
     line-height: 100px;
-    color: #20346C;
+    color: #1B316D;
     border-radius: 5px;
     border: 2px solid #BADDE9;
     font-size: 4rem;
     backface-visibility: hidden;
+}
+
+.card-reverse:hover {
+    transform: scale(1.02);
+    border-width: 3px;
 }
 
 .card-reverse > p {
@@ -397,18 +403,16 @@ visibility: hidden;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
     text-align: center;
-    color: #20346C;
+    color: #1B316D;
     font-size: 2.2rem;
 }
+
 footer a{
 width: 100px;
-position: fixed;
-bottom: 0;
-right: 0;
 color:#BADDE9;
-background-color: #20346C;
+background-color: #1B316D;
 opacity: 0.75;
-font-size: 0.75rem;
+font-size: 0.5rem;
 padding: 5px;
 font-family: 'Raleway', sans-serif;
 }
