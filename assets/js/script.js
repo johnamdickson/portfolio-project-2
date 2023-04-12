@@ -15,10 +15,14 @@ document.addEventListener("DOMContentLoaded", function() {
         this.style.color = "";
     })
     }
-    let howToPlaySection = document.getElementById('how-to-play-section')
+    let howToPlaySection = document.getElementById('how-to-play-section');
+    let gameGrid = document.getElementById('game-grid');
+    let gameInstructions = document.getElementById('game-area-instructions')
     let howToPlayStartButton = buttons[0];
     howToPlayStartButton.addEventListener("click", function(){
-        howToPlaySection.style.visibility = 'hidden'
+        gameGrid.style.visibility = 'visible';
+        gameInstructions.style.visibility = 'hidden';
+        howToPlaySection.style.visibility = 'hidden';
       setUpGame();
     })
     let goBackButton = buttons[1];
@@ -27,7 +31,9 @@ document.addEventListener("DOMContentLoaded", function() {
 })
     let gameButton = buttons[2];
     gameButton.addEventListener("click", function(){
-          this.innerText = "Start Again?"
+      gameGrid.style.visibility = 'visible';
+      gameInstructions.style.visibility = 'hidden';
+      this.innerText = "Start Again?"
         setUpGame();
     })
     let howToPlayButton = buttons[3];
@@ -296,7 +302,7 @@ function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
         { transform: "rotate(270deg) scale(100)", opacity: "0" },
       ];
       let animateOutTiming = {
-        duration: 1000,
+        duration: 750,
         iterations: 1
       };
       setTimeout(function(){
@@ -306,7 +312,7 @@ function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
       setTimeout(function(){ 
       star.style.display = 'none';
       playGame(player);
-    }, 4000);
+    }, 3750);
     }
 
     function calculateWinner(playerOneScore, playerTwoScore) {
