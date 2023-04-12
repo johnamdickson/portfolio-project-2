@@ -13,9 +13,25 @@
 <title>Wild Cards 🐾</title>
 </head>
 <body>
-    <div class ="logo-and-title">
-        <img src="assets/images/logo-transparent.png" alt="Logo for game showing the title Wild Cards and an Elephant logo">
-    </div>
+    <header>
+        <div class ="logo-and-title">
+            <img src="assets/images/logo-transparent.png" alt="Logo for game showing the title Wild Cards and an Elephant logo">
+        </div>
+    </header>    
+    <section id="how-to-play-section">
+        <div id="instructions">
+            <h2>How to Play</h2>
+            <ol>
+                <li>To begin, press the start button.</li>
+                <li>Player one takes the first go.</li>
+                <li>If you get a match your turn keeps going.</li>
+                <li>If you get it wrong your turn ends and the next player has a go.</li>
+                <li>The person with the most matches wins.</li>
+            </ol>
+            <button id="how-to-play-start-button">Start Game</button>
+            <button id="go-back-button"><i class="fa-solid fa-arrow-left"></i> Go Back</button>
+        </div>
+    </section>
     <section id="game-section">
         <div class="game-control-divs" id="game-info">
             <div>
@@ -23,6 +39,7 @@
                 <h3>The two player animal memory matching game.</h3>
                 <p>Press the button below to start a new game!</p>
                 <button id="start-game-button">Start</button>
+                <button id="how-to-play-button">How To Play <i class="fa-regular fa-circle-question"></i></button>
             </div>
         </div>
         <div id="game-area">

@@ -28,6 +28,51 @@ body {
         object-fit: cover;
         overflow: hidden;
 }
+#how-to-play-section {
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    z-index: 2;
+    visibility: hidden;
+}
+
+#instructions {
+    height: 45vmax;
+    width: 33%;
+    background-color: #E9D358;
+    border-radius: 10px;
+    border: 3px solid #20346C;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+#instructions h2 {
+    font-size:  3vmax;
+    text-align: center;
+    margin: 2vmax 0;
+}
+
+#instructions ol {
+    padding-left: 2.5vmax;
+    margin-bottom: 0;
+    font-size: 1.75vmax;
+    line-height: 3vmax;
+}
+
+#how-to-play-start-button {
+    width: 60%;
+    margin-left: 20%;
+}
+
+#go-back-button {
+    width: 60%;
+    margin-left: 20%;
+}
 #game-section{
     display: flex;
     flex-direction: row;
@@ -69,7 +114,7 @@ body {
  }
 
 #game-info{
-    height:30vmax;
+    height:35vmax;
     text-align: center;
     text-align: center;
     font-size: 2vmax;
@@ -80,7 +125,7 @@ body {
     font-size: 1.25vmax;
 }
 
-#start-game-button {
+button {
     font-size: 1.75vmax;
     width: 70%;
     font-weight: bold;
@@ -92,7 +137,15 @@ body {
     font-family: 'Raleway', sans-serif;
     box-shadow: 0 2px 2px rgba(0,0,0,0.7), inset 3px 3px 3px 0 rgba(255,255,255,0.7), inset -3px -3px 3px 0 rgba(255,255,255,0.5);
 }
-
+#start-game-button {
+    font-size: 1.75vmax;
+    width: 70%;
+}
+#how-to-play-button {
+    font-size: 1.25vmax;
+    width: 60%;
+    margin-top: 0.65vmax;
+}
 #game-status-div{
     width: 75%;
     margin-bottom: 30px;

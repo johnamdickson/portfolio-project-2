@@ -2,21 +2,39 @@
 // Get the button elements and add event listeners to them
 
 document.addEventListener("DOMContentLoaded", function() {
-    let button = document.getElementsByTagName("button");
-    let gameButton = button[0];
-        gameButton.addEventListener("mousedown", function(){
-            this.style.boxShadow = "inset 3px 3px 3px 0 rgba(255,255,255,0.7), inset -3px -3px 3px 0 rgba(255,255,255,0.5)";
-            this.style.color = "rgba(186, 221, 233, 0.9)";
-        })
-        // How to return styling to CSS: https://stackoverflow.com/questions/3506050/how-to-reset-the-style-properties-to-their-css-defaults-in-javascript
-        gameButton.addEventListener("mouseup", function(){
-            this.style.boxShadow = "";
-            this.style.color = "";
-        })
-        gameButton.addEventListener("click", function(){
+    let buttons = document.getElementsByTagName("button");
+   
+    for (let button of buttons) {
+      button.addEventListener("mousedown", function(){
+        this.style.boxShadow = "inset 3px 3px 3px 0 rgba(255,255,255,0.7), inset -3px -3px 3px 0 rgba(255,255,255,0.5)";
+        this.style.color = "rgba(186, 221, 233, 0.9)";
+    })
+    // How to return styling to CSS: https://stackoverflow.com/questions/3506050/how-to-reset-the-style-properties-to-their-css-defaults-in-javascript
+    button.addEventListener("mouseup", function(){
+        this.style.boxShadow = "";
+        this.style.color = "";
+    })
+    }
+    let howToPlaySection = document.getElementById('how-to-play-section')
+    let howToPlayStartButton = buttons[0];
+    howToPlayStartButton.addEventListener("click", function(){
+        howToPlaySection.style.visibility = 'hidden'
+      setUpGame();
+    })
+    let goBackButton = buttons[1];
+    goBackButton.addEventListener("click", function(){
+      howToPlaySection.style.visibility = 'hidden'
+})
+    let gameButton = buttons[2];
+    gameButton.addEventListener("click", function(){
           this.innerText = "Start Again?"
-          setUpGame();
-        })
+        setUpGame();
+    })
+    let howToPlayButton = buttons[3];
+    howToPlayButton.addEventListener("click", function(){
+      howToPlaySection.style.visibility = 'visible'
+  })
+      
     })
 /**
  * Function to set up game on press of the start game button.
@@ -292,5 +310,11 @@ function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
     }
 
     function calculateWinner(playerOneScore, playerTwoScore) {
-      console.log(playerOneScore, playerTwoScore);
+      if (playerOneScore === playerTwoScore) {
+        console.log("Its a draw!")
+      } else if (playerOneScore > playerTwoScore) {
+        console.log("Player one wins!")
+      } else {
+        console.log("Player 2 wins!")
+      }
     }
