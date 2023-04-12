@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
         gameButton.addEventListener("mousedown", function(){
             this.style.boxShadow = "inset 3px 3px 3px 0 rgba(255,255,255,0.7), inset -3px -3px 3px 0 rgba(255,255,255,0.5)";
             this.style.color = "rgba(186, 221, 233, 0.9)";
-            
         })
         // How to return styling to CSS: https://stackoverflow.com/questions/3506050/how-to-reset-the-style-properties-to-their-css-defaults-in-javascript
         gameButton.addEventListener("mouseup", function(){
@@ -15,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
             this.style.color = "";
         })
         gameButton.addEventListener("click", function(){
+          this.innerText = "Start Again?"
           setUpGame();
         })
     })
@@ -271,10 +271,24 @@ function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
       let animal = info.split(' ').pop();
       let animalSpan = document.getElementById("animal-name");
       animalSpan.innerHTML = animal;
+      // properties for animating out the star feedback block using tutorial below:
+      // https://developer.mozilla.org/en-US/docs/Web/API/Element/animate
+      let animateOut = [
+        { transform: "rotate(0) scale(1.5)", opacity: "0.95"},
+        { transform: "rotate(270deg) scale(100)", opacity: "0" },
+      ];
+      let animateOutTiming = {
+        duration: 1000,
+        iterations: 1
+      };
       setTimeout(function(){
+        star.animate(animateOut, animateOutTiming);
+      },3000);
+     
+      setTimeout(function(){ 
       star.style.display = 'none';
       playGame(player);
-    }, 3200);
+    }, 4000);
     }
 
     function calculateWinner(playerOneScore, playerTwoScore) {
