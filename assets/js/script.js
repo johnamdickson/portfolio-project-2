@@ -15,26 +15,39 @@ document.addEventListener("DOMContentLoaded", function() {
         this.style.color = "";
     })
     }
-    let howToPlaySection = document.getElementById('how-to-play-section');
+    let blurredSection = document.getElementById('blurred-section');
+    let instructions = document.getElementById('instructions');
     let gameArea = document.getElementById('game-area');
     let gameGrid = document.getElementById('game-grid');
     let gameInstructions = document.getElementById('game-area-instructions')
+
     let howToPlayStartButton = buttons[0];
     howToPlayStartButton.addEventListener("click", function(){
         gameGrid.style.visibility = 'visible';
         gameArea.style.opacity = '1';
         gameInstructions.style.visibility = 'hidden';
-        howToPlaySection.style.visibility = 'hidden';
+        blurredSection.style.visibility = 'hidden';
+        instructions.style.visibility = 'hidden';
         this.innerText = "Start Again?"
-        gameButton.innerText = "Start Again?"
+        gameStartButton.innerText = "Start Again?"
       setUpGame();
     })
     let goBackButton = buttons[1];
     goBackButton.addEventListener("click", function(){
-      howToPlaySection.style.visibility = 'hidden'
+      blurredSection.style.visibility = 'hidden'
+      instructions.style.visibility = 'hidden';
 })
-    let gameButton = buttons[2];
-    gameButton.addEventListener("click", function(){
+    let newGameButton = buttons[2];
+    newGameButton.addEventListener("click", function(){
+      gameGrid.style.visibility = 'visible';
+        gameArea.style.opacity = '1';
+      gameInstructions.style.visibility = 'hidden';
+        blurredSection.style.visibility = 'hidden';
+        instructions.style.visibility = 'hidden';
+        setUpGame()
+    })
+    let gameStartButton = buttons[3];
+    gameStartButton.addEventListener("click", function(){
       gameGrid.style.visibility = 'visible';
       gameArea.style.opacity = '1';
       gameInstructions.style.visibility = 'hidden';
@@ -42,9 +55,10 @@ document.addEventListener("DOMContentLoaded", function() {
       howToPlayStartButton.innerText = "Start Again?"
         setUpGame();
     })
-    let howToPlayButton = buttons[3];
+    let howToPlayButton = buttons[4];
     howToPlayButton.addEventListener("click", function(){
-      howToPlaySection.style.visibility = 'visible'
+      blurredSection.style.visibility = 'visible';
+      instructions.style.visibility = 'visible';
   })
       
     })
@@ -201,10 +215,10 @@ document.addEventListener("DOMContentLoaded", function() {
       for (let pictureCard of pictureCards){
         let picture = document.createElement('img');
         picture.className = "animal-image"
-        picture.src = shuffledAnimalCards[i].image;
-        picture.alt = shuffledAnimalCards[i].alt;
-        // picture.src = monkey.image;
-        // picture.alt = monkey.alt;
+        // picture.src = shuffledAnimalCards[i].image;
+        // picture.alt = shuffledAnimalCards[i].alt;
+        picture.src = monkey.image;
+        picture.alt = monkey.alt;
         pictureCard.appendChild(picture);
         i++
       }
@@ -322,11 +336,25 @@ function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
     }
 
     function calculateWinner(playerOneScore, playerTwoScore) {
+      console.log("HERE!")
+      let blurredSection = document.getElementById('blurred-section');
+      blurredSection.style.visibility = 'visible';
+      let gameOutcome = document.getElementById('game-outcome')
+      gameOutcome.style.display = 'block';
+      let gameOutcomeMessage = document.getElementById('outcome-message')
+      let newGameButton = document.getElementById('new-game-button');
+
       if (playerOneScore === playerTwoScore) {
-        console.log("Its a draw!")
+        gameOutcomeMessage.innerText = "That was close, its a draw!"
       } else if (playerOneScore > playerTwoScore) {
-        console.log("Player one wins!")
+        gameOutcomeMessage.innerText = "Congrats Player 1, you win!"
       } else {
-        console.log("Player 2 wins!")
+        gameOutcomeMessage.innerText = "Congrats Player 2, you win!"
       }
+      setTimeout(function(){ 
+        gameOutcomeMessage.style.top = "42%";
+        gameOutcomeMessage.style.fontSize = "1.5rem";
+        gameOutcomeMessage.innerText = "Click below to begin a new game"
+        newGameButton.style.display = "block";
+      }, 3500);
     }

@@ -28,7 +28,9 @@ body {
         object-fit: cover;
         overflow: hidden;
 }
-#how-to-play-section {
+
+/* section with blurred effect background for in game how to play instructions and game outcome message. */
+#blurred-section {
     backdrop-filter: blur(10px);
     position: absolute;
     top: 0;
@@ -49,6 +51,7 @@ body {
     left: 50%;
     top: 50%;
     transform: translateY(-50%) translateX(-50%);
+    visibility: hidden;
 }
 
 #instructions h2 {
@@ -64,16 +67,39 @@ body {
     line-height: 3vmax;
 }
 
-#how-to-play-start-button {
-    width: 60%;
-    margin-left: 20%;
+
+
+#game-outcome {
+    text-align: center;
+    color: #E9D358;
+    position: absolute;
+    top: 25%;
+    left: 30%; 
+    transform: translateY(-50%) translateX(-50%);
+    font-size: 25rem;
+    display: none;
+    animation-name: outcome-zoom;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes outcome-zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(2);
+    }
+}
+#game-outcome p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+    color: #1B316D;
+    font-size: 2.2rem;
 }
 
-#go-back-button {
-    font-size: 1.25vmax;
-    width: 40%;
-    margin-left: 30%
-}
 #game-section{
     display: flex;
     flex-direction: row;
@@ -176,6 +202,28 @@ button:hover {
     width: 60%;
     margin-top: 0.65vmax;
 }
+
+#go-back-button {
+    font-size: 1.25vmax;
+    width: 40%;
+    margin-left: 30%
+}
+
+#how-to-play-start-button {
+    width: 60%;
+    margin-left: 20%;
+}
+
+#new-game-button {
+    position: absolute;
+    top: 52%;
+    left: 47%;
+    font-size: 1vmax;
+    width: 25%;
+    transform: translateY(-50%) translateX(-50%);
+    display: none;
+}
+
 #game-status-div{
     width: 75%;
     margin-bottom: 30px;
