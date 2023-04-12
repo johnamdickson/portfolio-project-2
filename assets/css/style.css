@@ -345,7 +345,7 @@ button:hover {
 /* Assistance in developing flex from this article: https://www.freecodecamp.org/news/how-to-center-anything-with-css-align-a-div-text-and-more/ */
 #game-grid {
 flex: 1 auto;
-margin: 10px 25px;
+margin: 10px 25px 10px 5px;
 display: grid;
 grid-template-columns: repeat(4, 20%);
 grid-template-rows: repeat(4, 135px);
@@ -454,7 +454,10 @@ visibility: hidden;
     color: #1B316D;
     font-size: 2.2rem;
 }
-
+footer {
+    position: fixed;
+    bottom: 0;
+}
 footer a{
 width: 100px;
 color:#BADDE9;
@@ -463,4 +466,119 @@ opacity: 0.75;
 font-size: 0.5rem;
 padding: 5px;
 font-family: 'Raleway', sans-serif;
+}
+
+/* 
+Responsive styling for Media Screens
+*/
+@media screen and (max-width:1200px) {
+    #game-area-instructions {
+        top: 450px;
+    }
+    #how-to-play-button{
+        font-size: 1vmax;
+    }
+}
+
+@media screen and (max-width:950px) {
+
+    .logo-and-title {
+        padding: 20px 0;
+        width: 30%;
+    }
+    #instructions {
+        width: 50%;
+    }
+    #game-section{
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .game-control-divs h2 {
+        margin: 0.5vmax 5px;
+        font-size: 2vmax;
+    }
+    .game-control-divs h3 {
+        margin: 0.25vmax 5px;
+        font-size: 1.5vmax;
+    }
+
+    #start-game-button {
+        font-size: 1.5vmax;
+        width: 40%;
+    }
+
+    #how-to-play-button {
+        font-size: 1vmax;
+        width: 28%;
+    }
+
+    #game-info {
+        flex-grow: 0;
+        width: 100%;
+        height: 16vmax;
+        margin: 0 15vmax;
+    }
+    #game-area-instructions {
+        left: 50%;
+        top: 55%;
+        width: 75%;
+    }
+    #player-info-area {
+        display: flex;
+        width: 100%;
+        height:200px;
+        flex-direction: row;
+        bottom: 0;
+        width: 100%;
+    }
+    #game-area{
+        margin: 20px;
+        flex-grow: 0;
+        width: 100%;
+        height: 600px;
+    }
+    #scores-area {
+        width:35vmax;
+        height: 70px;
+        flex-grow:0;
+    }
+    #game-section {
+        height: 550px;
+    }
+    #game-grid {
+        grid-template-rows: repeat(4, 125px);
+        column-gap: 4.5%;
+    }
+
+    #game-status-div{
+        height: 150px;
+        width:120px;
+        flex-grow:0;
+        font-size: 2vmax;
+        margin-left: 3vmax;
+    }
+    #game-status-div span {
+        font-size: 3.5vmax;
+    }
+    #game-status-div p{
+        margin: 10px;
+    }
+
+    #feedback{
+        left: 20%;
+    }
+
+    #game-outcome {
+        left: 25%;
+    }
+
+    @keyframes outcome-zoom {
+        from {
+            transform: scale(0)
+        }
+        to {
+            transform: scale(1.5);
+        }
+    }
 }
