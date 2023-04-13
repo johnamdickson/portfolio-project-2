@@ -102,6 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
  * Function to set up game on press of the start game button.
  */
     function setUpGame() {
+        // hide game outcome star if already in place.
         let gameOutcome = document.getElementById('game-outcome')
       gameOutcome.style.display = 'none';
       let cards = document.getElementsByClassName("card");
@@ -197,7 +198,6 @@ document.addEventListener("DOMContentLoaded", function() {
  */
 
     function playGame(playerNumber) {
-      console.log(`player number ${playerNumber}`)
       let numberOfCardsTurned = 0;
       let cardsTurned = [];
       let cardsTurnedInfo = [];
@@ -209,6 +209,7 @@ document.addEventListener("DOMContentLoaded", function() {
       function flipCard() {
         this.classList = "card flip";
       }
+      
       function count() { 
         // obtain alt text from images using query selector and add to cardsTurned array.
         cardsTurned.push(this)
@@ -309,11 +310,13 @@ function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
     switch(playerNumber) {
       case 1:
         if (cardsTurnedInfo[0] === cardsTurnedInfo[1]){
+            console.log(playerOneScore);
           document.getElementById('player-one-score').innerText = ++ playerOneScore;
+          console.log(playerOneScore);
           if (cardsVisible === 16) {
-            calculateWinner(playerOneScore, playerTwoScore)
+            calculateWinner(playerOneScore, playerTwoScore);
           } else {
-            feedbackMatch(cardsTurnedInfo[0], 1)
+            feedbackMatch(cardsTurnedInfo[0], 1);
           }
          
           // playGame(1);
@@ -324,17 +327,19 @@ function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
            card.className = "card";
        }, 2000); }
        setTimeout(function(){
-        playGame(2)
-        playerStatus.innerHTML = "2"
+        playGame(2);
+        playerStatus.innerHTML = "2";
     }, 2250); }
        break;
       case 2: 
         if (cardsTurnedInfo[0] === cardsTurnedInfo[1]){
+            console.log(playerTwoScore);
           document.getElementById('player-two-score').innerText = ++ playerTwoScore;
+          console.log(playerTwoScore);
           if (cardsVisible === 16) {
-            calculateWinner(playerOneScore, playerTwoScore)
+            calculateWinner(playerOneScore, playerTwoScore);
           } else {
-            feedbackMatch(cardsTurnedInfo[0], 2)
+            feedbackMatch(cardsTurnedInfo[0], 2);
           }
         }
        else {
@@ -344,8 +349,8 @@ function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
            card.className = "card";
        }, 2000); }
        setTimeout(function(){
-        playGame(1)
-        playerStatus.innerHTML = "1"
+        playGame(1);
+        playerStatus.innerHTML = "1";
     }, 2250); }
         break;
       default:
