@@ -598,11 +598,11 @@ Responsive styling for Media Screens
     }
 
     #game-area {
-        height: 525px;
+        height: 55vh;
     }
 
     #game-grid {
-        grid-template-rows: repeat(4, 110px);
+        grid-template-rows: repeat(4, 11vh);
     }
     .card-reverse {
         font-size: 3rem;
