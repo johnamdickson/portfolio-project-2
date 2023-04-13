@@ -364,7 +364,7 @@ visibility: hidden;
 /* Card flip code from this site: https://dev.to/mugas/flip-cards-with-javascript-2ad0 */
 .card {
     display: flex;
-    background-color: #1B316D;
+    background-color: transparent;
     transform-style: preserve-3d;
     transition-duration: 2s;
     cursor: pointer;
