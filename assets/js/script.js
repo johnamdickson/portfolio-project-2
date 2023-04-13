@@ -21,10 +21,9 @@ document.addEventListener("DOMContentLoaded", function() {
     let instructions = document.getElementById('instructions');
     let gameArea = document.getElementById('game-area');
     let gameGrid = document.getElementById('game-grid');
-    let gameInstructions = document.getElementById('game-area-instructions')
-    let gameOutcome = document.getElementById('game-outcome')
-      
-// set up buttons
+    let gameInstructions = document.getElementById('game-area-instructions');
+
+ // set up buttons
     let howToPlayStartButton = buttons[0];
     howToPlayStartButton.addEventListener("click", function(){
         gameGrid.style.visibility = 'visible';
@@ -44,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
     goBackButton.addEventListener("click", function(){
       blurredSection.style.visibility = 'hidden'
       instructions.style.visibility = 'hidden';
-})
+     })
     let newGameButton = buttons[2];
     newGameButton.addEventListener("click", function(){
       gameGrid.style.visibility = 'visible';
@@ -76,8 +75,8 @@ document.addEventListener("DOMContentLoaded", function() {
       blurredSection.style.visibility = 'visible';
       instructions.style.visibility = 'visible';
   })
-//  solution to handling media queries in JS found here: 
-//  https://css-tricks.com/working-with-javascript-media-queries/
+  //  solution to handling media queries in JS found here: 
+  //  https://css-tricks.com/working-with-javascript-media-queries/
   let nineFiftyQuery = window.matchMedia('(max-width: 950px)')
   nineFiftyQuery.addEventListener("change", handleNineFiftyChange)
   function handleNineFiftyChange(event) {
@@ -98,6 +97,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 }
     })
+
 /**
  * Function to set up game on press of the start game button.
  */
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function() {
    
      let playerInfoArea = document.getElementById("player-info-area");
      let gameStatusCheck = document.getElementById("game-status-div");
-    //  check if the game status div has been added. If not, add this div above player scores.
+     //  check if the game status div has been added. If not, add this div above player scores.
 
      if (gameStatusCheck === null) {
         let windowWidth = window.innerWidth;
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function() {
       gameStatus.className = "game-control-divs";
       gameStatus.id = "game-status-div";
       let gameStatusInnerHTML
-    //   check window width to style game status div appropriately.
+     //   check window width to style game status div appropriately.
       if (windowWidth <= 950) {
         gameStatusInnerHTML = 
         `
@@ -171,12 +171,13 @@ document.addEventListener("DOMContentLoaded", function() {
   document.getElementById('player-number-span').innerText = '1';
       playGame(1);
     }
-
+    
+let playGameIterator = 0
 /**
  * Helper function that can be called to return the number of cards with pictures visible.
  */
     function cardsPicturesVisibleCalculator() {
-      let cardsReverse = 0;
+        let cardsReverse = 0;
       let cardsPicture = 0;
       let cards = document.getElementsByClassName("card");
       for (let card of cards) {
@@ -187,8 +188,6 @@ document.addEventListener("DOMContentLoaded", function() {
           cardsPicture += 1;
         }
       }
-      console.log(cardsReverse);
-      console.log(cardsPicture);
       return cardsPicture
     }
 
@@ -198,18 +197,26 @@ document.addEventListener("DOMContentLoaded", function() {
  */
 
     function playGame(playerNumber) {
-      let numberOfCardsTurned = 0;
-      let cardsTurned = [];
-      let cardsTurnedInfo = [];
-      let cards = document.getElementsByClassName("card");
-      for (let card of cards){
-        card.addEventListener("click", flipCard);
-        card.addEventListener("click", count);
-      }
+        playGameIterator++;
+        console.log(playGameIterator);
+        let numberOfCardsTurned = 0;
+        let cardsTurned = [];
+        let cardsTurnedInfo = [];
+        let cards = document.getElementsByClassName("card");
+        let cardsVisible = cardsPicturesVisibleCalculator()
+        let playerOneScore = parseInt(document.getElementById('player-one-score').innerText);
+        let playerTwoScore = parseInt(document.getElementById('player-two-score').innerText);
+        if (cardsVisible === 16) {
+            calculateWinner(playerOneScore, playerTwoScore);
+          } 
+        else {
+         for (let card of cards){
+            card.addEventListener("click", flipCard);
+            card.addEventListener("click", count);
+        }
       function flipCard() {
         this.classList = "card flip";
       }
-      
       function count() { 
         // obtain alt text from images using query selector and add to cardsTurned array.
         cardsTurned.push(this)
@@ -222,11 +229,14 @@ document.addEventListener("DOMContentLoaded", function() {
           for (let card of cards){
             // remove this event listener to ensure no more cards can be flipped prior to checking for a match.
             card.removeEventListener("click", flipCard);
-          }
+             }
           checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo);
-      }
+          return;
+             }
           }
       }
+      return;
+    }
 
     /**
  * Helper function to remove old images from previous game and maintain readability of setUpGame function.
@@ -300,32 +310,14 @@ document.addEventListener("DOMContentLoaded", function() {
 }
 
 function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
-  console.log(`here is the player number!!! ${playerNumber}`)
-  let cardsVisible = cardsPicturesVisibleCalculator()
   let playerOneScore = parseInt(document.getElementById('player-one-score').innerText);
   let playerTwoScore = parseInt(document.getElementById('player-two-score').innerText);
   let playerStatus = document.getElementById('player-number-span');
-  if (cardsTurnedInfo[0] === cardsTurnedInfo[1]) 
-    console.log("MATCH!")
     switch(playerNumber) {
       case 1:
         if (cardsTurnedInfo[0] === cardsTurnedInfo[1]){
-<<<<<<< HEAD
-            console.log(playerOneScore)
           document.getElementById('player-one-score').innerText = ++ playerOneScore;
-          console.log(playerOneScore)
-=======
-            console.log(playerOneScore);
-          document.getElementById('player-one-score').innerText = ++ playerOneScore;
-          console.log(playerOneScore);
->>>>>>> bc2759011964d670e8af18222dc45b14c234577f
-          if (cardsVisible === 16) {
-            calculateWinner(playerOneScore, playerTwoScore);
-          } else {
-            feedbackMatch(cardsTurnedInfo[0], 1);
-          }
-         
-          // playGame(1);
+          feedbackMatch(cardsTurnedInfo[0], 2);
         }
        else {
         for (let card of cardsTurned) {
@@ -339,14 +331,8 @@ function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
        break;
       case 2: 
         if (cardsTurnedInfo[0] === cardsTurnedInfo[1]){
-            console.log(playerTwoScore);
           document.getElementById('player-two-score').innerText = ++ playerTwoScore;
-          console.log(playerTwoScore);
-          if (cardsVisible === 16) {
-            calculateWinner(playerOneScore, playerTwoScore);
-          } else {
             feedbackMatch(cardsTurnedInfo[0], 2);
-          }
         }
        else {
           //  Turn cards back around if they do not match. Time delay to stop this happening straight away.
@@ -362,6 +348,7 @@ function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
       default:
         console.log("Fell through");
     }
+    return
   }
 
 
@@ -395,12 +382,10 @@ function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
       setTimeout(function(){ 
       star.style.display = 'none';
       feedbackSection.style.visibility = 'hidden';
-      playGame(player);
     }, 3750);
     }
 
     function calculateWinner(playerOneScore, playerTwoScore) {
-      console.log("HERE!")
       let blurredSection = document.getElementById('blurred-section');
       blurredSection.style.visibility = 'visible';
       let gameOutcome = document.getElementById('game-outcome')
