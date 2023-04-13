@@ -15,12 +15,13 @@ document.addEventListener("DOMContentLoaded", function() {
         this.style.color = "";
     })
     }
+    // set up properties that will interact with or contain buttons
     let blurredSection = document.getElementById('blurred-section');
     let instructions = document.getElementById('instructions');
     let gameArea = document.getElementById('game-area');
     let gameGrid = document.getElementById('game-grid');
     let gameInstructions = document.getElementById('game-area-instructions')
-
+// set up buttons
     let howToPlayStartButton = buttons[0];
     howToPlayStartButton.addEventListener("click", function(){
         gameGrid.style.visibility = 'visible';
@@ -60,7 +61,27 @@ document.addEventListener("DOMContentLoaded", function() {
       blurredSection.style.visibility = 'visible';
       instructions.style.visibility = 'visible';
   })
-      
+//  solution to handling media queries in JS found here: 
+//  https://css-tricks.com/working-with-javascript-media-queries/
+  let nineFiftyQuery = window.matchMedia('(max-width: 950px)')
+  nineFiftyQuery.addEventListener("change", handleNineFiftyChange)
+  function handleNineFiftyChange(event) {
+    let gameStatus = document.getElementById('game-status-div')
+    if (gameStatus !== null) {
+        if (event.matches) {
+            gameStatus.innerHTML = 
+            `
+            <p>Player <span id="player-number-span">1</span> turn.</p>
+            `;
+        } else {
+            gameStatus.innerHTML = 
+            `
+            <p>Player<br><span id="player-number-span">1</span><br>turn.</p>
+             `;
+        }
+       
+    }
+}
     })
 /**
  * Function to set up game on press of the start game button.
@@ -85,14 +106,25 @@ document.addEventListener("DOMContentLoaded", function() {
     //  check if the game status div has been added. If not, add this div above player scores.
 
      if (gameStatusCheck === null) {
+        let windowWidth = window.innerWidth;
       let gameStatus = document.createElement('div');
       gameStatus.className = "game-control-divs";
       gameStatus.id = "game-status-div";
-      gameStatusInnerHTML =
-      `
-      <p>Player<br><span id="player-number-span">1</span><br>turn.</p>
-      `;
-      gameStatus.innerHTML = gameStatusInnerHTML;
+      let gameStatusInnerHTML
+    //   check window width to style game status div appropriately.
+      if (windowWidth <= 950) {
+        gameStatusInnerHTML = 
+        `
+        <p>Player <span id="player-number-span">1</span> turn.</p>
+        `;
+      } else {
+        gameStatusInnerHTML =
+        `
+        <p>Player<br><span id="player-number-span">1</span><br>turn.</p>
+        `;
+      }
+    
+      gameStatus.innerHTML = gameStatusInnerHTML ;
       /* solution to adding the game status div before the scores area div found here: 
       https://stackoverflow.com/questions/2007357/how-to-set-dom-element-as-first-child
       */
@@ -358,3 +390,5 @@ function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
         newGameButton.style.display = "block";
       }, 3500);
     }
+
+  
