@@ -430,6 +430,19 @@ visibility: hidden;
     transform: rotateY(180deg);
     transition-duration: 2s;
   }
+
+  #feedback-section {
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    transform: translateZ(1000px);
+    z-index: 2;
+    visibility: hidden;
+}
   /* feedback star styling with animation to zoom out when display is changed from none to block by JS. */
   #feedback {
     text-align: center;

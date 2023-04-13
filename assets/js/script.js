@@ -309,7 +309,9 @@ function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
     switch(playerNumber) {
       case 1:
         if (cardsTurnedInfo[0] === cardsTurnedInfo[1]){
+            console.log(playerOneScore)
           document.getElementById('player-one-score').innerText = ++ playerOneScore;
+          console.log(playerOneScore)
           if (cardsVisible === 16) {
             calculateWinner(playerOneScore, playerTwoScore)
           } else {
@@ -358,6 +360,8 @@ function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
    * function to present a feedback star and message when a match is made.
  */
     function feedbackMatch(info, player) {
+        let feedbackSection = document.getElementById("feedback-section");
+        feedbackSection.style.visibility = 'visible';
       let star = document.getElementById("feedback");
       star.style.display = 'block';
       // solution to getting last word from string from here:
@@ -381,6 +385,7 @@ function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
      
       setTimeout(function(){ 
       star.style.display = 'none';
+      feedbackSection.style.visibility = 'hidden';
       playGame(player);
     }, 3750);
     }
