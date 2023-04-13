@@ -80,6 +80,7 @@ body {
     animation-name: outcome-zoom;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
+    z-index: 3;
 }
 @keyframes outcome-zoom {
     from {
@@ -193,7 +194,7 @@ button:hover {
     opacity: 0.9;
 }
 #start-game-button {
-    font-size: 1.75vmax;
+    font-size: 1.7vmax;
     width: 70%;
 }
 #how-to-play-button {

@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
     let gameArea = document.getElementById('game-area');
     let gameGrid = document.getElementById('game-grid');
     let gameInstructions = document.getElementById('game-area-instructions')
+    let gameOutcome = document.getElementById('game-outcome')
+      
 // set up buttons
     let howToPlayStartButton = buttons[0];
     howToPlayStartButton.addEventListener("click", function(){
@@ -87,6 +89,8 @@ document.addEventListener("DOMContentLoaded", function() {
  * Function to set up game on press of the start game button.
  */
     function setUpGame() {
+        let gameOutcome = document.getElementById('game-outcome')
+      gameOutcome.style.display = 'none';
       let cards = document.getElementsByClassName("card");
         for (let card of cards) {
         /*
@@ -247,6 +251,7 @@ document.addEventListener("DOMContentLoaded", function() {
       for (let pictureCard of pictureCards){
         let picture = document.createElement('img');
         picture.className = "animal-image"
+        picture.style.zIndex = '3';
         // picture.src = shuffledAnimalCards[i].image;
         // picture.alt = shuffledAnimalCards[i].alt;
         picture.src = monkey.image;
