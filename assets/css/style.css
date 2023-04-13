@@ -31,6 +31,7 @@ body {
 /* section with blurred effect background for in game how to play instructions and game outcome message. */
 #blurred-section {
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     position: absolute;
     top: 0;
     left: 0;
