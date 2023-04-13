@@ -80,7 +80,7 @@ body {
     animation-name: outcome-zoom;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
-    z-index: 3;
+    z-index: 100;
 }
 @keyframes outcome-zoom {
     from {
@@ -436,7 +436,7 @@ visibility: hidden;
     animation-name: feedback-zoom;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
-    z-index: 3;
+    z-index: 99;
 }
 @keyframes feedback-zoom {
     from {
