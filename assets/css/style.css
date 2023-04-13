@@ -85,9 +85,11 @@ body {
 }
 @keyframes outcome-zoom {
     from {
+        z-index: 98;
         transform: scale(0)
     }
     to {
+        z-index: 99;
         transform: scale(2);
     }
 }
@@ -444,9 +446,11 @@ visibility: hidden;
 }
 @keyframes feedback-zoom {
     from {
-        transform: scale(0)
+        z-index: 98;
+        transform: scale(0);
     }
     to {
+        z-index: 99;
         transform: scale(1.5);
     }
 }
@@ -581,9 +585,11 @@ Responsive styling for Media Screens
 
     @keyframes outcome-zoom {
         from {
-            transform: scale(0)
+            z-index: 98;
+            transform: scale(0);
         }
         to {
+            z-index: 99;
             transform: scale(1.5);
         }
     }
@@ -623,9 +629,11 @@ Responsive styling for Media Screens
     }
     @keyframes feedback-zoom {
         from {
-            transform: scale(0)
+            z-index: 98;
+            transform: scale(0);
         }
         to {
+            z-index: 99;
             transform: scale(0.8);
         }
     }
@@ -634,9 +642,11 @@ Responsive styling for Media Screens
     }
     @keyframes outcome-zoom {
         from {
-            transform: scale(0)
+            z-index: 98;
+            transform: scale(0);
         }
         to {
+            z-index: 99;
             transform: scale(0.9);
         }
     }
