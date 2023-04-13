@@ -369,6 +369,7 @@ visibility: hidden;
     transition-duration: 2s;
     cursor: pointer;
     border: 0;
+    z-index: 1;
 }
 /* Style for reverse of game cards. */
 .card-reverse {
@@ -386,6 +387,7 @@ visibility: hidden;
     border: 2px solid #BADDE9;
     font-size: 4rem;
     backface-visibility: hidden;
+    z-index: 1;
 }
 
 .card-reverse:hover {
@@ -411,6 +413,7 @@ visibility: hidden;
     border: 2px solid #E9D358;
     transform: rotateY(180deg);
     backface-visibility: hidden;
+    z-index: 1;
 }
 
 .card-front > img {
