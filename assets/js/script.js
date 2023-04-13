@@ -2,6 +2,7 @@
 // Get the button elements and add event listeners to them
 
 document.addEventListener("DOMContentLoaded", function() {
+    
     let buttons = document.getElementsByTagName("button");
    
     for (let button of buttons) {
@@ -32,7 +33,11 @@ document.addEventListener("DOMContentLoaded", function() {
         blurredSection.style.visibility = 'hidden';
         instructions.style.visibility = 'hidden';
         this.innerText = "Start Again?"
-        gameStartButton.innerText = "Start Again?"
+        howToPlayStartButton.innerText = "Start Again?"
+        howToPlayStartButton.disabled = true;
+        setTimeout(function(){
+            howToPlayStartButton.disabled = false
+        }, 1000);
       setUpGame();
     })
     let goBackButton = buttons[1];
@@ -47,6 +52,10 @@ document.addEventListener("DOMContentLoaded", function() {
       gameInstructions.style.visibility = 'hidden';
         blurredSection.style.visibility = 'hidden';
         instructions.style.visibility = 'hidden';
+         newGameButton.disabled = true;
+        setTimeout(function(){
+            newGameButton.disabled = false
+        }, 1000);
         setUpGame()
     })
     let gameStartButton = buttons[3];
@@ -56,6 +65,10 @@ document.addEventListener("DOMContentLoaded", function() {
       gameInstructions.style.visibility = 'hidden';
       this.innerText = "Start Again?"
       howToPlayStartButton.innerText = "Start Again?"
+       gameStartButton.disabled = true;
+        setTimeout(function(){
+            gameStartButton.disabled = false
+        }, 1000);
         setUpGame();
     })
     let howToPlayButton = buttons[4];
