@@ -210,8 +210,6 @@ let playGameIterator = 0
       function flipCard() {
         this.classList = "card flip";
       }
-  count()
-      }
       function count() { 
         // obtain alt text from images using query selector and add to cardsTurned array.
         cardsTurned.push(this)
@@ -228,6 +226,8 @@ let playGameIterator = 0
           checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo);
              }
           }
+      }
+     
     /**
  * Helper function to remove old images from previous game and maintain readability of setUpGame function.
  */
