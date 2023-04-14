@@ -515,7 +515,7 @@ Responsive styling for Media Screens
 
     #game-info {
         flex-grow: 0;
-        width: 100%;
+        width: 75%;
         height: 16vmax;
         margin: 0 15vmax;
     }
@@ -533,7 +533,7 @@ Responsive styling for Media Screens
         width: 100%;
     }
     #game-area{
-        margin: 20px;
+        margin: 10px;
         flex-grow: 0;
         width: 100%;
         height: 575px;
@@ -611,7 +611,7 @@ Responsive styling for Media Screens
         font-size: 3rem;
     }
     #scores-area {
-        width: 20vmax;
+        width: 25vmax;
         height: 100px;
         margin-right: 20px;
     }
