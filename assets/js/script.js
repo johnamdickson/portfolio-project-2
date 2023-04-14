@@ -203,19 +203,14 @@ let playGameIterator = 0
         let cardsTurned = [];
         let cardsTurnedInfo = [];
         let cards = document.getElementsByClassName("card");
-        let cardsVisible = cardsPicturesVisibleCalculator()
-        let playerOneScore = parseInt(document.getElementById('player-one-score').innerText);
-        let playerTwoScore = parseInt(document.getElementById('player-two-score').innerText);
-        if (cardsVisible === 16) {
-            calculateWinner(playerOneScore, playerTwoScore);
-          } 
-        else {
          for (let card of cards){
             card.addEventListener("click", flipCard);
             card.addEventListener("click", count);
         }
       function flipCard() {
         this.classList = "card flip";
+      }
+  count()
       }
       function count() { 
         // obtain alt text from images using query selector and add to cardsTurned array.
@@ -231,13 +226,8 @@ let playGameIterator = 0
             card.removeEventListener("click", flipCard);
              }
           checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo);
-          return;
              }
           }
-      }
-      return;
-    }
-
     /**
  * Helper function to remove old images from previous game and maintain readability of setUpGame function.
  */
@@ -356,6 +346,13 @@ function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
    * function to present a feedback star and message when a match is made.
  */
     function feedbackMatch(info, player) {
+        let cardsVisible = cardsPicturesVisibleCalculator()
+        let playerOneScore = parseInt(document.getElementById('player-one-score').innerText);
+        let playerTwoScore = parseInt(document.getElementById('player-two-score').innerText);
+        if (cardsVisible === 16) {
+            calculateWinner(playerOneScore, playerTwoScore);
+          } 
+          else {
         let feedbackSection = document.getElementById("feedback-section");
         feedbackSection.style.visibility = 'visible';
       let star = document.getElementById("feedback");
@@ -385,6 +382,7 @@ function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
     }, 3750);
     playGame(player);
     }
+}
 
     function calculateWinner(playerOneScore, playerTwoScore) {
       let blurredSection = document.getElementById('blurred-section');
