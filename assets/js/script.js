@@ -383,6 +383,7 @@ function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
       star.style.display = 'none';
       feedbackSection.style.visibility = 'hidden';
     }, 3750);
+    playGame(player);
     }
 
     function calculateWinner(playerOneScore, playerTwoScore) {
