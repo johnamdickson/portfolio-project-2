@@ -124,32 +124,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
 }
 
-#game-area-instructions {
-    height: 40vmax;
-    width: 55%;
-    background-color: #E9D358;
-    border-radius: 10px;
-    border: 3px solid #1B316D;
-    position: absolute;
-    left: 50%;
-    top: 500px;
-    transform: translateY(-50%) translateX(-50%);
-}
-
-#game-area-instructions h2 {
-    font-size:  4vmax;
-    text-align: center;
-    margin: 1.5vmax 0;
-}
-#game-area-instructions ol {
-    padding-left: 5vmax;
-    margin-bottom: 0;
-    font-size: 2vmax;
-    line-height: 4vmax;
-}
 /* Flex set up with assistance from this tutorial: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 .game-control-divs{
     flex-grow: 1;
@@ -363,7 +339,6 @@ grid-template-areas:
     "d1 d2 d3 d4";
 max-width: 100%;
 justify-content: center;
-visibility: hidden;
 }
 
 /* Card flip code from this site: https://dev.to/mugas/flip-cards-with-javascript-2ad0 */

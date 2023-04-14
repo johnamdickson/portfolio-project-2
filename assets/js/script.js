@@ -21,23 +21,17 @@ document.addEventListener("DOMContentLoaded", function() {
     let instructions = document.getElementById('instructions');
     let gameArea = document.getElementById('game-area');
     let gameGrid = document.getElementById('game-grid');
-    let gameInstructions = document.getElementById('game-area-instructions');
 
  // set up buttons
     let howToPlayStartButton = buttons[0];
     howToPlayStartButton.addEventListener("click", function(){
-        gameGrid.style.visibility = 'visible';
-        gameArea.style.opacity = '1';
-        gameInstructions.style.visibility = 'hidden';
         blurredSection.style.visibility = 'hidden';
         instructions.style.visibility = 'hidden';
-        this.innerText = "Start Again?"
-        howToPlayStartButton.innerText = "Start Again?"
         howToPlayStartButton.disabled = true;
         setTimeout(function(){
             howToPlayStartButton.disabled = false
         }, 1000);
-      setUpGame();
+      window.location.reload()
     })
     let goBackButton = buttons[1];
     goBackButton.addEventListener("click", function(){
@@ -46,29 +40,21 @@ document.addEventListener("DOMContentLoaded", function() {
      })
     let newGameButton = buttons[2];
     newGameButton.addEventListener("click", function(){
-      gameGrid.style.visibility = 'visible';
-        gameArea.style.opacity = '1';
-      gameInstructions.style.visibility = 'hidden';
         blurredSection.style.visibility = 'hidden';
         instructions.style.visibility = 'hidden';
          newGameButton.disabled = true;
         setTimeout(function(){
             newGameButton.disabled = false
         }, 1000);
-        setUpGame()
+        window.location.reload()
     })
     let gameStartButton = buttons[3];
     gameStartButton.addEventListener("click", function(){
-      gameGrid.style.visibility = 'visible';
-      gameArea.style.opacity = '1';
-      gameInstructions.style.visibility = 'hidden';
-      this.innerText = "Start Again?"
-      howToPlayStartButton.innerText = "Start Again?"
        gameStartButton.disabled = true;
         setTimeout(function(){
             gameStartButton.disabled = false
         }, 1000);
-        setUpGame();
+        window.location.reload()
     })
     let howToPlayButton = buttons[4];
     howToPlayButton.addEventListener("click", function(){
@@ -95,12 +81,13 @@ document.addEventListener("DOMContentLoaded", function() {
         }
        
     }
-}
+} setUpGame()
     })
 
 /**
  * Function to set up game on press of the start game button.
  */
+
     function setUpGame() {
         // hide game outcome star if already in place.
         let gameOutcome = document.getElementById('game-outcome')
@@ -197,8 +184,8 @@ let playGameIterator = 0
  */
 
     function playGame(playerNumber) {
-        playGameIterator++;
-        console.log(playGameIterator);
+        // playGameIterator++;
+        // console.log(playGameIterator);
         let numberOfCardsTurned = 0;
         let cardsTurned = [];
         let cardsTurnedInfo = [];
@@ -223,6 +210,7 @@ let playGameIterator = 0
             // remove this event listener to ensure no more cards can be flipped prior to checking for a match.
             card.removeEventListener("click", flipCard);
              }
+             cards.removeEventListeners;
           checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo);
              }
           }
@@ -307,7 +295,7 @@ function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
       case 1:
         if (cardsTurnedInfo[0] === cardsTurnedInfo[1]){
           document.getElementById('player-one-score').innerText = ++ playerOneScore;
-          feedbackMatch(cardsTurnedInfo[0], 2);
+          feedbackMatch(cardsTurnedInfo[0], 1);
         }
        else {
         for (let card of cardsTurned) {
