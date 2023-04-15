@@ -240,12 +240,17 @@ button:hover {
 }
 
 #scores-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     height:12vmax;
     width:100%;
 }
 
 .player-scores-title {
-    margin: 1.6vmax 0 0 1.5vmax;
+    /* margin: 1.6vmax 0 0 1.5vmax; */
+    margin: 0;
     text-align: center;
     font-size: 1.6vmax;
     line-height: 3.2vmax;
@@ -478,9 +483,7 @@ font-family: 'Raleway', sans-serif;
 Responsive styling for Media Screens
 */
 @media screen and (max-width:1200px) {
-    #game-area-instructions {
-        top: 450px;
-    }
+
     #how-to-play-button{
         font-size: 1vmax;
     }
@@ -520,7 +523,7 @@ Responsive styling for Media Screens
 
     #how-to-play-button {
         font-size: 1vmax;
-        width: 60%;
+        width: 65%;
     }
 
     #game-info {
@@ -530,11 +533,7 @@ Responsive styling for Media Screens
         height: 16vmax;
         margin: 0 15vmax;
     }
-    #game-area-instructions {
-        left: 50%;
-        top: 55%;
-        width: 75%;
-    }
+
     #player-info-area {
         display: flex;
         width: 100%;
@@ -544,12 +543,13 @@ Responsive styling for Media Screens
         width: 100%;
     }
     #game-area{
-        margin: 50px 10px;
+        margin: 3vmax 10px;
         flex-grow: 0;
         width: 100%;
         height: 600px;
     }
     #scores-area {
+        flex-direction: row;
         width:35vmax;
         height: 70px;
         flex-grow:0;
@@ -574,7 +574,7 @@ Responsive styling for Media Screens
         font-size: 3.5vmax;
     }
     #game-status-div p{
-        margin: 10px;
+        margin: 8.5px;
     }
 
     #feedback{
@@ -595,6 +595,12 @@ Responsive styling for Media Screens
             transform: scale(1.5);
         }
     }
+
+        /* drop footer to accomodate mobile and tablet device address bars and safe areas not displayed on the simulator. */
+   footer {
+        position: absolute;
+        bottom: -40px;
+        }
 }
 
 @media screen and (max-width:600px) {
@@ -605,10 +611,6 @@ Responsive styling for Media Screens
 
     #game-info {
         margin: 0 20px;
-    }
-
-    #game-area-instructions {
-        width: 94%;
     }
 
     #game-area {
@@ -622,9 +624,14 @@ Responsive styling for Media Screens
         font-size: 3rem;
     }
     #scores-area {
+        flex-direction: column;
         width: 25vmax;
         height: 100px;
         margin-right: 20px;
+    }
+
+    #instructions {
+        width: 75%;
     }
     #feedback {
         left: -2%;
@@ -657,4 +664,9 @@ Responsive styling for Media Screens
         font-size: 2vmax;
         width: 30%;
     }
+
+    footer {
+        position: absolute;
+        bottom: -10px;
+        }
 }
