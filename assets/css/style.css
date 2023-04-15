@@ -465,10 +465,11 @@ justify-content: center;
     color: #1B316D;
     font-size: 2.2rem;
 }
+
 footer {
-    position: fixed;
-    bottom: 0;
+    margin-top: 20px;
 }
+
 footer a{
 width: 100px;
 color:#BADDE9;
@@ -595,12 +596,6 @@ Responsive styling for Media Screens
             transform: scale(1.5);
         }
     }
-
-        /* drop footer to accomodate mobile and tablet device address bars and safe areas not displayed on the simulator. */
-   footer {
-        position: absolute;
-        bottom: -40px;
-        }
 }
 
 @media screen and (max-width:600px) {
@@ -664,9 +659,4 @@ Responsive styling for Media Screens
         font-size: 2vmax;
         width: 30%;
     }
-
-    footer {
-        position: absolute;
-        bottom: -10px;
-        }
 }
