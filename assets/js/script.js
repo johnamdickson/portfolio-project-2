@@ -310,7 +310,7 @@ function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
       case 2: 
         if (cardsTurnedInfo[0] === cardsTurnedInfo[1]){
           document.getElementById('player-two-score').innerText = ++ playerTwoScore;
-            feedbackMatch(cardsTurnedInfo[0], 1);
+            feedbackMatch(cardsTurnedInfo[0], 2);
         }
        else {
           //  Turn cards back around if they do not match. Time delay to stop this happening straight away.
