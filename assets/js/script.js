@@ -1,22 +1,24 @@
 // Wait for DOM to finish loading before running the game
 // Get the button elements and add event listeners to them
 
-document.addEventListener("DOMContentLoaded", function() {
-    
+// code below for JSHint to silence warnings for ESversion 6.
+/*jshint esversion: 6 */ 
+
+document.addEventListener("DOMContentLoaded", function(){
+
     let buttons = document.getElementsByTagName("button");
-   
     for (let button of buttons) {
       button.addEventListener("mousedown", function(){
         this.style.boxShadow = "inset 3px 3px 3px 0 rgba(255,255,255,0.7), inset -3px -3px 3px 0 rgba(255,255,255,0.5)";
         this.style.color = "rgba(186, 221, 233, 0.9)";
-    })
-    // How to return styling to CSS: https://stackoverflow.com/questions/3506050/how-to-reset-the-style-properties-to-their-css-defaults-in-javascript
-    button.addEventListener("mouseup", function(){
-        this.style.boxShadow = "";
-        this.style.color = "";
-    })
+      });
+// How to return styling to CSS: https://stackoverflow.com/questions/3506050/how-to-reset-the-style-properties-to-their-css-defaults-in-javascript
+        button.addEventListener("mouseup", function(){
+            this.style.boxShadow = "";
+            this.style.color = "";
+        });
     }
-    // set up properties that will interact with or contain buttons
+// set up properties that will interact with or contain buttons
     let blurredSection = document.getElementById('blurred-section');
     let instructions = document.getElementById('instructions');
     let gameArea = document.getElementById('game-area');
@@ -29,44 +31,44 @@ document.addEventListener("DOMContentLoaded", function() {
         instructions.style.visibility = 'hidden';
         howToPlayStartButton.disabled = true;
         setTimeout(function(){
-            howToPlayStartButton.disabled = false
+            howToPlayStartButton.disabled = false;
         }, 1000);
-      window.location.reload()
-    })
+      window.location.reload();
+    });
     let goBackButton = buttons[1];
     goBackButton.addEventListener("click", function(){
-      blurredSection.style.visibility = 'hidden'
+      blurredSection.style.visibility = 'hidden';
       instructions.style.visibility = 'hidden';
-     })
+     });
     let newGameButton = buttons[2];
     newGameButton.addEventListener("click", function(){
         blurredSection.style.visibility = 'hidden';
         instructions.style.visibility = 'hidden';
          newGameButton.disabled = true;
         setTimeout(function(){
-            newGameButton.disabled = false
+            newGameButton.disabled = false;
         }, 1000);
-        window.location.reload()
-    })
+        window.location.reload();
+    });
     let gameStartButton = buttons[3];
     gameStartButton.addEventListener("click", function(){
        gameStartButton.disabled = true;
         setTimeout(function(){
-            gameStartButton.disabled = false
+            gameStartButton.disabled = false;
         }, 1000);
-        window.location.reload()
-    })
+        window.location.reload();
+    });
     let howToPlayButton = buttons[4];
     howToPlayButton.addEventListener("click", function(){
       blurredSection.style.visibility = 'visible';
       instructions.style.visibility = 'visible';
-  })
+  });
   //  solution to handling media queries in JS found here: 
   //  https://css-tricks.com/working-with-javascript-media-queries/
-  let nineFiftyQuery = window.matchMedia('(max-width: 950px)')
-  nineFiftyQuery.addEventListener("change", handleNineFiftyChange)
+  let nineFiftyQuery = window.matchMedia('(max-width: 950px)');
+  nineFiftyQuery.addEventListener("change", handleNineFiftyChange);
   function handleNineFiftyChange(event) {
-    let gameStatus = document.getElementById('game-status-div')
+    let gameStatus = document.getElementById('game-status-div');
     if (gameStatus !== null) {
         if (event.matches) {
             gameStatus.innerHTML = 
@@ -79,18 +81,16 @@ document.addEventListener("DOMContentLoaded", function() {
             <p>Player<br><span id="player-number-span">1</span><br>turn.</p>
              `;
         }
-       
     }
-} setUpGame()
-    })
+} setUpGame();
+    });
 
 /**
  * Function to set up game on press of the start game button.
  */
-
     function setUpGame() {
         // hide game outcome star if already in place.
-        let gameOutcome = document.getElementById('game-outcome')
+        let gameOutcome = document.getElementById('game-outcome');
       gameOutcome.style.display = 'none';
       let cards = document.getElementsByClassName("card");
         for (let card of cards) {
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function() {
       let gameStatus = document.createElement('div');
       gameStatus.className = "game-control-divs";
       gameStatus.id = "game-status-div";
-      let gameStatusInnerHTML
+      let gameStatusInnerHTML;
      //   check window width to style game status div appropriately.
       if (windowWidth <= 950) {
         gameStatusInnerHTML = 
@@ -147,8 +147,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
   // reset scores on start of new game.
-  document.getElementById('player-one-score').innerText = "0"
-  document.getElementById('player-two-score').innerText = "0"
+  document.getElementById('player-one-score').innerText = "0";
+  document.getElementById('player-two-score').innerText = "0";
   // function below ensures that the animal images are not visible on card turn 
   // when new game is started from Start New Game Button click. 
   // Solution found here: https://stackoverflow.com/questions/17883692/how-to-set-time-delay-in-javascript
@@ -158,8 +158,7 @@ document.addEventListener("DOMContentLoaded", function() {
   document.getElementById('player-number-span').innerText = '1';
       playGame(1);
     }
-    
-let playGameIterator = 0
+
 /**
  * Helper function that can be called to return the number of cards with pictures visible.
  */
@@ -175,7 +174,7 @@ let playGameIterator = 0
           cardsPicture += 1;
         }
       }
-      return cardsPicture
+      return cardsPicture;
     }
 
 /**
@@ -184,8 +183,6 @@ let playGameIterator = 0
  */
 
     function playGame(playerNumber) {
-        // playGameIterator++;
-        // console.log(playGameIterator);
         let numberOfCardsTurned = 0;
         let cardsTurned = [];
         let cardsTurnedInfo = [];
@@ -199,18 +196,17 @@ let playGameIterator = 0
       }
       function count() { 
         // obtain alt text from images using query selector and add to cardsTurned array.
-        cardsTurned.push(this)
+        cardsTurned.push(this);
         let image = this.querySelector('.animal-image').alt;
         cardsTurnedInfo.push(image);
         // remove event listener once card selected so that it is not counted twice.
-        this.removeEventListener('click', count)
+        this.removeEventListener('click', count);
         numberOfCardsTurned ++;
         if (numberOfCardsTurned === 2) {
           for (let card of cards){
             // remove this event listener to ensure no more cards can be flipped prior to checking for a match.
             card.removeEventListener("click", flipCard);
              }
-             cards.removeEventListeners;
           checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo);
              }
           }
@@ -227,7 +223,7 @@ let playGameIterator = 0
        if (pictureCard.querySelector('.animal-image') !== null){
         let oldImages = document.getElementsByClassName("animal-image");
         for (let oldImage of oldImages){
-            oldImage.remove()
+            oldImage.remove();
             }
           }
         }
@@ -248,18 +244,18 @@ let playGameIterator = 0
 
       let animalCards = [monkey, monkey, elephant, elephant,tiger, tiger, lion, lion, panda, panda, zebra, zebra, giraffe, giraffe, turtle, turtle];
       let shuffledAnimalCards = shuffle(animalCards);
-      let i = 0
+      let i = 0;
       let pictureCards = document.getElementsByClassName("card-front");
       for (let pictureCard of pictureCards){
         let picture = document.createElement('img');
-        picture.className = "animal-image"
+        picture.className = "animal-image";
         picture.style.zIndex = '3';
         picture.src = shuffledAnimalCards[i].image;
         picture.alt = shuffledAnimalCards[i].alt;
         // picture.src = monkey.image;
         // picture.alt = monkey.alt;
         pictureCard.appendChild(picture);
-        i++
+        i++;
       }
     }
 
@@ -326,15 +322,16 @@ function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
       default:
         console.log("Fell through");
     }
-    return
+    return;
   }
 
 
   /**
-   * function to present a feedback star and message when a match is made.
+   * function to present a feedback star and message when a match is made. Function takes in two
+   * parameters card information to describe the matched animals and the player number.
  */
     function feedbackMatch(info, player) {
-        let cardsVisible = cardsPicturesVisibleCalculator()
+        let cardsVisible = cardsPicturesVisibleCalculator();
         let playerOneScore = parseInt(document.getElementById('player-one-score').innerText);
         let playerTwoScore = parseInt(document.getElementById('player-two-score').innerText);
         if (cardsVisible === 16) {
@@ -371,28 +368,30 @@ function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
     playGame(player);
     }
 }
-
+  /**
+   * function to calculate the winner by comparing the two parameters and then feedback the game 
+   * outcome to the users with an approriate message. After a time delay, the text changes to prompt
+   * initation of a new game along with the appropriate button to do so.
+ */
     function calculateWinner(playerOneScore, playerTwoScore) {
       let blurredSection = document.getElementById('blurred-section');
       blurredSection.style.visibility = 'visible';
-      let gameOutcome = document.getElementById('game-outcome')
+      let gameOutcome = document.getElementById('game-outcome');
       gameOutcome.style.display = 'block';
-      let gameOutcomeMessage = document.getElementById('outcome-message')
+      let gameOutcomeMessage = document.getElementById('outcome-message');
       let newGameButton = document.getElementById('new-game-button');
 
       if (playerOneScore === playerTwoScore) {
-        gameOutcomeMessage.innerText = "That was close, its a draw!"
+        gameOutcomeMessage.innerText = "That was close, its a draw!";
       } else if (playerOneScore > playerTwoScore) {
-        gameOutcomeMessage.innerText = "Congrats Player 1, you win!"
+        gameOutcomeMessage.innerText = "Congrats Player 1, you win!";
       } else {
-        gameOutcomeMessage.innerText = "Congrats Player 2, you win!"
+        gameOutcomeMessage.innerText = "Congrats Player 2, you win!";
       }
       setTimeout(function(){ 
         gameOutcomeMessage.style.top = "42%";
         gameOutcomeMessage.style.fontSize = "1.5rem";
-        gameOutcomeMessage.innerText = "Click below to begin a new game"
+        gameOutcomeMessage.innerText = "Click below to begin a new game";
         newGameButton.style.display = "block";
       }, 3500);
     }
-
-  
