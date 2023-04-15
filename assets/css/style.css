@@ -36,7 +36,12 @@ body {
     top: 0;
     left: 0;
     width:100%;
-    height: 100%;
+    height: 105%;
+    /* 
+    Issue on Safari and iPhone where feedback and game outcome animations were obscured by the cards. Problem lies with
+    z indices being reset on transform. Found solution on Stack Overflow:
+    https://stackoverflow.com/questions/22621544/webkit-transform-breaks-z-index-on-safari
+    */
     transform: translateZ(1000px);
     z-index: 2;
     visibility: hidden;
@@ -424,7 +429,7 @@ justify-content: center;
     top: 0;
     left: 0;
     width:100%;
-    height: 100%;
+    height: 105%;
     transform: translateZ(1000px);
     z-index: 2;
     visibility: hidden;
