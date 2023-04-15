@@ -142,22 +142,28 @@ body {
 }
 
 .game-control-divs h3{
-    margin: 1.25vmax 5px;
+    margin: 1vmax 5px;
     font-size: 2vmax;
  }
 
 #game-info{
-    height:35vmax;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height:37.5vmax;
     text-align: center;
     font-size: 2vmax;
+    justify-content: center;
+    align-items: center;
 }
 
 #game-info p{
+    flex: 1 auto;
     margin: 0.5vmax  5px;
     font-size: 1.25vmax;
 }
-
+#game-info-buttons{
+    margin-bottom: 10px;
+}
 button {
     font-size: 1.75vmax;
     width: 70%;
@@ -503,18 +509,23 @@ Responsive styling for Media Screens
         font-size: 1.5vmax;
     }
 
+    #game-info-buttons {
+        margin: 0;
+    }
     #start-game-button {
         font-size: 1.5vmax;
-        width: 40%;
+        width: 75%;
     }
+    
 
     #how-to-play-button {
         font-size: 1vmax;
-        width: 28%;
+        width: 60%;
     }
 
     #game-info {
         flex-grow: 0;
+        flex-direction: row;
         width: 75%;
         height: 16vmax;
         margin: 0 15vmax;
@@ -533,10 +544,10 @@ Responsive styling for Media Screens
         width: 100%;
     }
     #game-area{
-        margin: 10px;
+        margin: 50px 10px;
         flex-grow: 0;
         width: 100%;
-        height: 575px;
+        height: 600px;
     }
     #scores-area {
         width:35vmax;
@@ -544,7 +555,7 @@ Responsive styling for Media Screens
         flex-grow:0;
     }
     #game-section {
-        height: 550px;
+        height: 100%;
     }
     #game-grid {
         grid-template-rows: repeat(4, 125px);
