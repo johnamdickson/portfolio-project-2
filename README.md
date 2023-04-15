@@ -3,7 +3,7 @@
 
 Wild cards is a two player memory game designed for people of all ages but especially kids.
 
-This website is showcasing HTML and CSS design for Project Portfolio 2 and can be accessed by following this [link.]
+This website is showcasing Javascript, HTML and CSS design for Project Portfolio 2 and can be accessed by following this [link.]
 
 ![Responsive Mockup Screenshot]()
 
@@ -36,14 +36,20 @@ This website is showcasing HTML and CSS design for Project Portfolio 2 and can b
 
 ## UX
 ### Site Goals
-Add site goals.
+The objective of the site is to create a two player memory card game directed towards young children and their parents. The site should give feedback on successful matches. It should also  keep track of the scores and feedback the game outcome once all cards are turned over.
 ### User Stories
-- As a user:
-  - 
+- As an adult user:
+  - I want to play a game with my children that challenges their memory and spatial awareness.
+  - I want the game to encourage turn taking by giving feedback on which player's turn it is.
+  - I want to be able to play the game on all devices including PC/Mac, tablets and mobile phones.
+  - I want responsive feedback from buttons and cards on the website.
 <br><br>
-
+- As a child user:
+  - I want to engage in a fun game with my parents or caregiver.
+  - I want to be visually stimulated by the site including background picture, card pictures and colours.
+<br><br>
 - As the site administrator:
-  - 
+  - I want to easily identify issues or bugs by providing clear and concise code with annotations.
 ### Wireframes
 The wirframes for the project can be found [here.]
 ### Further Reading
@@ -59,7 +65,7 @@ The wirframes for the project can be found [here.]
 
 ### Typography
 
-All fonts were sourced from Google Fonts:
+All fonts were sourced from Google Fonts. The main font used throughout is called 'Love Ya Like A Sister' which was selected for it's fun characteristics that children can relate too even if they cannot read. Raleway was selected for button font to make it stand out to adults who will normally be controlling the game.
 
  - 
 <br><br>
