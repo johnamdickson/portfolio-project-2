@@ -588,6 +588,16 @@ Responsive styling for Media Screens
         left: 20%;
     }
 
+    @keyframes feedback-zoom {
+        from {
+            z-index: 98;
+            transform: scale(0);
+        }
+        to {
+            z-index: 99;
+            transform: scale(1.2);
+        }
+    }
     #game-outcome {
         left: 25%;
     }
@@ -635,7 +645,8 @@ Responsive styling for Media Screens
         width: 75%;
     }
     #feedback {
-        left: -2%;
+        top: 15%;
+        left: -12%;
     }
     @keyframes feedback-zoom {
         from {
@@ -648,7 +659,8 @@ Responsive styling for Media Screens
         }
     }
     #game-outcome {
-        left: -4%;
+        top: 15%;
+        left: -8%;
     }
     @keyframes outcome-zoom {
         from {

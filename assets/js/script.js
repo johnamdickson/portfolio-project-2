@@ -19,12 +19,12 @@ document.addEventListener("DOMContentLoaded", function(){
         });
     }
 // set up properties that will interact with or contain buttons
-    let blurredSection = document.getElementById('blurred-section');
+    let blurredDiv = document.getElementById('blurred-div');
     let instructions = document.getElementById('instructions');
  // set up buttons
     let howToPlayStartButton = buttons[0];
     howToPlayStartButton.addEventListener("click", function(){
-        blurredSection.style.visibility = 'hidden';
+        blurredDiv.style.visibility = 'hidden';
         instructions.style.visibility = 'hidden';
         howToPlayStartButton.disabled = true;
         setTimeout(function(){
@@ -34,12 +34,12 @@ document.addEventListener("DOMContentLoaded", function(){
     });
     let goBackButton = buttons[1];
     goBackButton.addEventListener("click", function(){
-        blurredSection.style.visibility = 'hidden';
+        blurredDiv.style.visibility = 'hidden';
         instructions.style.visibility = 'hidden';
     });
     let newGameButton = buttons[2];
     newGameButton.addEventListener("click", function(){
-        blurredSection.style.visibility = 'hidden';
+        blurredDiv.style.visibility = 'hidden';
         instructions.style.visibility = 'hidden';
         newGameButton.disabled = true;
         setTimeout(function(){
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function(){
     });
     let howToPlayButton = buttons[4];
     howToPlayButton.addEventListener("click", function(){
-      blurredSection.style.visibility = 'visible';
+      blurredDiv.style.visibility = 'visible';
       instructions.style.visibility = 'visible';
   });
   //  solution to handling media queries in JS found here: 
@@ -133,6 +133,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 /* solution to animating in the game status div: 
                  https://stackoverflow.com/questions/14300210/animation-with-node-appendchild-html
                  */
+                 document.getElementById('player-number-span').innerText = '1';
                 gameStatus.animate([
                 // keyframes
                 { opacity: '0' },
@@ -162,8 +163,7 @@ document.addEventListener("DOMContentLoaded", function(){
         */
         setTimeout(function(){
             addAnimalImages();
-         }, 750); 
-        document.getElementById('player-number-span').innerText = '1';
+         }, 1000); 
         playGame(1);
     }
 
@@ -257,10 +257,10 @@ document.addEventListener("DOMContentLoaded", function(){
             let picture = document.createElement('img');
             picture.className = "animal-image";
             picture.style.zIndex = '3';
-            picture.src = shuffledAnimalCards[i].image;
-            picture.alt = shuffledAnimalCards[i].alt;
-            // picture.src = monkey.image;
-            // picture.alt = monkey.alt;
+            // picture.src = shuffledAnimalCards[i].image;
+            // picture.alt = shuffledAnimalCards[i].alt;
+            picture.src = monkey.image;
+            picture.alt = monkey.alt;
             pictureCard.appendChild(picture);
             i++;
         }
@@ -342,8 +342,8 @@ document.addEventListener("DOMContentLoaded", function(){
             calculateWinner(playerOneScore, playerTwoScore);
           } 
         else {
-            let feedbackSection = document.getElementById("feedback-section");
-            feedbackSection.style.visibility = 'visible';
+            let feedbackDiv = document.getElementById("feedback-div");
+            feedbackDiv.style.visibility = 'visible';
             let star = document.getElementById("feedback");
             star.style.display = 'block';
             // solution to getting last word from string from here:
@@ -366,7 +366,7 @@ document.addEventListener("DOMContentLoaded", function(){
             },3000);
             setTimeout(function(){ 
                 star.style.display = 'none';
-                feedbackSection.style.visibility = 'hidden';
+                feedbackDiv.style.visibility = 'hidden';
             }, 3750);
             playGame(player);
         }
@@ -377,8 +377,8 @@ document.addEventListener("DOMContentLoaded", function(){
    * initation of a new game along with the appropriate button to do so.
  */
     function calculateWinner(playerOneScore, playerTwoScore) {
-        let blurredSection = document.getElementById('blurred-section');
-        blurredSection.style.visibility = 'visible';
+        let blurredDiv = document.getElementById('blurred-div');
+        blurredDiv.style.visibility = 'visible';
         let gameOutcome = document.getElementById('game-outcome');
         gameOutcome.style.display = 'block';
         let gameOutcomeMessage = document.getElementById('outcome-message');
