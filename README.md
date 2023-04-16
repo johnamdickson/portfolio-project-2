@@ -76,7 +76,8 @@ All fonts were sourced from Google Fonts. The main font used throughout is calle
 
 - __The Game Information Div__
 <br>
-<img src="assets/README-files/game-information.png"  width="250"> 
+<img src="assets/README-files/game-information.png"  width="250">
+<br>
   - The game information div contains an `<h2>` welcome message and short `<p>` giving an overview of the game. There are two buttons at the bottom of the div -  *New Game* and *How To Play*. The former button gives the option to restart the game whilst the latter directs the user to an instructions div described below. The buttons are styled to have an embossed look using inset box shadows along with an outset shadow. The buttons have mousedown and mouseup event listeners where the mousedown removes the outset shadow and the mouseup returns the styling to normal. This creates the impression of the button being pressed and springing back to position once released.
 <br><br>
 ![Game-Instructions](/assets/README-files/game-instructions.jpg)
