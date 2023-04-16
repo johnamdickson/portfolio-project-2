@@ -103,44 +103,55 @@ document.addEventListener("DOMContentLoaded", function(){
       }
         removeOldImages();
         let playerInfoArea = document.getElementById("player-info-area");
-         let gameStatusCheck = document.getElementById("game-status-div");
+        let gameStatusCheck = document.getElementById("game-status-div");
+        let scoresArea = document.getElementById("scores-area")
         //  check if the game status div has been added. If not, add this div above player scores.
-
-        if (gameStatusCheck === null) {
-            let windowWidth = window.innerWidth;
-            let gameStatus = document.createElement('div');
-            gameStatus.className = "game-control-divs";
-            gameStatus.id = "game-status-div";
-            let gameStatusInnerHTML;
-     //   check window width to style game status div appropriately.
-            if (windowWidth <= 950) {
-                gameStatusInnerHTML = 
-                 `
-                 <p>Player <span id="player-number-span">1</span> turn.</p>
-                 `;
-            } else {
-                gameStatusInnerHTML =
-                 `
-                 <p>Player<br><span id="player-number-span">1</span><br>turn.</p>
-                `;
+        setTimeout(function(){
+            if (gameStatusCheck === null) {
+                let windowWidth = window.innerWidth;
+                let gameStatus = document.createElement('div');
+                gameStatus.className = "game-control-divs";
+                gameStatus.id = "game-status-div";
+                let gameStatusInnerHTML;
+         //   check window width to style game status div appropriately.
+                if (windowWidth <= 950) {
+                    gameStatusInnerHTML = 
+                     `
+                     <p>Player <span id="player-number-span">1</span> turn.</p>
+                     `;
+                } else {
+                    gameStatusInnerHTML =
+                     `
+                     <p>Player<br><span id="player-number-span">1</span><br>turn.</p>
+                    `;
+                }
+                gameStatus.innerHTML = gameStatusInnerHTML ;
+                /* solution to adding the game status div before the scores area div found here: 
+                 https://stackoverflow.com/questions/2007357/how-to-set-dom-element-as-first-child
+                 */
+                playerInfoArea.insertBefore(gameStatus, playerInfoArea.firstChild);
+                /* solution to animating in the game status div: 
+                 https://stackoverflow.com/questions/14300210/animation-with-node-appendchild-html
+                 */
+                gameStatus.animate([
+                // keyframes
+                { opacity: '0' },
+                { opacity: '1' }
+                ], {
+                // timing options
+                    duration: 1000,
+                });
+                scoresArea.style.visibility = 'visible'
+                scoresArea.animate([
+                    // keyframes
+                    { opacity: '0' },
+                    { opacity: '1' }
+                    ], {
+                    // timing options
+                        duration: 1000,
+                    });
             }
-            gameStatus.innerHTML = gameStatusInnerHTML ;
-            /* solution to adding the game status div before the scores area div found here: 
-             https://stackoverflow.com/questions/2007357/how-to-set-dom-element-as-first-child
-             */
-            playerInfoArea.insertBefore(gameStatus, playerInfoArea.firstChild);
-            /* solution to animating in the game status div: 
-             https://stackoverflow.com/questions/14300210/animation-with-node-appendchild-html
-             */
-             gameStatus.animate([
-            // keyframes
-            { opacity: '0' },
-            { opacity: '1' }
-            ], {
-            // timing options
-                duration: 250,
-            });
-        }
+         }, 1000); 
         // reset scores on start of new game.
         document.getElementById('player-one-score').innerText = "0";
         document.getElementById('player-two-score').innerText = "0";

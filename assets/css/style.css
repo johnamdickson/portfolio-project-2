@@ -251,6 +251,7 @@ button:hover {
     align-items: center;
     height:12vmax;
     width:100%;
+    visibility: hidden;
 }
 
 .player-scores-title {
