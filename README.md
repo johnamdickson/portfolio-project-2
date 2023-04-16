@@ -92,6 +92,10 @@ All fonts were sourced from Google Fonts. The main font used throughout is calle
     - The game area consists of a div of the site blue colour with embossed edges and rounded corners. A 4 x 4 grid element is contained within this div and holds all 16 of the game cards. 
     - Each game card has two sides, the reverse side and the front side containing the animal pictures.
     - When the user hovers over a card the cursor changes to a pointer. The card is responsively styled to marginally grow along with the border getting slightly thicker using the the hover pseudo element.
+    - When an unsuccessful match is made, the cards turn back around and the turn changes to the alternate player.
+    - When a successful match is made, a congratualtory message (described below) is displayed and the incumbent player gets another turn.
+    - The cards remain turned over revealing the animal pictures after a successful match.
+    - The game continues until all animal pairs are matched at which point a game outcome message appears, again described below.
 
 - __The Footer__ <br><br>
 ![Footer](/assets/README-files/footer.jpg)
