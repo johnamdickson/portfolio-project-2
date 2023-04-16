@@ -88,7 +88,7 @@ All fonts were sourced from Google Fonts. The main font used throughout is calle
   - The player info div contains two divs showing which player's turn it is and a scores area. The player info updates dynamically once the players turn changes. The scores area contains the player scores and updates on a successful match of animals. In order to draw the users attention here after the site loads or a new game is selected, the elements animate in after a short time delay.
 
 - __The Game Area__ <br><br>
-![Game Area](/assets/README-files/game-area.gif)
+![Game Area](/assets/README-files/game-area-flip-two-cards.gif)
     - The game area consists of a div of the site blue colour with embossed edges and rounded corners. A 4 x 4 grid element is contained within this div and holds all 16 of the game cards. 
     - Each game card has two sides, the reverse side and the front side containing the animal pictures.
     - When the user hovers over a card the cursor changes to a pointer. The card is responsively styled to marginally grow along with the border getting slightly thicker using the the hover pseudo element.
@@ -96,6 +96,11 @@ All fonts were sourced from Google Fonts. The main font used throughout is calle
     - When a successful match is made, a congratualtory message (described below) is displayed and the incumbent player gets another turn.
     - The cards remain turned over revealing the animal pictures after a successful match.
     - The game continues until all animal pairs are matched at which point a game outcome message appears, again described below.
+
+- __The Congratulatory Message__ <br><br>
+![Congratulatory Message](/assets/README-files/match-animals.gif)
+    - As described above, when the user successfully matches two animals they are presented with a congratulatory message. This takes the form of a star to make it visually engaging for children. The animal name is passed into the `<span>` at the end of the congratulatory message.
+    - There is also a background div covering the entire view which introduces a blurred effect to slightly obscure the background and create a greater contrast with the star.
 
 - __The Footer__ <br><br>
 ![Footer](/assets/README-files/footer.jpg)
@@ -106,7 +111,7 @@ All fonts were sourced from Google Fonts. The main font used throughout is calle
 - __The Congratulations Page__
 ![Thank You Page](/assets/README-files/thank-you-form.jpg)
   - 
-<br><br>
+
 
 
 ### Features Left to Implement
