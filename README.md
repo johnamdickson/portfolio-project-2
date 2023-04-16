@@ -79,22 +79,25 @@ All fonts were sourced from Google Fonts. The main font used throughout is calle
 
   - The game information div contains an `<h2>` welcome message and short `<p>` giving an overview of the game. There are two buttons at the bottom of the div -  *New Game* and *How To Play*. The former button gives the option to restart the game whilst the latter directs the user to an instructions div described below. The buttons are styled to have an embossed look using inset box shadows along with an outset shadow. The buttons have mousedown and mouseup event listeners where the mousedown removes the outset shadow and the mouseup returns the styling to normal. This creates the impression of the button being pressed and springing back to position once released.<br><br>
 - __The Game Instructions Div__ <br><br>
-![Game-Instructions](/assets/README-files/game-instructions.jpg) <br>
+![Game-Instructions](/assets/README-files/game-instructions.jpg) 
+
   - When the *How To Play* button is pressed two divs  - blurred and instructions - are made visible from their default hidden property. The blurred div covers the entire screen and creates a visual effect that accentuates the instructions div and contents and helps create a contrast against the backdrop of the game. The instructions div contains an `<ol>` of instructions followed by *New Game* and *Go Back* buttons. The former button completes the same action as its namesake described in Game Information above, whilst the latter returns the user to the current game. Both buttons return the two divs to their default visibility status of hidden.<br><br>
+
 - __The Player Information Div__ <br><br>
 ![Player-Information](/assets/README-files/player-info.gif)
   - The player info div contains two divs showing which player's turn it is and a scores area. The player info updates dynamically once the players turn changes. The scores area contains the player scores and updates on a successful match of animals. In order to draw the users attention here after the site loads or a new game is selected, the elements animate in after a short time delay.
-- __The Footer__ 
+
+- __The Game Area__ <br><br>
+![Game Area](/assets/README-files/game-area.gif)
+    - The game area consists of a div of the site blue colour with embossed edges and rounded corners. A 4 x 4 grid element is contained within this div and holds all 16 of the game cards. 
+    - Each game card has two sides, the reverse side and the front side containing the animal pictures.
+    - When the user hovers over a card the cursor changes to a pointer. The card is responsively styled to marginally grow along with the border getting slightly thicker using the the hover pseudo element.
+
+- __The Footer__ <br><br>
 ![Footer](/assets/README-files/footer.jpg)
-  - 
-<br><br>
+    - Add detail here.
 
 
-
-- __The Game Area__
-![What You Will Need Section](/assets/README-files/what-you-will-need-section.png)
-  - 
-  <br><br>
  
 - __The Congratulations Page__
 ![Thank You Page](/assets/README-files/thank-you-form.jpg)
@@ -183,5 +186,6 @@ The live link can be found [here.](https://johnamdickson.github.io/Portfolio-Pro
 
 - The site logo was created using Hatchful, a free logo design service offered by Shopify.
 - The site background image is from Freepik - <a href="https://www.freepik.com/free-vector/wild-animal-cartoon-character-forest-scene_14801768.htm#query=cartoon%20jungle&position=49&from_view=search&track=ais">Image by brgfx</a> on Freepik
+- - Conversion of mp4s to GIFs using free service on the [ezgif.com](https://ezgif.com/video-to-gif) website.
 <br><br>
 <a href="#top">BACK TO TOP 🔼</a>
