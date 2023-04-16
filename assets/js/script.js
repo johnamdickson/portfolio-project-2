@@ -163,8 +163,8 @@ document.addEventListener("DOMContentLoaded", function(){
         */
         setTimeout(function(){
             addAnimalImages();
+            playGame(1);
          }, 1000); 
-        playGame(1);
     }
 
 /**
