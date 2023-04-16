@@ -130,15 +130,16 @@ All fonts were sourced from Google Fonts. The main font used throughout is calle
 ### Validator Testing 
 
 - HTML
-  - No errors were returned for each page when passing through the official W3C validator:
-    - 
+  - No errors were returned for the page when passing through the official W3C HTML validator:
+    ![HTML Validator Results](/assets/README-files/html-validator.jpg)
     
 - CSS
-  - 
+  - No errors were returned for the page when passing through the official W3C CSS validator:
+    ![HTML Validator Results](/assets/README-files/css-validator.jpg)
 
 - Accessibility
-  - The accessibility of each of the main pages was checked using the lighthouse tool in devtools with a score within the 90 - 100% bracket for all metrics.
-   ![Lighthouse Results]
+  - Accessibility of the pages was checked using the lighthouse tool in devtools with a score within the 95 - 100% bracket for all metrics.
+   ![Lighthouse Results](/assets/README-files/lighthouse-results.jpg)
   - The theme colours were also checked against the font colour using [contrast checker](https://webaim.org/resources/contrastchecker/).
   <br><br>
   <table  width = 100% height = 350px cellspacing="0" cellpadding="0">
