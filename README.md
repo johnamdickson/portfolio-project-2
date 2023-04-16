@@ -82,7 +82,9 @@ All fonts were sourced from Google Fonts. The main font used throughout is calle
 <br><br>
 ![Game-Instructions](/assets/README-files/game-instructions.jpg)
   - When the *How To Play* button is pressed two divs  - blurred and instructions - are made visible from their default hidden property. The blurred div covers the entire screen and creates a visual effect that accentuates the instructions div and contents and helps create a contrast against the backdrop of the game. The instructions div contains an `<ol>` of instructions followed by *New Game* and *Go Back* buttons. The former button completes the same action as its namesake described in Game Information above, whilst the latter returns the user to the current game. Both buttons return the two divs to their default visibility status of hidden.
-
+<br><br>
+![Player-Information](/assets/README-files/player-info.gif)
+  - The player info div contains div showing which player's turn it is and a scores area. The player info updates dynamically once the players turn changes. The scores area contains the player scores and updates on a successful match of animals.
 - __The Footer__ 
 ![Footer](/assets/README-files/footer.jpg)
   - 
