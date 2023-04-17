@@ -5,7 +5,7 @@ Wild cards is a two player memory game designed for people of all ages but espec
 
 This website is showcasing Javascript, HTML and CSS design for Project Portfolio 2 and can be accessed by following this [link.](https://johnamdickson.github.io/Portfolio-Project-2/)
 
-![Responsive Mockup Screenshot](/assets/README-files/am-i-responsive.png)
+![Responsive Mockup Screenshot](/assets/README-files/am-i-responsive.jpg)
 
 ## Contents
 - [UX](#ux)
