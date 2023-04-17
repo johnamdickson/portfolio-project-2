@@ -16,6 +16,7 @@ body {
 }
 
 .logo-and-title {
+    border-radius: 10px;
     margin: auto;
     padding: 10px 0;
     width: 25%;

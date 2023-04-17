@@ -89,10 +89,12 @@ The objective of the site is to create a two player memory card game directed to
 
 ### Surface
 ## Design
+### Colour Scheme
+![Site Logo](/assets/README-files/color-palette.png)
 ### Logo
 ![Site Logo](/assets/README-files/logo.png)
 - The choice of site logo was based upon one that would be fun and engaging for children and have an immediate connection with the content. 
-### Colour Scheme
+
 - 
 - 
 
@@ -227,8 +229,9 @@ The live link can be found [here.](https://johnamdickson.github.io/Portfolio-Pro
 
 ### Media
 
-- The site logo was created using Hatchful, a free logo design service offered by Shopify.
-- The site background image is from Freepik - <a href="https://www.freepik.com/free-vector/wild-animal-cartoon-character-forest-scene_14801768.htm#query=cartoon%20jungle&position=49&from_view=search&track=ais">Image by brgfx</a> on Freepik
-- - Conversion of mp4s to GIFs using free service on the [ezgif.com](https://ezgif.com/video-to-gif) website.
+- The site logo was created using Hatchful, a free logo design service offered by [Shopify.](https://www.shopify.com/tools/logo-maker)
+- The site colour scheme pallete was generated using the palette creation tool in [Color Hex.](https://www.color-hex.com/) 
+- The site background image is from <a href="https://www.freepik.com/free-vector/wild-animal-cartoon-character-forest-scene_14801768.htm#query=cartoon%20jungle&position=49&from_view=search&track=ais">Freepik.</a>
+- Conversion of mp4s to GIFs using free service on the [ezgif.com](https://ezgif.com/video-to-gif) website.
 <br><br>
 <a href="#top">BACK TO TOP 🔼</a>
