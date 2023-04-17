@@ -9,10 +9,18 @@ This website is showcasing Javascript, HTML and CSS design for Project Portfolio
 
 ## Contents
 - [UX](#ux)
-  - [Site Goals](#site-goals)
-  - [User Stories](#user-stories)
-  - [Wireframes](#wireframes)
-  - [Further Reading](#further-reading)
+  - [Strategy](#strategy)
+    - [User Stories](#user-stories)
+  - [Scope](#scope)
+    - [Essential Content](#essential-content)
+    - [Optional Content](#optional-content)
+  - [Structure](#structure)
+    - [Essential Content](#essential-content)
+    - [Optional Content](#optional-content)
+  - [Skeleton](#structure)
+    - [Web Wireframe](#web-browser-wireframe)
+    - [Tablet Wireframe](#tablet-wireframe)
+    - [Mobile Wireframe](#mobile-wireframe)
 - [Design](#design)
   - [Colour Scheme](#colour-scheme)
     -  [Jet Stream](#jet-stream)
@@ -35,9 +43,9 @@ This website is showcasing Javascript, HTML and CSS design for Project Portfolio
 
 
 ## UX
-### Site Goals
-The objective of the site is to create a two player memory card game directed towards young children and their parents. The site should give feedback on successful matches. It should also  keep track of the scores and feedback the game outcome once all cards are turned over.
-### User Stories
+### Strategy
+The objective of the site is to create a two player memory card game directed towards young children and their parents. 
+#### User Stories
 - As an adult user:
   - I want to play a game with my children that challenges their memory and spatial awareness.
   - I want the game to encourage turn taking by giving feedback on which player's turn it is.
@@ -49,12 +57,37 @@ The objective of the site is to create a two player memory card game directed to
   - I want to be visually stimulated by the site including background picture, card pictures and colours.
 <br><br>
 - As the site administrator:
-  - I want to easily identify issues or bugs by providing clear and concise code with annotations.
-### Wireframes
-The wirframes for the project can be found [here.]
-### Further Reading
-- 
+  - I want to easily identify issues or bugs by having clear and concise code with annotations.
+  - I want to promote a fun online environment and game for parents and children to enjoy together.
+  - I want the game to be accessible to all users including those that are visually impaired.
 
+### Scope
+#### Essential Content
+ - The site will have 16 cards that can be clicked to turn over.
+ - The site will keep track of player turns and will give visual feedback of this.
+ - The site should give feedback on successful matches.
+ - The site should keep track of the scores. and 
+ - There should be a game outcome feedback once all cards are turned over.
+ - There should be alt text describing each animal image for visually impaired users.
+#### Optional Content
+- The site will have background music.
+- The site will have audible effects or descriptions for each animal when the cards are turned over and matched.
+### Structure
+ - The site will have a logo at the top of the page.
+ - There will be a game section containing all of the game elements.
+ - The first element will be a game information div.
+ - The next will be a game grid consisting of 16 cards arranged in a 4 x 4 grid.
+ - Each card will have a front and reverse with a blank side and then an hidden animal at the back.
+ - There will be a game information area which will keep track of player turns and their respective scores.
+### Skeleton
+#### Web Browser Wireframe
+![Web-Wireframe](/assets/README-files/web-browser-wireframe.png) 
+#### Tablet Wireframe
+![Tablet-Wireframe](/assets/README-files/tablet-wireframe.png) 
+#### Mobile Wireframe
+![Mobile-Wireframe](/assets/README-files/mobile-wireframe.png) 
+
+### Surface
 ## Design
 ### Logo
 ![Site Logo](/assets/README-files/logo.png)
