@@ -191,6 +191,9 @@ The objective of the site is to create a two player memory card game directed to
   - No errors were returned for the page when passing through the official W3C CSS validator:
     ![HTML Validator Results](/assets/README-files/css-validator.jpg)
 
+- Javascript
+  - No errors or warnings were returned 
+
 - Accessibility
   - Accessibility of the pages was checked using the lighthouse tool in devtools with a score within the 95 - 100% bracket for all metrics.
    ![Lighthouse Results](/assets/README-files/lighthouse-results.jpg)
