@@ -286,7 +286,13 @@ document.addEventListener("DOMContentLoaded", function(){
         }
         return array;
     }
-
+ /**
+   * function with three parameters. First playerNumber to keep track of 
+   * game and correctly increment score. Cards turned parameter is the element
+   * for each card selected so that they can be turned back on unssuccessful match.
+   * The third and last parameter is the cardsTurnedInfo which is taken from the alt
+   * text property and used to compare for equality.
+ */
     function checkForMatch(playerNumber, cardsTurned, cardsTurnedInfo) {
         let playerOneScore = parseInt(document.getElementById('player-one-score').innerText);
         let playerTwoScore = parseInt(document.getElementById('player-two-score').innerText);
@@ -295,7 +301,9 @@ document.addEventListener("DOMContentLoaded", function(){
             case 1:
                 if (cardsTurnedInfo[0] === cardsTurnedInfo[1]){
                     document.getElementById('player-one-score').innerText = ++ playerOneScore;
-                    feedbackMatch(cardsTurnedInfo[0], 1);
+                    setTimeout(function(){
+                        feedbackMatch(cardsTurnedInfo[0], 1);
+                    }, 1000);
                 }
                 else {
                     for (let card of cardsTurned) {
@@ -310,7 +318,9 @@ document.addEventListener("DOMContentLoaded", function(){
             case 2: 
                 if (cardsTurnedInfo[0] === cardsTurnedInfo[1]){
                     document.getElementById('player-two-score').innerText = ++ playerTwoScore;
-                    feedbackMatch(cardsTurnedInfo[0], 2);
+                    setTimeout(function(){
+                        feedbackMatch(cardsTurnedInfo[0], 2);
+                    }, 1000);
                 }
                 else {
                      //  Turn cards back around if they do not match. Time delay to stop this happening straight away.
