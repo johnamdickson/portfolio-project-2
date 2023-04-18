@@ -30,6 +30,8 @@ This website is showcasing Javascript, HTML and CSS design for Project Portfolio
 - [Testing](#testing)
   - [Development Testing](#development-testing)
   - [Testing User Stories](#testing-user-stories)
+  - [Responsiveness Testing](#responsiveness-testing)
+  - [Browser Compatability](#browser-compatability)
   - [Validator Testing](#validator-testing)
   - [Bugs / Issues](#bugs--issues)
   - [Unresolved Bugs / Issues](#unresolved-bugs-or-issues)
@@ -45,18 +47,18 @@ This website is showcasing Javascript, HTML and CSS design for Project Portfolio
 ### Strategy
 The objective of the site is to create a two player memory card game directed towards young children and their parents which will demonstrate the Portfolio Project 2 requirements.
 #### User Stories
-- As an adult user:
+- Adult User Goals:
   - I want to promote my child's development of their visual perceptual skills, including their ability to match two objects that are the same (visual discrimination) and their ability to remember visual information (visual memory).
   - I want the game to encourage turn taking by giving feedback on which player's turn it is.
   - I want to be able to play the game on all devices including PC/Mac, tablets and mobile phones.
   - I want responsive feedback from buttons and cards on the website.
   - I want to promote my children to develop their hand eye coordination.
 <br><br>
-- As a child user:
+- Child User Goals:
   - I want to engage in a fun game with my parents or caregiver.
   - I want to be visually stimulated by the site including background picture, card pictures and colours.
 <br><br>
-- As the site administrator:
+- Site Administrator Goals:
   - I want to easily identify issues or bugs by having clear and concise code with annotations.
   - I want to promote a fun online environment and game for parents and children to enjoy together.
   - I want the game to be accessible to all users including those that are visually impaired.
@@ -181,7 +183,21 @@ The objective of the site is to create a two player memory card game directed to
   - The *New Game* functioned as expected, commencing a new game after hiding the outcome message and blurred background div.<br><br>
 
 ### Testing User Stories
+#### Adult User Goals
+- **I want to promote my child's development of their visual perceptual skills, including their ability to match two objects that are the same (visual discrimination) and their ability to remember visual information (visual memory).**
+  - The site
+- **I want the game to encourage turn taking by giving feedback on which player's turn it is.**
+  - The player information area dynamically updates which player's turn it is and feeds this back to the user.
+- **I want to be able to play the game on all devices including PC/Mac, tablets and mobile phones.**
+  - The site was tested across multiple devices both physically and on the simulator and operated satisfactorily.
+- **I want responsive feedback from buttons and cards on the website**.
+  - The buttons and cards both offer responsive feedback using hover psuedo classes and associated styline. 
+  - The buttons have further styling so that when clicked they appear to depress into the screen.
+- **I want to promote my children to develop their hand eye coordination**.
+### Responsiveness Testing
 
+### Browser Compatability
+ - The game was tested on Chrome, Firefox, Safari and Microsoft Edge. The performance on each platform was good and the only minor difference observed was the *How To Play* button Font Awesome icon spilling over on to another line. This did not detract from the buttons appearance so was left as is.
 ### Validator Testing 
 
 - HTML
