@@ -46,10 +46,11 @@ This website is showcasing Javascript, HTML and CSS design for Project Portfolio
 The objective of the site is to create a two player memory card game directed towards young children and their parents which will demonstrate the Portfolio Project 2 requirements.
 #### User Stories
 - As an adult user:
-  - I want to play a game with my children that challenges their memory and spatial awareness.
+  - I want to promote my child's development of their visual perceptual skills, including their ability to match two objects that are the same (visual discrimination) and their ability to remember visual information (visual memory).
   - I want the game to encourage turn taking by giving feedback on which player's turn it is.
   - I want to be able to play the game on all devices including PC/Mac, tablets and mobile phones.
   - I want responsive feedback from buttons and cards on the website.
+  - I want to promote my children to develop their hand eye coordination.
 <br><br>
 - As a child user:
   - I want to engage in a fun game with my parents or caregiver.
@@ -65,7 +66,7 @@ The objective of the site is to create a two player memory card game directed to
  - The site will have 16 cards that can be clicked to turn over.
  - The site will keep track of player turns and will give visual feedback of this.
  - The site should give feedback on successful matches.
- - The site should keep track of the scores. and 
+ - The site should keep track of the scores. 
  - There should be a game outcome feedback once all cards are turned over.
  - There should be alt text describing each animal image for visually impaired users. <br><br>
 #### Optional Content
@@ -239,6 +240,7 @@ The live link can be found [here.](https://johnamdickson.github.io/Portfolio-Pro
 
 
 ## Credits 
+- Terminology for visual motor and perceptual skills [here.](https://www.cincinnatichildrens.org/service/o/ot-pt/visual-motor-perception)
 
 ### Content 
 
