@@ -42,7 +42,7 @@ This website is showcasing Javascript, HTML and CSS design for Project Portfolio
 
 ## UX
 ### Strategy
-The objective of the site is to create a two player memory card game directed towards young children and their parents. 
+The objective of the site is to create a two player memory card game directed towards young children and their parents which will demonstrate the Portfolio Project 2 requirements.
 #### User Stories
 - As an adult user:
   - I want to play a game with my children that challenges their memory and spatial awareness.
@@ -69,7 +69,8 @@ The objective of the site is to create a two player memory card game directed to
  - There should be alt text describing each animal image for visually impaired users. <br><br>
 #### Optional Content
 - The site will have background music.
-- The site will have audible effects or descriptions for each animal when the cards are turned over and matched. <br><br>
+- The site will have audible effects or descriptions for each animal when the cards are turned over and matched. 
+- 1 player game option against the computer.<br><br>
 ### Structure
  - The site will have a logo at the top of the page.
  - There will be a game section containing all of the game elements.
@@ -88,17 +89,17 @@ The objective of the site is to create a two player memory card game directed to
 ### Surface
 #### Colour Scheme
 ![Colour Palette](/assets/README-files/color-palette.png)
-- The site colours are based around three strong colours as shown in the palette. 
-- The colours were chosen to create a striking contrast, especially between the Confettie and Biscay colours.
+- The site colour scheme revolves around three strong colours as shown in the palette. 
+- The colours were chosen to create a striking contrast, especially between the *Confetti* and *Biscay* colours.
 - Another consideration was to have colours that stood out agains the background image. <br><br>
 #### Imagery
 ![Background Image](/assets/images/jungle.jpg)
 - The background image was selcted to again cater for the visual needs of children and as a way of introducing them and other users to the game.<br><br>
 #### Logo
 ![Site Logo](/assets/README-files/logo.png)
-- The choice of site logo was based upon one that would be fun and engaging for children and have an immediate connection with the content. <br><br>
+- The choice of site logo was based upon one that would be fun and engaging for children and have an immediate connection with the content. The logo utilises two of the colours from the site colour scheme: *Biscay* and *Powder Blue*.<br><br>
 #### Typography
-- All fonts were sourced from Google Fonts. The main font used throughout is called 'Love Ya Like A Sister' which was selected for it's fun characteristics that children can relate too even if they cannot read. Raleway was selected for button font to make it stand out to adults who will normally be controlling the game.<br><br>
+- All fonts were sourced from Google Fonts. The main font used throughout is called *Love Ya Like A Sister* which was selected for it's fun characteristics that children can relate too even if they cannot read. *Raleway* was selected for the buttons' font to make it stand out to adults who will normally be controlling the game.<br><br>
 
 ## Features 
 
@@ -133,15 +134,23 @@ The objective of the site is to create a two player memory card game directed to
 
 - __The Game Outcome__ <br><br>
 ![Game Outcome](/assets/README-files/game-outcome.gif)
-   - Once the final pair of animals are successfully matched, an outcome star.
+   - Once the final pair of animals are successfully matched and the game is completed, an outcome star appears on top of a blurred background div displaying one of three messages depending on the calcualted outcome of the game:
+     - *That was close, its a draw!*
+     - *Congrats Player 1, you win!*
+     - *Congrats Player 2, you win!*
+   - After a short time delay, the message on the start changes to *Click below to begin a new game* and a *New Game* button appears.
 
-  - 
 - __The Footer__ <br><br>
-![Footer](/assets/README-files/footer.jpg)
-    - Add detail here.
+![Footer](/assets/README-files/footer.png)
+    - The footer contains links to background and animal images on Freepik per licensing requirement.
 
 ### Features Left to Implement
-- 
+- The optional features identified in the scope phase were not implemented in this iteration of the site due to their complexity and time demands. 
+- As a reminder, the features are listed below
+  - Voice and/or animal sounds on a successful match.
+  - Background music.
+  - 1 player game against the computer.
+- In future versions of this game I would like to revisit these features and assess the feasiblity of implementing them.
 
 ## Testing 
 ### Development Testing
@@ -224,5 +233,6 @@ The live link can be found [here.](https://johnamdickson.github.io/Portfolio-Pro
 - The site colour scheme pallete was generated using the palette creation tool in [Color Hex.](https://www.color-hex.com/) 
 - The site background image is from <a href="https://www.freepik.com/free-vector/wild-animal-cartoon-character-forest-scene_14801768.htm#query=cartoon%20jungle&position=49&from_view=search&track=ais">Freepik.</a>
 - Conversion of mp4s to GIFs using free service on the [ezgif.com](https://ezgif.com/video-to-gif) website.
+- The colour names were sourced from [Name That Color.](https://chir.ag/projects/name-that-color/)
 <br><br>
 <a href="#top">BACK TO TOP 🔼</a>
