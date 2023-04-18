@@ -31,6 +31,7 @@ body {
 
 /* section with blurred effect background for in game how to play instructions and game outcome message. */
 #blurred-div {
+    display: flex;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     position: absolute;
@@ -46,6 +47,9 @@ body {
     transform: translateZ(1000px);
     z-index: 2;
     visibility: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #instructions {
@@ -54,10 +58,6 @@ body {
     background-color: #E9D358;
     border-radius: 10px;
     border: 3px solid #1B316D;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateY(-50%) translateX(-50%);
     visibility: hidden;
 }
 
@@ -74,16 +74,12 @@ body {
     line-height: 3vmax;
 }
 
-
-
 #game-outcome {
     text-align: center;
     color: #E9D358;
-    position: absolute;
-    top: 25%;
-    left: 30%; 
-    transform: translateY(-50%) translateX(-50%);
     font-size: 25rem;
+    position: relative;
+    top: -25%;
     display: none;
     animation-name: outcome-zoom;
     animation-duration: 1.5s;
@@ -427,6 +423,7 @@ justify-content: center;
   #feedback-div {
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
+    display: flex;
     position: absolute;
     top: 0;
     left: 0;
@@ -435,16 +432,15 @@ justify-content: center;
     transform: translateZ(1000px);
     z-index: 2;
     visibility: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
   /* feedback star styling with animation to zoom out when display is changed from none to block by JS. */
   #feedback {
     text-align: center;
     color: #badde9;
     opacity: 0.95;
-    position: absolute;
-    top: 25%;
-    left: 30%; 
-    transform: translateY(-50%) translateX(-50%);
     font-size: 25rem;
     display: none;
     animation-name: feedback-zoom;
@@ -585,10 +581,6 @@ Responsive styling for Media Screens
         margin: 8.5px;
     }
 
-    #feedback{
-        left: 20%;
-    }
-
     @keyframes feedback-zoom {
         from {
             z-index: 98;
@@ -598,9 +590,6 @@ Responsive styling for Media Screens
             z-index: 99;
             transform: scale(1.2);
         }
-    }
-    #game-outcome {
-        left: 25%;
     }
 
     @keyframes outcome-zoom {
@@ -645,10 +634,7 @@ Responsive styling for Media Screens
     #instructions {
         width: 75%;
     }
-    #feedback {
-        top: 15%;
-        left: -12%;
-    }
+
     @keyframes feedback-zoom {
         from {
             z-index: 98;
@@ -659,10 +645,7 @@ Responsive styling for Media Screens
             transform: scale(0.8);
         }
     }
-    #game-outcome {
-        top: 15%;
-        left: -8%;
-    }
+
     @keyframes outcome-zoom {
         from {
             z-index: 98;

@@ -15,8 +15,6 @@ This website is showcasing Javascript, HTML and CSS design for Project Portfolio
     - [Essential Content](#essential-content)
     - [Optional Content](#optional-content)
   - [Structure](#structure)
-    - [Essential Content](#essential-content)
-    - [Optional Content](#optional-content)
   - [Skeleton](#structure)
     - [Web Wireframe](#web-browser-wireframe)
     - [Tablet Wireframe](#tablet-wireframe)
