@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function(){
         removeOldImages();
         let playerInfoArea = document.getElementById("player-info-area");
         let gameStatusCheck = document.getElementById("game-status-div");
-        let scoresArea = document.getElementById("scores-area")
+        let scoresArea = document.getElementById("scores-area");
         //  check if the game status div has been added. If not, add this div above player scores.
         setTimeout(function(){
             if (gameStatusCheck === null) {
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 // timing options
                     duration: 1000,
                 });
-                scoresArea.style.visibility = 'visible'
+                scoresArea.style.visibility = 'visible';
                 scoresArea.animate([
                     // keyframes
                     { opacity: '0' },
@@ -306,10 +306,11 @@ document.addEventListener("DOMContentLoaded", function(){
                     }, 1000);
                 }
                 else {
-                    for (let card of cardsTurned) {
-                        setTimeout(function(){
-                            card.className = "card";
-                        }, 2000); }
+                    setTimeout(function(){
+                        for (let card of cardsTurned) {
+                        card.className = "card";
+                        }
+                    }, 2000); 
                     setTimeout(function(){
                         playGame(2);
                         playerStatus.innerHTML = "2";
@@ -324,10 +325,11 @@ document.addEventListener("DOMContentLoaded", function(){
                 }
                 else {
                      //  Turn cards back around if they do not match. Time delay to stop this happening straight away.
-                    for (let card of cardsTurned) {
-                        setTimeout(function(){
+                    setTimeout(function(){
+                            for (let card of cardsTurned) {
                             card.className = "card";
-                        }, 2000); }
+                            }
+                        }, 2000); 
                     setTimeout(function(){
                         playGame(1);
                         playerStatus.innerHTML = "1";
