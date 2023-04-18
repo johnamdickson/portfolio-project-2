@@ -185,24 +185,25 @@ The objective of the site is to create a two player memory card game directed to
 
 - HTML
   - No errors were returned for the page when passing through the official W3C HTML validator:
-    ![HTML Validator Results](/assets/README-files/html-validator.jpg)
+    ![HTML Validator Results](/assets/README-files/html-validator.jpg)<br><br>
     
 - CSS
   - No errors were returned for the page when passing through the official W3C CSS validator:
-    ![HTML Validator Results](/assets/README-files/css-validator.jpg)
+    ![HTML Validator Results](/assets/README-files/css-validator.jpg)<br><br>
 
 - Javascript
-  - No errors or warnings were returned 
+  - No errors or warnings were returned when passing the JS code through JSHint.
+  ![JSHint Validator Results](/assets/README-files/jshint.png)<br><br>
 
 - Accessibility
   - Accessibility of the pages was checked using the lighthouse tool in devtools with a score within the 95 - 100% bracket for all metrics.
-   ![Lighthouse Results](/assets/README-files/lighthouse-results.jpg)
-  - The theme colours were also checked against the font colour using [contrast checker](https://webaim.org/resources/contrastchecker/).
-  <br><br>
+   ![Lighthouse Results](/assets/README-files/lighthouse-results.jpg)<br><br>
+  - The lighter colours Confetti and Powder Blue were checked against the Biscay colour using [contrast checker](https://webaim.org/resources/contrastchecker/).<br><br>
+  
   <table  width = 100% height = 350px cellspacing="0" cellpadding="0">
   <tr>
-  <td><img src="assets/README-files/header-contrast-checker-results.jpg" height=300px width=275px></td>
-  <td> <img src="assets/README-files/body-elements-contrast-checker-results.jpg" height=300px width=275px></td>
+  <td><img src="assets/README-files/biscay-confetti-contrast.png" height=300px width=275px></td>
+  <td> <img src="assets/README-files/biscay-powder-blue-contrast.png" height=300px width=275px></td>
   </tr>
   </table>
 
