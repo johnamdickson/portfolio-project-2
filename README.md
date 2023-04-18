@@ -29,6 +29,7 @@ This website is showcasing Javascript, HTML and CSS design for Project Portfolio
   - [Features Left to Implement](#features-left-to-implement)
 - [Testing](#testing)
   - [Development Testing](#development-testing)
+  - [Testing User Stories](#testing-user-stories)
   - [Validator Testing](#validator-testing)
   - [Bugs / Issues](#bugs--issues)
   - [Unresolved Bugs / Issues](#unresolved-bugs-or-issues)
@@ -113,10 +114,6 @@ The objective of the site is to create a two player memory card game directed to
 ![Game-Instructions](/assets/README-files/game-instructions.jpg) 
 
   - When the *How To Play* button is pressed two divs  - blurred and instructions - are made visible from their default hidden property. The blurred div covers the entire screen and creates a visual effect that accentuates the instructions div and contents and helps create a contrast against the backdrop of the game. The instructions div contains an `<ol>` of instructions followed by *New Game* and *Go Back* buttons. The former button completes the same action as its namesake described in Game Information above, whilst the latter returns the user to the current game. Both buttons return the two divs to their default visibility status of hidden.<br><br>
-
-- __The Player Information Area__ <br><br>
-![Player-Information](/assets/README-files/player-info.gif)
-  - The player info div contains two divs showing which player's turn it is and a scores area. The player info updates dynamically once the players turn changes. The scores area contains the player scores and updates on a successful match of animals. In order to draw the users attention here after the site loads or a new game is selected, the elements animate in after a short time delay.<br><br>
 - __The Game Area__ <br><br>
 ![Game Area](/assets/README-files/game-area-flip-two-cards.gif)
     - The game area consists of a div of the site blue colour with embossed edges and rounded corners. A 4 x 4 grid element is contained within this div and holds all 16 of the game cards. 
@@ -126,7 +123,9 @@ The objective of the site is to create a two player memory card game directed to
     - When a successful match is made, a congratualtory message (described below) is displayed and the incumbent player gets another turn.
     - The cards remain turned over revealing the animal pictures after a successful match.
     - The game continues until all animal pairs are matched at which point a game outcome message appears, again described below. <br><br>
-
+- __The Player Information Area__ <br><br>
+![Player-Information](/assets/README-files/player-info.gif)
+  - The player info div contains two divs showing which player's turn it is and a scores area. The player info updates dynamically once the players turn changes. The scores area contains the player scores and updates on a successful match of animals. In order to draw the users attention here after the site loads or a new game is selected, the elements animate in after a short time delay.<br><br>
 - __The Congratulatory Message__ <br><br>
 ![Congratulatory Message](/assets/README-files/match-animals.gif)
     - As described above, when the user successfully matches two animals they are presented with a congratulatory message. This takes the form of a star to make it visually engaging for children. The animal name is passed into the `<span>` at the end of the congratulatory message.
@@ -155,17 +154,32 @@ The objective of the site is to create a two player memory card game directed to
 ## Testing 
 ### Development Testing
 
-- __Home Page__
+- __The Game Information Area__
+  - The *New Game* button was tested and work correctly by reloading the window.
+  - The *How To Play* was tested and opened up the game instructions as expected, with the associated blurred background div also presenting.  <br><br>
+- __The Instructions Area__
+  - The *New Game* button was tested and worked correctly by hiding the blurred div and instructions area before reloading the window.
+  - The *Go Back* was tested and worked as expected by hiding the blurred div and instructions and returning to the game in progress.<br><br>
+- __The Game Area__
+  - Two cards were selected by clicking on them. They both turned over in the y-axis as expected.
+  - When the cursor moved over a card the pointer selector appeared. The cards also responded as per CSS styling to marginally increase in size.
+  - In the case of an unsuccessul match, the cards remained in position for a short period before turning back around and hiding the animal images.
+  - Attempts to turn over more than two cards were unsuccessful which is the correct behaviour.
+  - When a match was made, the cards remained in the position with the animal images facing towards the user and remained that way until the end of the game.<br><br>
+- __The Player Information Area__
+  - The player number alternated between 1 and 2 correctly throughout the game.
+  - The players scores incremented correctly on successful match of animal images.<br><br>
+- __The Congratulatory Message__
+  - The congrulatory message, star and blurred background div appeared as expected after a successful match of animal images. 
+  - The message contained the correct animal name in it.
+  - The star and message both animated in and out as expected.<br><br>
+- __The Game Outcome__
+  - The game outcome star and message appeared as expected at the culmination of the game. 
+  - The message accurately represented the outcome of the game.
+  - The message changed to the prompt for starting a new game and the *New Game* button appeared.
+  - The *New Game* functioned as expected, commencing a new game after hiding the outcome message and blurred background div.<br><br>
 
-  - 
-<br><br>
-
-- __Get Started Page__
-  - 
-
-
-<br><br>
-
+### Testing User Stories
 
 ### Validator Testing 
 
@@ -190,7 +204,7 @@ The objective of the site is to create a two player memory card game directed to
   </table>
 
   - Images alt text properties were checked using Chrome extension [Alt Text Checker.](https://chrome.google.com/webstore/detail/alt-text-tester/koldhcllpbdfcdpfpbldbicbgddglodk)
-  ![Alt Text Checker](/assets/README-files/alt-text-tester.png)
+  ![Alt Text Checker](/assets/README-files/alt-text-checker.gif)
  
 
 ### Bugs / Issues
