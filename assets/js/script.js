@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 gameStatus.id = "game-status-div";
                 let gameStatusInnerHTML;
          //   check window width to style game status div appropriately.
-                if (windowWidth <= 950) {
+                if (windowWidth <= 1200) {
                     gameStatusInnerHTML = 
                      `
                      <p>Player <span id="player-number-span">1</span> turn.</p>
