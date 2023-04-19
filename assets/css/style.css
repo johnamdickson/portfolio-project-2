@@ -564,7 +564,7 @@ Responsive styling for Media Screens
     #scores-area {
         flex-direction: row;
         width:35vmax;
-        height: 70px;
+        height: 80px;
         flex-grow:0;
     }
     #game-section {
@@ -576,7 +576,7 @@ Responsive styling for Media Screens
     }
 
     #game-status-div{
-        height: 70px;
+        height: 80px;
         width: 200px;
         flex-grow:0;
         font-size: 2vmax;
@@ -639,7 +639,9 @@ Responsive styling for Media Screens
         height: 100px;
         margin-right: 20px;
     }
-
+    #game-status-div {
+        height: 60px;
+    }
     #instructions {
         width: 75%;
     }
