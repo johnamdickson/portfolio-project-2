@@ -16,10 +16,8 @@ This website is showcasing Javascript, HTML and CSS design for Project Portfolio
     - [Optional Content](#optional-content)
   - [Structure](#structure)
   - [Skeleton](#structure)
-    - [Web Wireframe](#web-browser-wireframe)
-    - [Tablet Wireframe](#tablet-wireframe)
-    - [Mobile Wireframe](#mobile-wireframe)
-  - [Surface](#surface)
+    - [Wireframes](#wireframes)
+  - [Surface(Design)](#surface-design)
     - [Colour Scheme](#colour-scheme)
     - [Imagery](#imagery)
     - [Logo](#logo)
@@ -83,14 +81,12 @@ The objective of the site is to create a two player memory card game directed to
  - Each card will have a front and reverse with a blank side and then an hidden animal at the back.
  - There will be a game information area which will keep track of player turns and their respective scores.<br><br>
 ### Skeleton
-#### Web Browser Wireframe
-![Web-Wireframe](/assets/README-files/web-browser-wireframe.png) <br><br>
-#### Tablet Wireframe
-![Tablet-Wireframe](/assets/README-files/tablet-wireframe.png)  <br><br>
-#### Mobile Wireframe
-![Mobile-Wireframe](/assets/README-files/mobile-wireframe.png) <br><br>
-
-### Surface
+#### Wireframes
+- Three wireframes were developed for the project, all of which are listed and linked below:
+  - [Web browser wireframe](/assets/README-files/web-browser-wireframe.png)
+  - [Tablet wireframe](/assets/README-files/tablet-wireframe.png) 
+  - [Mobile wireframe](/assets/README-files/mobile-wireframe.png)<br><br>
+### Surface (Design)
 #### Colour Scheme
 ![Colour Palette](/assets/README-files/color-palette.png)
 - The site colour scheme revolves around three strong colours as shown in the palette. 
@@ -101,7 +97,8 @@ The objective of the site is to create a two player memory card game directed to
 - The background image was selcted to again cater for the visual needs of children and as a way of introducing them and other users to the game.<br><br>
 #### Logo
 ![Site Logo](/assets/README-files/logo.png)
-- The choice of site logo was based upon one that would be fun and engaging for children and have an immediate connection with the content. The logo utilises two of the colours from the site colour scheme: *Biscay* and *Powder Blue*.<br><br>
+- The choice of site logo was based upon one that would be fun and engaging for children and have an immediate connection with the content. The logo utilises two of the colours from the site colour scheme: *Biscay* and *Powder Blue*.
+- The name is a play on words to make the site memorable in the hope of drawing users back to play.<br><br>
 #### Typography
 - All fonts were sourced from Google Fonts. The main font used throughout is called *Love Ya Like A Sister* which was selected for it's fun characteristics that children can relate too even if they cannot read. *Raleway* was selected for the buttons' font to make it stand out to adults who will normally be controlling the game.<br><br>
 
@@ -158,8 +155,8 @@ The objective of the site is to create a two player memory card game directed to
 ### Development Testing
 
 - __The Game Information Area__
-  - The *New Game* button was tested and work correctly by reloading the window.
-  - The *How To Play* was tested and opened up the game instructions as expected, with the associated blurred background div also presenting.  <br><br>
+  - The *New Game* button was tested and worked correctly by reloading the window.
+  - The *How To Play* button was tested and opened up the game instructions as expected, with the associated blurred background div also presenting.  <br><br>
 - __The Instructions Area__
   - The *New Game* button was tested and worked correctly by hiding the blurred div and instructions area before reloading the window.
   - The *Go Back* was tested and worked as expected by hiding the blurred div and instructions and returning to the game in progress.<br><br>
@@ -195,9 +192,25 @@ The objective of the site is to create a two player memory card game directed to
   - The buttons have further styling so that when clicked they appear to depress into the screen.
 - **I want to promote my children to develop their hand eye coordination**.
 ### Responsiveness Testing
+#### Physical Device
+- I first tested the game on my own phone - an iPhone 12 Pro Max. The responsive styling worked as expected for this screen size, implementing a flex column to the game section. 
+- My initial fear with doing this kind of game was that the animal image would not be clear on a small screen size. As can be seen from the screenshot, that is not the case. 
+- The congratulatory and outcome messages were also tested for responsiveness and appeared as designed.
+ <table  width = 100% height = 350px cellspacing="0" cellpadding="0">
+ <caption>Physical Device Responsiveness Test</caption>
+  <tr>
+  <td><img src="assets/README-files/iphone-cards-turned.png" height=300px></td>
+  <td> <img src="assets/README-files/iphone-congrats-message.jpeg" height=300px></td>
+    <td> <img src="assets/README-files/iphone-outcome.jpeg" height=300px></td>
+  </tr>
+  </table>
 
+#### Simulated Devices
+- The following devices were selected for responsiveness testing on Chrome Devtools:
+  - Samsung Galaxy S9+.
+  
 ### Browser Compatability
- - The game was tested on Chrome, Firefox, Safari and Microsoft Edge. The performance on each platform was good and the only minor difference observed was the *How To Play* button Font Awesome icon spilling over on to another line. This did not detract from the buttons appearance so was left as is.
+ - The game was tested on Chrome, Firefox, Safari and Microsoft Edge. The appearance and responsiveness on each platform was good and the only minor difference observed was the *How To Play* button Font Awesome icon spilling over on to another line. This did not detract from the buttons appearance so was left as is.<br><br>
 ### Validator Testing 
 
 - HTML
