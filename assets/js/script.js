@@ -62,12 +62,13 @@ document.addEventListener("DOMContentLoaded", function(){
   });
   //  solution to handling media queries in JS found here: 
   //  https://css-tricks.com/working-with-javascript-media-queries/
-  let nineFiftyQuery = window.matchMedia('(max-width: 950px)');
-  nineFiftyQuery.addEventListener("change", handleNineFiftyChange);
-  function handleNineFiftyChange(event) {
+  let twelveHundredPixQuery = window.matchMedia('(max-width: 1200px)');
+  twelveHundredPixQuery.addEventListener("change", handleTwelveHundredChange);
+  function handleTwelveHundredChange(event) {
     let gameStatus = document.getElementById('game-status-div');
     if (gameStatus !== null) {
         if (event.matches) {
+            console.log('here')
             gameStatus.innerHTML = 
             `
             <p>Player <span id="player-number-span">1</span> turn.</p>

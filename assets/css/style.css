@@ -490,14 +490,18 @@ font-family: 'Raleway', sans-serif;
 /* 
 Responsive styling for Media Screens
 */
-@media screen and (max-width:1200px) {
+/* @media screen and (max-width:1200px) {
 
     #how-to-play-button{
         font-size: 1vmax;
     }
-}
 
-@media screen and (max-width:950px) {
+    #game-section{
+        height: 800px;
+    }
+} */
+
+@media screen and (max-width:1200px) {
 
     .logo-and-title {
         padding: 10px 0;
