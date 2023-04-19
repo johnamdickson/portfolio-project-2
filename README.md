@@ -196,7 +196,7 @@ The objective of the site is to create a two player memory card game directed to
 - I first tested the game on my own phone - an iPhone 12 Pro Max. The responsive styling worked as expected for this screen size, implementing a flex column to the game section. 
 - My initial fear with doing this kind of game was that the animal image would not be clear on a small screen size. As can be seen from the screenshot, that is not the case. 
 - The congratulatory and outcome messages were also tested for responsiveness and appeared as designed.
- <table  width = 100% height = 350px cellspacing="0" cellpadding="0">
+ <table  width = 100% cellspacing="0" cellpadding="0">
  <caption>Physical Device Responsiveness Test</caption>
   <tr>
   <td><img src="assets/README-files/iphone-cards-turned.png" height=300px></td>
@@ -208,7 +208,7 @@ The objective of the site is to create a two player memory card game directed to
 #### Simulated Devices
 - The following devices were selected for responsiveness testing on Chrome Devtools:
   - Samsung Galaxy S9+.
-  
+
 ### Browser Compatability
  - The game was tested on Chrome, Firefox, Safari and Microsoft Edge. The appearance and responsiveness on each platform was good and the only minor difference observed was the *How To Play* button Font Awesome icon spilling over on to another line. This did not detract from the buttons appearance so was left as is.<br><br>
 ### Validator Testing 

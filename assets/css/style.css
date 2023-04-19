@@ -549,7 +549,7 @@ Responsive styling for Media Screens
         width: 100%;
     }
     #game-area{
-        margin: 2.5vmax 10px;
+        margin: 1.5vmax 10px;
         flex-grow: 0;
         width: 100%;
         height: 600px;
