@@ -471,6 +471,8 @@ justify-content: center;
 
 footer {
     margin-top: 10px;
+    position: fixed;
+    bottom: 0;
 }
 
 footer a{
