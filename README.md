@@ -207,22 +207,21 @@ The objective of the site is to create a two player memory card game directed to
 
 #### Simulated Devices
 - The following devices were selected for responsiveness testing on Chrome Devtools:
-  - iPhone 6/7/8. Responsiveness is good for those devices:
-  <img src="assets/README-files/iphone-6-7-8-responsiveness.png" height=300px>
-  - Samsung Galaxy S9+. Responsiveness is good for this device:
-  <img src="assets/README-files/samsung-s9-responsiveness.png" height=300px>
-  - iPad. Responsiveness is good for this device:
-  <img src="assets/README-files/ipad-responsiveness.png" height=300px>
-  - iPad Pro. Responsiveness is good for this device:
-  <img src="assets/README-files/ipad-pro-responsiveness.png" height=300px>
-  - Desktop with a width <= 1200px. Responsiveness is okay for this device and view width. Given the fixed height of the game area there is a requirement to scroll down to access the game. Crucially the three game section elements are all visible in the veiwport together after scrolling:
-    <img src="assets/README-files/desktop<1200px.png" height=300px>
-  - Desktop with a width > 1200px. Responsiveness is good for this device and view width:
-      <img src="assets/README-files/desktop>1200px.png" height=300px>
-
-
+  - iPhone 6/7/8. Responsiveness is good for those devices:<br><br>
+  <img src="assets/README-files/iphone-6-7-8-responsiveness.png" height=300px><br><br>
+  - Samsung Galaxy S9+. Responsiveness is good for this device:<br><br>
+  <img src="assets/README-files/samsung-s9-responsiveness.png" height=300px><br><br>
+  - iPad. Responsiveness is good for this device:<br><br>
+  <img src="assets/README-files/ipad-responsiveness.png" height=300px><br><br>
+  - iPad Pro. Responsiveness is good for this device:<br><br>
+  <img src="assets/README-files/ipad-pro-responsiveness.png" height=300px><br><br>
+  - Desktop with a width <= 1200px. Responsiveness is okay for this device and view width. Given the fixed height of the game area there is a requirement to scroll down to access the game. Crucially the three game section elements are all visible in the veiwport together after scrolling:<br><br>
+    <img src="assets/README-files/desktop<1200px.png" height=300px><br><br>
+  - Desktop with a width > 1200px. Responsiveness is good for this device and view width:<br><br>
+      <img src="assets/README-files/desktop>1200px.png" height=300px><br><br>
 ### Browser Compatability
- - The game was tested on Chrome, Firefox, Safari and Microsoft Edge. The appearance and responsiveness on each platform was good and the only minor difference observed was the *How To Play* button Font Awesome icon spilling over on to another line. This did not detract from the buttons appearance so was left as is.<br><br>
+ - The game was tested on Chrome, Firefox, Safari and Microsoft Edge. The appearance and responsiveness on each platform was good and the only minor difference observed was on the Safari browser where the *How To Play* button Font Awesome icon spilling over on to another line. This did not detract from the buttons appearance so was left as is.<br><br>
+ ![Safari How To Play Button](/assets/README-files/how-to-play-button-safari.png)
 ### Validator Testing 
 
 - HTML

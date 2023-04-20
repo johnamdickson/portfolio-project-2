@@ -53,8 +53,8 @@ body {
 }
 
 #instructions {
-    height: 50vmax;
-    width: 33%;
+    height: 55vmax;
+    width: 40%;
     background-color: #E9D358;
     border-radius: 10px;
     border: 3px solid #1B316D;
@@ -508,7 +508,7 @@ Responsive styling for Media Screens
         width: 30%;
     }
     #instructions {
-        width: 50%;
+        width: 60%;
     }
     #game-section{
         flex-wrap: wrap;
@@ -644,6 +644,7 @@ Responsive styling for Media Screens
     }
     #instructions {
         width: 75%;
+        height: 60vmax;
     }
 
     @keyframes feedback-zoom {
