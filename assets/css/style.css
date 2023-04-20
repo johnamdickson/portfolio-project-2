@@ -61,7 +61,7 @@ visible when the How To Play button is selected */
     background-color: #E9D358;
     border-radius: 10px;
     border: 3px solid #1B316D;
-    visibility: hidden;
+    display: none;
 }
 
 #instructions h2 {
@@ -83,7 +83,6 @@ on completion of the game. */
     color: #E9D358;
     font-size: 25rem;
     position: relative;
-    top: -35%;
     display: none;
     animation-name: outcome-zoom;
     animation-duration: 1.5s;
@@ -570,10 +569,6 @@ Responsive styling for Media Screens
         height: 600px;
     }
 
-    #game-outcome{
-        top: -25%;
-    }
-    
     #scores-area {
         flex-direction: row;
         width:35vmax;

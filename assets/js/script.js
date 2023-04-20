@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function(){
     let howToPlayStartButton = buttons[0];
     howToPlayStartButton.addEventListener("click", function(){
         blurredDiv.style.visibility = 'hidden';
-        instructions.style.visibility = 'hidden';
+        instructions.style.display = 'none';
         howToPlayStartButton.disabled = true;
         setTimeout(function(){
             howToPlayStartButton.disabled = false;
@@ -35,12 +35,12 @@ document.addEventListener("DOMContentLoaded", function(){
     let goBackButton = buttons[1];
     goBackButton.addEventListener("click", function(){
         blurredDiv.style.visibility = 'hidden';
-        instructions.style.visibility = 'hidden';
+        instructions.style.display = 'none';
     });
     let newGameButton = buttons[2];
     newGameButton.addEventListener("click", function(){
         blurredDiv.style.visibility = 'hidden';
-        instructions.style.visibility = 'hidden';
+        instructions.style.display = 'none';
         newGameButton.disabled = true;
         setTimeout(function(){
             newGameButton.disabled = false;
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function(){
     let howToPlayButton = buttons[4];
     howToPlayButton.addEventListener("click", function(){
       blurredDiv.style.visibility = 'visible';
-      instructions.style.visibility = 'visible';
+      instructions.style.display = 'block';
   });
   //  solution to handling media queries in JS found here: 
   //  https://css-tricks.com/working-with-javascript-media-queries/
@@ -257,10 +257,10 @@ document.addEventListener("DOMContentLoaded", function(){
             let picture = document.createElement('img');
             picture.className = "animal-image";
             picture.style.zIndex = '3';
-            picture.src = shuffledAnimalCards[i].image;
-            picture.alt = shuffledAnimalCards[i].alt;
-            // picture.src = monkey.image;
-            // picture.alt = monkey.alt;
+            // picture.src = shuffledAnimalCards[i].image;
+            // picture.alt = shuffledAnimalCards[i].alt;
+            picture.src = monkey.image;
+            picture.alt = monkey.alt;
             pictureCard.appendChild(picture);
             i++;
         }
