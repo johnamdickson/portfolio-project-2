@@ -229,7 +229,7 @@ In order to test children's responses to the site, I asked my two daughters Isse
   - **I want to promote a fun online environment and game for parents and children to enjoy together.**
     - Based on feedback from my family, this game offers a fun online environment for both children and their parents.
   - **I want the game to be accessible to all users including those that are visually impaired.**
-    - Each card has an alt 
+    - Each card has an alt text attribute which was shown to display in the features section. How this translates to a screen reader in a game scenario will require further testing.
 ### Responsiveness Testing
 #### Physical Device
 - I first tested the game on my own phone - an iPhone 12 Pro Max. The responsive styling worked as expected for this screen size, implementing a flex column to the game section. 
@@ -288,20 +288,36 @@ In order to test children's responses to the site, I asked my two daughters Isse
   </table>
 
   - Images alt text properties were checked using Chrome extension [Alt Text Checker.](https://chrome.google.com/webstore/detail/alt-text-tester/koldhcllpbdfcdpfpbldbicbgddglodk)
-  ![Alt Text Checker](/assets/README-files/alt-text-checker.gif)
+  ![Alt Text Checker](/assets/README-files/alt-text-checker.gif)<br><br>
  
 
 ### Bugs / Issues
-- __General Issues__
-  - 
-    <br><br>
-- __Home Page Issues__
-   - 
-   <br><br>
-
-- __Get Started Page Issues__
-    - 
-    
+<table  width = 100% cellspacing="0" cellpadding="0">
+  <tr>
+  <th>Issue/Bug</th>
+  <th>Solution</th>
+  </tr>
+  <tr>
+   <td>Issue with images on cards. All except first card retained 2 animal images</td>
+   <td>Used query selector on each card front div to check existence of the animal-images class prior to removing old images</td>
+  </tr>
+  <tr>
+   <td>On new game start animal images were visible when cards were rotating</td>
+   <td>Utilised setTimeOut function to add animal images after 750 ms</td>
+   </tr>
+   <tr>
+   <td>Issue with 950px and the game status div paragraph line breaks, subsequently changed to 1200px.</td>
+   <td>Resolved using JS code</td>
+   </tr>
+   <tr>
+   <td>Issue on safari with card background colour superseding the animal image</td>
+   <td>Changed background to transparent which resolved the issue.</td>
+   </tr>
+   <tr>
+   <td>During mentoring call, mentor observed long load time for background image</td>
+   <td>Used online compressor to decrease memory allocation and improve performance.</td>
+   </tr>
+  </table>
 
 ### Unresolved Bugs or Issues
 
@@ -332,5 +348,6 @@ NOTE: Specific links are included within the HTML, CSS or Javascript files. The 
 - The site background image is from <a href="https://www.freepik.com/free-vector/wild-animal-cartoon-character-forest-scene_14801768.htm#query=cartoon%20jungle&position=49&from_view=search&track=ais">Freepik.</a>
 - Conversion of mp4s to GIFs using free service on the [ezgif.com](https://ezgif.com/video-to-gif) website.
 - The colour names were sourced from [Name That Color.](https://chir.ag/projects/name-that-color/)
+- The background image was compressed using [Optimazilla](https://imagecompressor.com/) service.
 <br><br>
 <a href="#top">BACK TO TOP 🔼</a>
