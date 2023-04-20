@@ -14,7 +14,9 @@ body {
     background-attachment: fixed;
     font-family: 'Love Ya Like A Sister', cursive;
 }
-
+/* logo and title will always site at top within the header and 
+it will be determined by the width setting thereby reducing in size
+as the screen sizes changes. */
 .logo-and-title {
     border-radius: 10px;
     margin: auto;
@@ -51,7 +53,8 @@ body {
     align-items: center;
     justify-content: center;
 }
-
+/* instructions div which is initially hidden and will be made
+visible when the How To Play button is selected */
 #instructions {
     height: 55vmax;
     width: 40%;
@@ -73,7 +76,8 @@ body {
     font-size: 1.75vmax;
     line-height: 3vmax;
 }
-
+/* The game outcome star which appears in an animated fashion 
+on completion of the game. */
 #game-outcome {
     text-align: center;
     color: #E9D358;
@@ -106,15 +110,16 @@ body {
     color: #1B316D;
     font-size: 2.2rem;
 }
-
+/* game section containing all of the divs essential to the game */
 #game-section{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 650px;
-
 }
+/* game area which contains the game grid and is formatted to 
+give an embossed effect*/
 #game-area {
     flex-grow:2;
     width: 100%;
@@ -128,7 +133,10 @@ body {
     align-items: center;
 }
 
-/* Flex set up with assistance from this tutorial: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+/* Game Control divs class for standard formatting of the divs with 
+the confetti colour scheme. 
+Flex set up with assistance from this tutorial: 
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
 .game-control-divs{
     flex-grow: 1;
     width: 30%;
@@ -147,7 +155,8 @@ body {
     margin: 1vmax 5px;
     font-size: 2vmax;
  }
-
+/* game info containing welcome message and New Game and How t
+ */
 #game-info{
     display: flex;
     flex-direction: column;
@@ -182,7 +191,7 @@ button {
 button:hover {
     opacity: 0.9;
 }
-#start-game-button {
+#main-new-game-button {
     font-size: 1.7vmax;
     width: 70%;
 }
@@ -527,7 +536,7 @@ Responsive styling for Media Screens
     #game-info-buttons {
         margin: 0;
     }
-    #start-game-button {
+    #main-new-game-button {
         font-size: 1.5vmax;
         width: 75%;
     }
@@ -537,7 +546,6 @@ Responsive styling for Media Screens
         font-size: 1vmax;
         width: 65%;
     }
-
     #game-info {
         flex-grow: 0;
         flex-direction: row;
