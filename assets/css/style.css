@@ -616,7 +616,7 @@ Responsive styling for Media Screens
         }
         to {
             z-index: 99;
-            transform: scale(1.5);
+            transform: scale(1.3);
         }
     }
 }

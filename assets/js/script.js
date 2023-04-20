@@ -196,8 +196,10 @@ document.addEventListener("DOMContentLoaded", function(){
         let cardsTurnedInfo = [];
         let cards = document.getElementsByClassName("card");
          for (let card of cards){
-            card.addEventListener("click", flipCard);
-            card.addEventListener("click", count);
+            if (card.className === "card") {
+                card.addEventListener("click", flipCard);
+                card.addEventListener("click", count);
+            }
         }
         function flipCard() {
             this.classList = "card flip";
