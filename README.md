@@ -5,7 +5,7 @@ Wild cards is a two player memory game designed for people of all ages but espec
 
 This website is showcasing Javascript, HTML and CSS design for Project Portfolio 2 and can be accessed by following this [link.](https://johnamdickson.github.io/Portfolio-Project-2/)
 
-![Responsive Mockup Screenshot](/assets/README-files/am-i-responsive.jpg)
+![Responsive Mockup Screenshot](/assets/README-files/am-i-responsive.png)
 
 ## Contents
 - [UX](#ux)
@@ -18,8 +18,8 @@ This website is showcasing Javascript, HTML and CSS design for Project Portfolio
   - [Skeleton](#structure)
     - [Wireframes](#wireframes)
   - [Surface(Design)](#surface-design)
-    - [Colour Scheme](#colour-scheme)
-    - [Imagery](#imagery)
+    - [Physical Device](#physical-device)
+    - [Simulated Devices](#simulated-devices)
     - [Logo](#logo)
     - [Typography](#typography)
 - [Features](#features)
@@ -28,7 +28,12 @@ This website is showcasing Javascript, HTML and CSS design for Project Portfolio
 - [Testing](#testing)
   - [Development Testing](#development-testing)
   - [Testing User Stories](#testing-user-stories)
+     - [Adult User Goals](#adult-user-goals)
+     - [Child User Goals](#child-user-goals)
+     - [Site Administrator Goals](#site-administrator-goals)
   - [Responsiveness Testing](#responsiveness-testing)
+    - [Colour Scheme](#colour-scheme)
+    - [Imagery](#imagery)
   - [Browser Compatability](#browser-compatability)
   - [Validator Testing](#validator-testing)
   - [Bugs / Issues](#bugs--issues)
@@ -180,6 +185,7 @@ The objective of the site is to create a two player memory card game directed to
   - The *New Game* functioned as expected, commencing a new game after hiding the outcome message and blurred background div.<br><br>
 
 ### Testing User Stories
+In order to test children's responses to the site, I asked my two daughters Issey(9) and Sienna(6) to partake in the test by playing each other at the game. I also requested my wife to join in for a game with each child to subjectively assess the adult user goals.
 #### Adult User Goals
 - **I want to promote my child's development of their visual perceptual skills, including their ability to match two objects that are the same (visual discrimination) and their ability to remember visual information (visual memory).**
   - The site
@@ -191,6 +197,20 @@ The objective of the site is to create a two player memory card game directed to
   - The buttons and cards both offer responsive feedback using hover psuedo classes and associated styline. 
   - The buttons have further styling so that when clicked they appear to depress into the screen.
 - **I want to promote my children to develop their hand eye coordination**.
+   - On observation 
+
+#### Child User Goals
+  - **I want to engage in a fun game with my parents or caregiver.**
+    - As detailed above, my two children partook in a serious of games with each other, with my wife and with me. I asked them if they felt the game was fun and engaging. Their responses are detailed below:
+       - Issey - 
+       - Sienna -
+  - **I want to be visually stimulated by the site including background picture, card pictures and colours.**
+    - I asked the girls what they thought of the site colours and pictures. Their responses are detailed below:
+      - Issey - 
+      - Sienna -
+
+#### Site Administrator Goals
+
 ### Responsiveness Testing
 #### Physical Device
 - I first tested the game on my own phone - an iPhone 12 Pro Max. The responsive styling worked as expected for this screen size, implementing a flex column to the game section. 

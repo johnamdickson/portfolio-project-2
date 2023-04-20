@@ -68,7 +68,6 @@ document.addEventListener("DOMContentLoaded", function(){
     let gameStatus = document.getElementById('game-status-div');
     if (gameStatus !== null) {
         if (event.matches) {
-            console.log('here')
             gameStatus.innerHTML = 
             `
             <p>Player <span id="player-number-span">1</span> turn.</p>
