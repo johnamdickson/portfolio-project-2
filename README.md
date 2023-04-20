@@ -155,7 +155,21 @@ The objective of the site is to create a two player memory card game directed to
   - Background music.
   - 1 player game against the computer.
 - In future versions of this game I would like to revisit these features and assess the feasiblity of implementing them.
+## Technologies Used
+### Languages Used
+- HTML5
+- CSS3
+- Javascript ES6.
 
+### Frameworks, Libraries & Programs Used
+- Hover.css used on buttons and cards.
+- Google Fonts used for all typography.
+- Font Awesome used for icons in *How To Play* / *Go Back* buttons and also the stars for the congrulatory / game outcome messages.
+- Git used for version control.
+- GitHub as cloud repository for Git version control.
+- Gitpod cloud based IDE used at the beginning of the project.
+- Codeanywhere cloud based IDE used during the project.
+- VSCode desktop based IDE used at the end of the project.
 ## Testing 
 ### Development Testing
 
@@ -202,12 +216,12 @@ In order to test children's responses to the site, I asked my two daughters Isse
 #### Child User Goals
   - **I want to engage in a fun game with my parents or caregiver.**
     - As detailed above, my two children partook in a serious of games with each other, with my wife and with me. I asked them if they felt the game was fun and engaging. Their responses are detailed below:
-       - Issey - 
-       - Sienna -
+       - Issey - *"It was very competitive. I enjoyed playing it together and it was really fun. I think it was better playing with another person. It would be cool to be able to play with the computer."*
+       - Sienna - *"I liked that it was fun but even if you lose you're still having fun. I liked playing with my daddy."*
   - **I want to be visually stimulated by the site including background picture, card pictures and colours.**
     - I asked the girls what they thought of the site colours and pictures. Their responses are detailed below:
-      - Issey - 
-      - Sienna -
+      - Issey - *"I like the paw prints on the backs of the cards. It would be nice to have a link to the person that created the site as well. The colours would be vibrant for yound children. The background is fun, but I like that the cards just have one animal."*
+      - Sienna - *"I like the yellow as it's bright and the blue is bright as well. I like the background because they all have something that they are doing. I really like the cards because they are cool and bright and colourful"*
 
 #### Site Administrator Goals
 
@@ -300,15 +314,14 @@ The live link can be found [here.](https://johnamdickson.github.io/Portfolio-Pro
 
 
 ## Credits 
-- Terminology for visual motor and perceptual skills [here.](https://www.cincinnatichildrens.org/service/o/ot-pt/visual-motor-perception)
-
 ### Content 
-
-- 
-
-
+NOTE: Specific links are included within the HTML, CSS or Javascript files. The list below summarises content credits in general.
+- Stack Overflow, W3 Docs, MDN Web Docs and other online resources were a massive help for HTML, CSS or JS code that enabled some of the functionality I was looking for.
+- Terminology for visual motor and perceptual skills [here.](https://www.cincinnatichildrens.org/service/o/ot-pt/visual-motor-perception)
+- Sample [README](https://github.com/Code-Institute-Solutions/SampleREADME) provided in PP2 Stand Up.
+- Thanks to my tutor Gurjot for his advice during the mentoring sessions.
+- Special thanks to my wife Sinéad and my daughters Issey and Sienna for all their help in the inception of the project all the way through to testing user stories.
 ### Media
-
 - The site logo was created using Hatchful, a free logo design service offered by [Shopify.](https://www.shopify.com/tools/logo-maker)
 - The site colour scheme pallete was generated using the palette creation tool in [Color Hex.](https://www.color-hex.com/) 
 - The site background image is from <a href="https://www.freepik.com/free-vector/wild-animal-cartoon-character-forest-scene_14801768.htm#query=cartoon%20jungle&position=49&from_view=search&track=ais">Freepik.</a>

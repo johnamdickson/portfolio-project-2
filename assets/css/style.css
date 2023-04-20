@@ -83,7 +83,7 @@ on completion of the game. */
     color: #E9D358;
     font-size: 25rem;
     position: relative;
-    top: -25%;
+    top: -35%;
     display: none;
     animation-name: outcome-zoom;
     animation-duration: 1.5s;
@@ -569,6 +569,11 @@ Responsive styling for Media Screens
         width: 100%;
         height: 600px;
     }
+
+    #game-outcome{
+        top: -25%;
+    }
+    
     #scores-area {
         flex-direction: row;
         width:35vmax;
