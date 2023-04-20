@@ -257,10 +257,8 @@ document.addEventListener("DOMContentLoaded", function(){
             let picture = document.createElement('img');
             picture.className = "animal-image";
             picture.style.zIndex = '3';
-            // picture.src = shuffledAnimalCards[i].image;
-            // picture.alt = shuffledAnimalCards[i].alt;
-            picture.src = monkey.image;
-            picture.alt = monkey.alt;
+            picture.src = shuffledAnimalCards[i].image;
+            picture.alt = shuffledAnimalCards[i].alt;
             pictureCard.appendChild(picture);
             i++;
         }
