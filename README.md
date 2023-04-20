@@ -202,24 +202,24 @@ The objective of the site is to create a two player memory card game directed to
 In order to test children's responses to the site, I asked my two daughters Issey(9) and Sienna(6) to partake in the test by playing each other at the game. I also requested my wife to join in for a game with each child to subjectively assess the adult user goals.
 #### Adult User Goals
 - **I want to promote my child's development of their visual perceptual skills, including their ability to match two objects that are the same (visual discrimination) and their ability to remember visual information (visual memory).**
-  - The site
+  - The site delivers on this goal as it presents an animal matching game (visual discrimination) along with the requirement to memorise where the correct animal pairs are (visual memory).
 - **I want the game to encourage turn taking by giving feedback on which player's turn it is.**
   - The player information area dynamically updates which player's turn it is and feeds this back to the user.
 - **I want to be able to play the game on all devices including PC/Mac, tablets and mobile phones.**
   - The site was tested across multiple devices both physically and on the simulator and operated satisfactorily.
 - **I want responsive feedback from buttons and cards on the website**.
-  - The buttons and cards both offer responsive feedback using hover psuedo classes and associated styline. 
+  - The buttons and cards both offer responsive feedback using hover psuedo classes and associated styling. 
   - The buttons have further styling so that when clicked they appear to depress into the screen.
 - **I want to promote my children to develop their hand eye coordination**.
-   - On observation 
+   - Whilst playing with my children, who are at different developmental stages, I was able to establish that the requirement to line up the cursor with the correct card and then clicking does promote development of hand eye coordination. This developent would be even more profound for younger children who may only be starting to use computers or devices.
 
 #### Child User Goals
   - **I want to engage in a fun game with my parents or caregiver.**
-    - As detailed above, my two children partook in a serious of games with each other, with my wife and with me. I asked them if they felt the game was fun and engaging. Their responses are detailed below:
+    - As detailed above, my two children partook in a serious of games with each other, with my wife and with me. I asked them if they felt the game was fun and engaging. Their responses - detailed below - help demonstrate that this goal was met:
        - Issey - *"It was very competitive. I enjoyed playing it together and it was really fun. I think it was better playing with another person. It would be cool to be able to play with the computer."*
        - Sienna - *"I liked that it was fun but even if you lose you're still having fun. I liked playing with my daddy."*
   - **I want to be visually stimulated by the site including background picture, card pictures and colours.**
-    - I asked the girls what they thought of the site colours and pictures. Their responses are detailed below:
+    - I asked the girls what they thought of the site colours and pictures. Their responses below also help to demonstrate that this goal was met:
       - Issey - *"I like the paw prints on the backs of the cards. It would be nice to have a link to the person that created the site as well. The colours would be vibrant for yound children. The background is fun, but I like that the cards just have one animal."*
       - Sienna - *"I like the yellow as it's bright and the blue is bright as well. I like the background because they all have something that they are doing. I really like the cards because they are cool and bright and colourful"*
 
