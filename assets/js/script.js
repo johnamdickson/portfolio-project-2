@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function(){
  // set up buttons
     let howToPlayStartButton = buttons[0];
     howToPlayStartButton.addEventListener("click", function(){
+        // ensure blurred div and instructions are hidden/set to none display
         blurredDiv.style.visibility = 'hidden';
         instructions.style.display = 'none';
         // In all start game buttons the button is disabled for 1 second to prevent 
@@ -59,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function(){
     });
     let howToPlayButton = buttons[4];
     howToPlayButton.addEventListener("click", function(){
+        // make blurred div visible and instructions display to block when button pressed
       blurredDiv.style.visibility = 'visible';
       instructions.style.display = 'block';
   });
@@ -68,6 +70,13 @@ document.addEventListener("DOMContentLoaded", function(){
   twelveHundredPixQuery.addEventListener("change", handleTwelveHundredChange);
   function handleTwelveHundredChange(event) {
     let gameStatus = document.getElementById('game-status-div');
+    /* The code below checks if the gameStatus exists before adding to the DOM
+     NOTE: the code below added in early iteration of the project where
+     the start game button commenced a new game and the div appeared thereafter.
+     Due to bug identified in README, the start game was revised to a window reload so this code
+     was essentially redundant and could be recreated in HTML/CSS. However I opted to leave in to demonstrate
+     this aspect of JS coding from a project perspective.
+    */
     if (gameStatus !== null) {
         if (event.matches) {
             gameStatus.innerHTML = 
@@ -135,6 +144,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 /* solution to animating in the game status div: 
                  https://stackoverflow.com/questions/14300210/animation-with-node-appendchild-html
                  */
+                // animate in player information and scores areas.
                  document.getElementById('player-number-span').innerText = '1';
                 gameStatus.animate([
                 // keyframes
@@ -300,7 +310,9 @@ document.addEventListener("DOMContentLoaded", function(){
         let playerTwoScore = parseInt(document.getElementById('player-two-score').innerText);
         let playerStatus = document.getElementById('player-number-span');
         switch(playerNumber) {
+            // first switch player number cases.
             case 1:
+                // check for match. If true, increment score and then call the feedback match function
                 if (cardsTurnedInfo[0] === cardsTurnedInfo[1]){
                     document.getElementById('player-one-score').innerText = ++ playerOneScore;
                     setTimeout(function(){
@@ -308,12 +320,15 @@ document.addEventListener("DOMContentLoaded", function(){
                     }, 1000);
                 }
                 else {
+                    // if false, flip cards back over.
                     setTimeout(function(){
                         for (let card of cardsTurned) {
                         card.className = "card";
                         }
                     }, 2000); 
+                    // switch turns to player 2 and update the player status
                     setTimeout(function(){
+                        //  Turn cards back around if they do not match. Time delay to stop this happening straight away.
                         playGame(2);
                         playerStatus.innerHTML = "2";
                     }, 2250); }
@@ -326,7 +341,6 @@ document.addEventListener("DOMContentLoaded", function(){
                     }, 1000);
                 }
                 else {
-                     //  Turn cards back around if they do not match. Time delay to stop this happening straight away.
                     setTimeout(function(){
                             for (let card of cardsTurned) {
                             card.className = "card";
@@ -338,7 +352,7 @@ document.addEventListener("DOMContentLoaded", function(){
                     }, 2250); }
                 break;
             default:
-                console.log("Fell through");
+                console.log("Error, check for match switch had no player cases");
         }
         return;
     }
@@ -352,21 +366,24 @@ document.addEventListener("DOMContentLoaded", function(){
         let cardsVisible = cardsPicturesVisibleCalculator();
         let playerOneScore = parseInt(document.getElementById('player-one-score').innerText);
         let playerTwoScore = parseInt(document.getElementById('player-two-score').innerText);
+    //    check how many cards are flipped over. If 16 then game is over so calculate winner function is called.
         if (cardsVisible === 16) {
             calculateWinner(playerOneScore, playerTwoScore);
           } 
         else {
+            // call feedback star to let user no they had a successful match
             let feedbackDiv = document.getElementById("feedback-div");
             feedbackDiv.style.visibility = 'visible';
             let star = document.getElementById("feedback");
             star.style.display = 'block';
-            // solution to getting last word from string from here:
+            // solution to getting last word from string from here that can be added to feedback message:
             // https://bobbyhadz.com/blog/javascript-get-last-word-of-string
             let animal = info.split(' ').pop();
             let animalSpan = document.getElementById("animal-name");
             animalSpan.innerHTML = animal;
             // properties for animating out the star feedback block using tutorial below:
             // https://developer.mozilla.org/en-US/docs/Web/API/Element/animate
+            // animateOut to bring the star towards user, creating an intersting effect.
             let animateOut = [
             { transform: "rotate(0) scale(1.5)", opacity: "0.95"},
             { transform: "rotate(270deg) scale(100)", opacity: "0" },
@@ -391,12 +408,14 @@ document.addEventListener("DOMContentLoaded", function(){
    * initation of a new game along with the appropriate button to do so.
  */
     function calculateWinner(playerOneScore, playerTwoScore) {
+        // make blurred div and game outcome star visible/block.
         let blurredDiv = document.getElementById('blurred-div');
         blurredDiv.style.visibility = 'visible';
         let gameOutcome = document.getElementById('game-outcome');
         gameOutcome.style.display = 'block';
         let gameOutcomeMessage = document.getElementById('outcome-message');
         let newGameButton = document.getElementById('new-game-button');
+        // check scores and feedback appropriate message on outcome star <p>
         if (playerOneScore === playerTwoScore) {
             gameOutcomeMessage.innerText = "That was close, its a draw!";
         } 
@@ -406,6 +425,7 @@ document.addEventListener("DOMContentLoaded", function(){
       else {
             gameOutcomeMessage.innerText = "Congrats Player 2, you win!";
       }
+    //   after a timeout, change message to prompt for new game and newGameButton style to block.
       setTimeout(function(){ 
         gameOutcomeMessage.style.top = "42%";
         gameOutcomeMessage.style.fontSize = "1.5rem";
