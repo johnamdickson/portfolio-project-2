@@ -307,7 +307,7 @@ In order to test children's responses to the site, I asked my two daughters Isse
    </tr>
    <tr>
    <td>Issue with 950px and the game status div paragraph line breaks, subsequently changed to 1200px.</td>
-   <td>Resolved using JS code</td>
+   <td>Resolved using Media Query List in JS</td>
    </tr>
    <tr>
    <td>Issue on safari with card background colour superseding the animal image</td>
@@ -315,13 +315,44 @@ In order to test children's responses to the site, I asked my two daughters Isse
    </tr>
    <tr>
    <td>During mentoring call, mentor observed long load time for background image</td>
-   <td>Used online compressor to decrease memory allocation and improve performance.</td>
+   <td>Used online compressor to decrease memory allocation and improve performance</td>
+   </tr>
+   <tr>
+   <td>JSHint error: Functions declared within loops referencing an outer scoped variable may lead to confusing semantics</td>
+   <td>Moved for let card of carsTurned inside the setTimeOut function to resolve the error.</td>
+   </tr>
+   <tr>
+   <td>Observed issue where flipped cards could be selected again for a new turn and they subsequently flip over again in error resulting in one card being face up</td>
+   <td>Handled by checking to ensure cards have a “card” class before assigning event listeners</td>
+   </tr>
+   <tr>
+   <td>Issue on Safari browser with feedback and outcome stars during animation. Cards randomly appear on top of the star during animation and thereafter</td>
+   <td>Investigated issue and found that the element transform affects the stacking context. Resolved issue by adding a background divs that the feedback and outcome stars are children of</td>
+   </tr>
+   <tr>
+   <td>Outcome and feedback star alignment issue bot stars on physical device and Edge browser misaligned, not repeating in devtools</td>
+   <td>Changed to flex display on background divs</td>
+   </tr>
+   <tr>
+   <td>Issue with multiple animals appearing on cards when New Game button pressed repeatedly. This happens due to other timeout functions further down the code giving an opportunity for animal images to be added again prior to the game starting</td>
+   <td>Added code to temporarily disable the buttons for 1 second to allow for game to begin</td>
+   </tr>
+   <tr>
+   <td>When testing iPad Pro responsiveness, I observed numerous issues with overflow as per the following image:<img src="assets/README-files/ipad-pro-testing-pre-adjustments.png"></td>
+   <td>Amended JS media query list to 1200px which resolved the issue as shown in the responsiveness testing section</td>
+   </tr>
+   <tr>
+   <td>Issue with footer appearance whereby the two anchor elements appear above the bottom of the screen on some devices. During development I switched from different position properties which worked satisfactorily on some devices but not others: <img src="assets/README-files/footer-issue.png"></td>
+   <td>Changed footer to fixed and flex display to stack the anchor elements on top of on another as shown in the features section</td>
+   </tr>
+   <tr>
+   <td>Issue with check for match call passing player one instead of player two in the appropriate case</td>
+   <td>Found bug with wrong player number being passed into the feedbackMatch function</td>
    </tr>
   </table>
 
 ### Unresolved Bugs or Issues
-
-- 
+- The most time consuming error I encountered was an issue with scoring. For the first round the scores worked as expected. If a new game was started midway through an in progress game then the scores would increment by 2. If this happened again the score would increment by 3 and so on. The issue revolved around the Play Game function where it is waiting for two cards to be turned. If a new game is selected that particular function persists. I had a tutoring session but ran out of time. In order to progress, I changed the function call on click new game buttons to reload the window to commence a new game which removed the persistence. Although the bug was essentially resolved, it was not in a way that I was 100% happy with.
 
 ## Deployment
 
@@ -340,8 +371,10 @@ NOTE: Specific links are included within the HTML, CSS or Javascript files. The 
 - Stack Overflow, W3 Docs, MDN Web Docs and other online resources were a massive help for HTML, CSS or JS code that enabled some of the functionality I was looking for.
 - Terminology for visual motor and perceptual skills [here.](https://www.cincinnatichildrens.org/service/o/ot-pt/visual-motor-perception)
 - Sample [README](https://github.com/Code-Institute-Solutions/SampleREADME) provided in PP2 Stand Up.
+- The Love Maths walkthrough project gave much inspiration for this project.
 - Thanks to my tutor Gurjot for his advice during the mentoring sessions.
-- Special thanks to my wife Sinéad and my daughters Issey and Sienna for all their help in the inception of the project all the way through to testing user stories.
+- Thanks to Lewis Dillon for his feedback in the peer code review that the feedback star appears a little early, thus obscuring the last turning card. I added a timeout to delay the star briefly.
+- Special thanks to my wife Sinéad and my daughters Issey and Sienna for their help in the inception of the project and all the way through to testing user stories.
 ### Media
 - The site logo was created using Hatchful, a free logo design service offered by [Shopify.](https://www.shopify.com/tools/logo-maker)
 - The site colour scheme pallete was generated using the palette creation tool in [Color Hex.](https://www.color-hex.com/) 

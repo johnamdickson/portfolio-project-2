@@ -26,6 +26,8 @@ document.addEventListener("DOMContentLoaded", function(){
     howToPlayStartButton.addEventListener("click", function(){
         blurredDiv.style.visibility = 'hidden';
         instructions.style.display = 'none';
+        // In all start game buttons the button is disabled for 1 second to prevent 
+        // multiple animals appearing on cards. 
         howToPlayStartButton.disabled = true;
         setTimeout(function(){
             howToPlayStartButton.disabled = false;
