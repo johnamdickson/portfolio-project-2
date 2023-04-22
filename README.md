@@ -223,7 +223,7 @@ In order to test children's responses to the site, I asked my two daughters Isse
        - Sienna - *"I liked that it was fun but even if you lose you're still having fun. I liked playing with my daddy."*
   - **I want to be visually stimulated by the site including background picture, card pictures and colours.**
     - I asked the girls what they thought of the site colours and pictures. Their responses below also help to demonstrate that this goal was met:
-      - Issey - *"I like the paw prints on the backs of the cards. It would be nice to have a link to the person that created the site as well. The colours would be vibrant for yound children. The background is fun, but I like that the cards just have one animal."*
+      - Issey - *"I like the paw prints on the backs of the cards. It would be nice to have a link to the person that created the site as well. The colours would be vibrant for young children. The background is fun, but I like that the cards just have one animal."*
       - Sienna - *"I like the yellow as it's bright and the blue is bright as well. I like the background because they all have something that they are doing. I really like the cards because they are cool and bright and colourful"*
 
 #### Site Administrator Goals
@@ -232,7 +232,7 @@ In order to test children's responses to the site, I asked my two daughters Isse
   - **I want to promote a fun online environment and game for parents and children to enjoy together.**
     - Based on feedback from my family, this game offers a fun online environment for both children and their parents.
   - **I want the game to be accessible to all users including those that are visually impaired.**
-    - Each card has an alt text attribute which was shown to display in the features section. How this translates to a screen reader in a game scenario will require further testing.
+    - Each card has an alt text attribute which was shown to display in the features section. 
 ### Responsiveness Testing
 #### Physical Device
 - I first tested the game on my own phone - an iPhone 12 Pro Max. The responsive styling worked as expected for this screen size, implementing a flex column to the game section. 
