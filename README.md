@@ -121,6 +121,7 @@ The objective of the site is to create a two player memory card game directed to
   - When the *How To Play* button is pressed two divs  - blurred and instructions - are made visible from their default *visibility: hidden / display: none property*. The blurred div covers the entire screen and creates a visual effect that accentuates the instructions div and contents and helps create a contrast against the backdrop of the game. The instructions div contains an `<ol>` of instructions followed by *New Game* and *Go Back* buttons. The former button completes the same action as its namesake described in Game Information above, whilst the latter returns the user to the current game. Both buttons return the two divs to their default visibility status of hidden.<br><br>
 - __The Game Area__ <br><br>
 ![Game Area](/assets/README-files/game-area-flip-two-cards.gif)
+
     - The game area consists of a div of the site blue colour with embossed edges and rounded corners. A 4 x 4 grid element is contained within this div and holds all 16 of the game cards. 
     - Each game card has two sides, the reverse side with a paw print emblem and the front side containing the animal pictures.
     - When the user hovers over a card the cursor changes to a pointer. The card is responsively styled to marginally grow along with the border getting slightly thicker using the the hover pseudo element.
@@ -130,9 +131,11 @@ The objective of the site is to create a two player memory card game directed to
     - The game continues until all animal pairs are matched at which point a game outcome message appears, again described below. <br><br>
 - __The Player Information Area__ <br><br>
 ![Player-Information](/assets/README-files/player-info.gif)
+
   - The player info div contains two divs showing which player's turn it is and a scores area. The player info updates dynamically once the players turn changes. The scores area contains the player scores and updates on a successful match of animals. In order to draw the users attention here after the site loads or a new game is selected, the elements animate in after a short time delay.<br><br>
 - __The Congratulatory Message__ <br><br>
 ![Congratulatory Message](/assets/README-files/match-animals.gif)
+
     - As described above, when the user successfully matches two animals they are presented with a congratulatory message. This takes the form of a star to make it visually engaging for children. The animal name is passed into the `<span>` at the end of the congratulatory message.
     - There is also a background div covering the entire view which introduces a blurred effect to slightly obscure the background and create a greater contrast with the star.<br><br>
 
