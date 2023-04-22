@@ -289,8 +289,8 @@ In order to test children's responses to the site, I asked my two daughters Isse
   ![JSHint Validator Results](/assets/README-files/jshint.png)<br><br>
 
 - Accessibility
-  - Accessibility of the pages was checked using the lighthouse tool in devtools with a score within the 95 - 100% bracket for all metrics.
-   ![Lighthouse Results](/assets/README-files/lighthouse-results.jpg)<br><br>
+  - Accessibility of the pages was checked using the lighthouse tool in devtools with a score within the 96 - 100% bracket for all metrics.
+   ![Lighthouse Results](/assets/README-files/lighthouse-results.png)<br><br>
   - The lighter colours Confetti and Powder Blue were checked against the Biscay colour using [contrast checker](https://webaim.org/resources/contrastchecker/).<br><br>
   
   <table  width = 100% height = 350px cellspacing="0" cellpadding="0">
