@@ -1,4 +1,4 @@
-<a name="top"></a>
+
 # <img src="favicon.png"  width="50" height="50"> Wild Cards Memory Game
 
 Wild cards is a two player memory game designed for people of all ages but especially kids.
@@ -8,6 +8,7 @@ This website is showcasing Javascript, HTML and CSS design for Project Portfolio
 ![Responsive Mockup Screenshot](/assets/README-files/am-i-responsive.png)
 
 ## Contents
+<a name="contents"></a>
 - [UX](#ux)
   - [Strategy](#strategy)
     - [User Stories](#user-stories)
@@ -110,7 +111,7 @@ The objective of the site is to create a two player memory card game directed to
 #### Typography
 - All fonts were sourced from Google Fonts. The main font used throughout is called *Love Ya Like A Sister* which was selected for it's fun characteristics that children can relate too even if they cannot read. *Raleway* was selected for the buttons' font to make it stand out to adults who will normally be controlling the game.<br><br>
 
-<a href="#top">BACK TO TOP 🔼</a>
+<a href="#contents">BACK TO CONTENTS 🔼</a>
 
 ## Features 
 
@@ -164,7 +165,7 @@ The objective of the site is to create a two player memory card game directed to
   - 1 player game against the computer.
 - In future versions of this game I would like to revisit these features and assess the feasiblity of implementing them.<br><br>
 
-<a href="#top">BACK TO TOP 🔼</a>
+<a href="#contents">BACK TO CONTENTS 🔼</a>
 ## Technologies Used
 ### Languages Used
 - HTML5
@@ -181,7 +182,7 @@ The objective of the site is to create a two player memory card game directed to
 - Codeanywhere cloud based IDE used during the project.
 - VSCode desktop based IDE used at the end of the project. <br><br>
 
-<a href="#top">BACK TO TOP 🔼</a>
+<a href="#contents">BACK TO CONTENTS 🔼</a>
 ## Testing 
 ### Development Testing
 
@@ -307,7 +308,7 @@ In order to test children's responses to the site, I asked my two daughters Isse
   - Images alt text properties were checked using Chrome extension [Alt Text Checker.](https://chrome.google.com/webstore/detail/alt-text-tester/koldhcllpbdfcdpfpbldbicbgddglodk)
   ![Alt Text Checker](/assets/README-files/alt-text-checker.gif)<br><br>
  
-<a href="#top">BACK TO TOP 🔼</a>
+<a href="#contents">BACK TO CONTENTS 🔼</a>
 ### Bugs / Issues
 <table  width = 100% cellspacing="0" cellpadding="0">
   <tr>
@@ -370,7 +371,7 @@ In order to test children's responses to the site, I asked my two daughters Isse
 
 ### Unresolved Bugs or Issues
 - The most time consuming error I encountered was an issue with scoring. For the first round the scores worked as expected. If a new game was started midway through an in progress game then the scores would increment by 2. If this happened again the score would increment by 3 and so on. The issue revolved around the Play Game function where it is waiting for two cards to be turned. If a new game is selected that particular function persists. I had a tutoring session but ran out of time. In order to progress, I changed the function call on click new game buttons to reload the window to commence a new game which removed the persistence. Although the bug was essentially resolved, it was not in a way that I was 100% happy with. However given the amount of time I spent trying to rectify the bug, I felt it was appropriate to accept this fix and move on with the project. <br><br>
-<a href="#top">BACK TO TOP 🔼</a>
+<a href="#contents">BACK TO CONTENTS 🔼</a>
 
 ## Deployment
 
@@ -417,7 +418,7 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 ```
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.<br><br>
-<a href="#top">BACK TO TOP 🔼</a>
+<a href="#contents">BACK TO CONTENTS 🔼</a>
 ## Credits 
 ### Content 
 NOTE: Specific links are included within the HTML, CSS or Javascript files. The list below summarises content credits in general.
@@ -437,4 +438,4 @@ NOTE: Specific links are included within the HTML, CSS or Javascript files. The 
 - The colour names were sourced from [Name That Color.](https://chir.ag/projects/name-that-color/)
 - The background image was compressed using [Optimazilla](https://imagecompressor.com/) service.
 <br><br>
-<a href="#top">BACK TO TOP 🔼</a>
+<a href="#contents">BACK TO CONTENTS 🔼</a>
