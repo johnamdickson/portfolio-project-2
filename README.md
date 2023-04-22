@@ -297,10 +297,10 @@ In order to test children's responses to the site, I asked my two daughters Isse
 <br><br>
   - The colour contrasts of Confetti background with a Biscay foreground Biscay background with Powder Blue foreground were checked and passed the applicable tests on Web AIM contrast checker.<br><br>
   
-  <table  width = 100% height = 350px cellspacing="0" cellpadding="0">
+  <table  width = 100% cellspacing="0" cellpadding="0">
   <tr>
-  <td><img src="assets/README-files/biscay-confetti-contrast.png" height=300px width=275px></td>
-  <td> <img src="assets/README-files/biscay-powder-blue-contrast.png" height=300px width=275px></td>
+  <td><img src="assets/README-files/biscay-confetti-contrast.png" ></td>
+  <td> <img src="assets/README-files/biscay-powder-blue-contrast.png"></td>
   </tr>
   </table>
 
