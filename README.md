@@ -241,9 +241,7 @@ In order to test children's responses to the site, I asked my two daughters Isse
   - **I want to promote a fun online environment and game for parents and children to enjoy together.**
     - Based on feedback from my family, this game offers a fun online environment for both children and their parents.
   - **I want the game to be accessible to all users including those that are visually impaired.**
-    - Each card has an alt text attribute which was shown to display in the features section. <br><br>
-
-<a href="#top">BACK TO TOP 🔼</a>
+    - Each card has an alt text attribute which was shown to display in the features section. Lighthouse returned an accessibility score of 100 and the colour contrast were also checked.
 
 ### Responsiveness Testing
 #### Physical Device
