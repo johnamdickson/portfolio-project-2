@@ -9,16 +9,20 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/cosmo/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="assets/css/style.css">
+<!-- font awesone script -->
 <script src="https://kit.fontawesome.com/f99ce6eeee.js" crossorigin="anonymous"></script>
+<!-- favicon for tab logo -->
 <link rel="icon" href="favicon.png" type="image/png">
 <title>Wild Cards 🐾</title>
 </head>
 <body>
     <header>
         <div class ="logo-and-title">
+            <!-- site logo from Hatchful Logo Maker -->
             <img src="assets/images/logo-transparent.png" alt="Logo for game showing the title Wild Cards and an Elephant logo">
         </div>
     </header>    
+    <!-- blurred background with instructions div containing how to play information and two buttons to either go back to the game or start a new game -->
     <div id="blurred-div">
         <div id="instructions">
             <h2>How to Play</h2>
@@ -34,6 +38,8 @@
             <button id="how-to-play-start-button">New Game</button>
             <button id="go-back-button"><i class="fa-solid fa-arrow-left"></i> Go Back</button>
         </div>
+        <!-- also contained within the blurred div is the game outcome consisting of a star and message. The message is changed by JS after a time delay
+        and the new game button made visible. -->
         <div id="game-outcome">
             <i class="fa-solid fa-star"></i>
         <p id="outcome-message">Congrats Player 1, you win!</p>
@@ -41,6 +47,8 @@
         </div>
     </div>
     <section id="game-section">
+        <!-- game control divs with consistent styling for both using class. Game info contains a welcome message along with a new game button 
+        which restarts the game and a how to play button which brings up the instructions -->
         <div class="game-control-divs" id="game-info">
          <div>
                 <h2>Welcome to Wild Cards!</h2>
@@ -53,6 +61,8 @@
                 </div>
         </div>
         <div id="game-area">
+            <!-- main area of the game. Consists of a 4 x 4 grid containing cards. Each card has a front and reverse side, front being animal image and 
+            reverse being the paw print. Cards are set up to show reverse at start of game. -->
             <div id="game-grid">
                 <div class="card" id="card-a1">
                     <div class="card-reverse">
@@ -169,6 +179,7 @@
             </div>
         </div>
         <div id="player-info-area">
+            <!-- scores area with titles and span which will be dynamically updated by JS code to incremement scores -->
             <div class="game-control-divs" id="scores-area">
                 <div>
                     <p class="player-scores-title">Player One Score:  </p>
@@ -181,12 +192,14 @@
             </div>
         </div>
     </section>
+    <!-- game feedback div consisting of blurred background and star with message introduced into the game when the user makes a match -->
     <div id= "feedback-div">
     <div id="feedback">
         <i class="fa-solid fa-star"></i>
         <p>Congrats! You matched the <span id="animal-name"></span>s!</p>
      </div>
     </div>
+    <!-- footer containing links to Freepik resources used in this site. -->
 <footer>
     <a href="https://www.freepik.com/free-vector/many-different-animals-forest-scene_13633453.htm#page=2&query=cartoon%20jungle%20animals&position=38&from_view=search&track=ais" target="_blank" rel="noopener" aria-label="Link to background image on Freepik(opens in a new tab)">Background image by brgfx on Freepik</a>
     <a href="https://www.freepik.com/free-vector/set-wild-animals-zoo-safari-reserve_5675421.htm#page=2&query=cartoon%20jungle%20animals&position=12&from_view=search&track=ais">Card images by studiogstock on Freepik</a>
