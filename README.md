@@ -355,7 +355,7 @@ In order to test children's responses to the site, I asked my two daughters Isse
    <td>Added code to temporarily disable the buttons for 1 second to allow for game to begin</td>
    </tr>
    <tr>
-   <td>When testing iPad Pro responsiveness, I observed numerous issues with overflow as per the following image:<img src="assets/README-files/ipad-pro-testing-pre-adjustments.png"></td>
+   <td>When testing iPad Pro responsiveness, I observed numerous issues with overflow as per the following image:<br><img src="assets/README-files/ipad-pro-testing-pre-adjustments.png" height= 450px></td>
    <td>Amended JS media query list to 1200px which resolved the issue as shown in the responsiveness testing section</td>
    </tr>
    <tr>
