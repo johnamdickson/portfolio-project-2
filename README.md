@@ -9,6 +9,7 @@ This website is showcasing Javascript, HTML and CSS design for Project Portfolio
 
 ## Contents
 <a name="contents"></a>
+
 - [UX](#ux)
   - [Strategy](#strategy)
     - [User Stories](#user-stories)
@@ -26,6 +27,9 @@ This website is showcasing Javascript, HTML and CSS design for Project Portfolio
 - [Features](#features)
   - [Existing Features](#existing-features)
   - [Features Left to Implement](#features-left-to-implement)
+- [Technologies Used](#technologies-used)
+  - [Languages Used](#languages-used)
+  - [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
 - [Testing](#testing)
   - [Development Testing](#development-testing)
   - [Testing User Stories](#testing-user-stories)
@@ -166,6 +170,7 @@ The objective of the site is to create a two player memory card game directed to
 - In future versions of this game I would like to revisit these features and assess the feasiblity of implementing them.<br><br>
 
 <a href="#contents">BACK TO CONTENTS 🔼</a>
+
 ## Technologies Used
 ### Languages Used
 - HTML5
