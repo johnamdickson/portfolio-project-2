@@ -196,7 +196,6 @@ document.addEventListener("DOMContentLoaded", function(){
         }
         return cardsPicture;
     }
-
 /**
  * playGame function takes in the player number, counts the number of cards turned and stores the card elements
  *  in an array to be passed on to the checkForMatch function.
@@ -233,7 +232,6 @@ document.addEventListener("DOMContentLoaded", function(){
             }
         }
     }
-     
     /**
  * Helper function to remove old images from previous game and maintain readability of setUpGame function.
  */
@@ -277,7 +275,6 @@ document.addEventListener("DOMContentLoaded", function(){
             i++;
         }
     }
-
   /**
    * shuffle function to randomise order of game cards.
  */
@@ -356,8 +353,6 @@ document.addEventListener("DOMContentLoaded", function(){
         }
         return;
     }
-
-
   /**
    * function to present a feedback star and message when a match is made. Function takes in two
    * parameters card information to describe the matched animals and the player number.

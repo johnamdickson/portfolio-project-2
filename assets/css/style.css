@@ -1,7 +1,5 @@
 /* Import chosen Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Raleway:wght@200&display=swap');
-
-
 * {
     margin: 0;
     padding: 0;
@@ -23,14 +21,12 @@ as the screen sizes changes. */
     padding: 10px 0;
     width: 25%;
 }
-
 .logo-and-title > img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         overflow: hidden;
 }
-
 /* section with blurred effect background for in game how to play instructions and game outcome message. */
 #blurred-div {
     display: flex;
@@ -63,13 +59,11 @@ visible when the How To Play button is selected */
     border: 3px solid #1B316D;
     display: none;
 }
-
 #instructions h2 {
     font-size:  3vmax;
     text-align: center;
     margin: 2vmax 0;
 }
-
 #instructions ol {
     padding-left: 2.5vmax;
     margin-bottom: 0;
@@ -90,7 +84,6 @@ on completion of the game. */
     transform: translateZ(1000px);
     z-index: 100;
 }
-
 /* animation for game outcome star and message */
 @keyframes outcome-zoom {
     from {
@@ -135,7 +128,6 @@ give an embossed effect*/
     justify-content: center;
     align-items: center;
 }
-
 /* Game Control divs class for standard formatting of the divs with 
 the confetti colour scheme. 
 Flex set up with assistance from this tutorial: 
@@ -148,12 +140,10 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
     border-radius: 10px;
     box-shadow: inset 5px 5px 8px 1px rgba(255,255,255,0.5), inset -3px -7px 5px 2px rgba(32,52,108,0.5);
 }
-
 .game-control-divs h2{
    margin: 1.5vmax 5px;
    font-size: 3vmax;
 }
-
 .game-control-divs h3{
     margin: 1vmax 5px;
     font-size: 2vmax;
@@ -169,7 +159,6 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
     justify-content: center;
     align-items: center;
 }
-
 #game-info p{
     flex: 1 auto;
     margin: 0.5vmax  5px;
@@ -190,7 +179,6 @@ button {
     font-family: 'Raleway', sans-serif;
     box-shadow: 0 2px 2px rgba(0,0,0,0.7), inset 3px 3px 3px 0 rgba(255,255,255,0.7), inset -3px -3px 3px 0 rgba(255,255,255,0.5);
 }
-
 button:hover {
     opacity: 0.9;
 }
@@ -290,68 +278,52 @@ and resizes dynamically based on screen size */
     color: #BADDE9;
     background-color: #1B316D;
 }
-
 /* Assign grid area names. Each grid will represent a card. */
-
 #card-a1 {
     grid-area: a1;
 }
-
 #card-b1 {
     grid-area: b1;
 }
-
 #card-c1 {
     grid-area: c1;
 }
-
 #card-d1 {
     grid-area: d1;
 }
-
 #card-a2 {
     grid-area: a2;
 }
-
 #card-b2 {
     grid-area: b2;
 }
-
 #card-c2 {
     grid-area: c2;
 }
-
 #card-d2 {
     grid-area: d2;
 }
 #card-a3 {
     grid-area: a3;
 }
-
 #card-b3 {
     grid-area: b3;
 }
-
 #card-c3 {
     grid-area: c3;
 }
-
 #card-d3 {
     grid-area: d3;
 }
-
 #card-a4 {
     grid-area: a4;
 }
-
 #card-b4 {
     grid-area: b4;
 }
-
 #card-c4 {
     grid-area: c4;
 }
-
 #card-d4 {
     grid-area: d4;
 }
@@ -372,8 +344,6 @@ grid-template-areas:
 max-width: 100%;
 justify-content: center;
 }
-
-/* Card flip code from this site: https://dev.to/mugas/flip-cards-with-javascript-2ad0 */
 .card {
     display: flex;
     background-color: transparent;
@@ -383,7 +353,6 @@ justify-content: center;
     border: 0;
     z-index: 1;
 }
-
 /* Style for reverse of game cards. */
 .card-reverse {
     display: flex;
@@ -429,13 +398,14 @@ and align pawprints vertically in the middle of div */
     backface-visibility: hidden;
     z-index: 1;
 }
-
 .card-front > img {
     max-width: 90%;
     max-height: 90%;
 }
 /* card flip class called by JS code when cards are clicked
-to turn the around 180 deg in the y axis */
+to turn the around 180 deg in the y axis 
+Card flip code from this site: https://dev.to/mugas/flip-cards-with-javascript-2ad0
+*/
 .card.flip {
     transform: rotateY(180deg);
     transition-duration: 2s;
@@ -472,7 +442,6 @@ on Safari browser */
     transform: translateZ(1000px);
     z-index: 99;
 }
-
 /* animation for the feedback star */
 @keyframes feedback-zoom {
     from {
@@ -503,7 +472,6 @@ footer {
     bottom: 0;
     height: auto;
 }
-
 footer a{
 color:#BADDE9;
 background-color: #1B316D;
@@ -512,13 +480,10 @@ font-size: 0.5rem;
 margin: 2px 0 0 2px;
 font-family: 'Raleway', sans-serif;
 }
-
 /* 
 Responsive styling for Media Screens
 */
-
 @media screen and (max-width:1200px) {
-
     .logo-and-title {
         padding: 10px 0;
         width: 30%;
@@ -530,7 +495,6 @@ Responsive styling for Media Screens
         flex-wrap: wrap;
         height: auto;
     }
-
     .game-control-divs h2 {
         margin: 0.5vmax 5px;
         font-size: 2vmax;
@@ -539,7 +503,6 @@ Responsive styling for Media Screens
         margin: 0.25vmax 5px;
         font-size: 1.5vmax;
     }
-
     #game-info-buttons {
         margin: 0;
     }
@@ -547,8 +510,6 @@ Responsive styling for Media Screens
         font-size: 1.5vmax;
         width: 75%;
     }
-    
-
     #how-to-play-button {
         font-size: 1vmax;
         width: 65%;
@@ -560,7 +521,6 @@ Responsive styling for Media Screens
         height: 16vmax;
         margin: 0 15vmax;
     }
-
     #player-info-area {
         display: flex;
         width: 100%;
@@ -576,7 +536,6 @@ Responsive styling for Media Screens
         width: 100%;
         height: 600px;
     }
-
     #scores-area {
         flex-direction: row;
         width:35vmax;
@@ -590,7 +549,6 @@ Responsive styling for Media Screens
         grid-template-rows: repeat(4, 125px);
         column-gap: 4.5%;
     }
-
     #game-status-div{
         height: 80px;
         width: 200px;
@@ -605,7 +563,6 @@ Responsive styling for Media Screens
     #game-status-div p{
         margin: 8.5px;
     }
-
     @keyframes feedback-zoom {
         from {
             z-index: 98;
@@ -616,7 +573,6 @@ Responsive styling for Media Screens
             transform: scale(1.2);
         }
     }
-
     @keyframes outcome-zoom {
         from {
             z-index: 98;
@@ -628,21 +584,17 @@ Responsive styling for Media Screens
         }
     }
 }
-
 @media screen and (max-width:600px) {
     .logo-and-title {
         padding: 5px 0;
         width: 18%;
     }
-
     #game-info {
         margin: 0 20px;
     }
-
     #game-area {
         height: 55vh;
     }
-
     #game-grid {
         grid-template-rows: repeat(4, 11vh);
     }
@@ -662,7 +614,6 @@ Responsive styling for Media Screens
         width: 75%;
         height: 60vmax;
     }
-
     @keyframes feedback-zoom {
         from {
             z-index: 98;
@@ -673,7 +624,6 @@ Responsive styling for Media Screens
             transform: scale(0.8);
         }
     }
-
     @keyframes outcome-zoom {
         from {
             z-index: 98;
@@ -684,7 +634,6 @@ Responsive styling for Media Screens
             transform: scale(0.9);
         }
     }
-
     #new-game-button {
         font-size: 2vmax;
         width: 30%;
