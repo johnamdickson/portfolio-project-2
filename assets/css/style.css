@@ -14,7 +14,7 @@ body {
     background-attachment: fixed;
     font-family: 'Love Ya Like A Sister', cursive;
 }
-/* logo and title will always site at top within the header and 
+/* logo and title will always sit at top within the header and 
 it will be determined by the width setting thereby reducing in size
 as the screen sizes changes. */
 .logo-and-title {
@@ -90,6 +90,8 @@ on completion of the game. */
     transform: translateZ(1000px);
     z-index: 100;
 }
+
+/* animation for game outcome star and message */
 @keyframes outcome-zoom {
     from {
         z-index: 98;
@@ -100,6 +102,8 @@ on completion of the game. */
         transform: scale(2);
     }
 }
+/* game outcome text centered to appear
+in middle of outcome star */
 #game-outcome p{
     position: absolute;
     top: 50%;
@@ -190,27 +194,31 @@ button {
 button:hover {
     opacity: 0.9;
 }
+/* new game button visible on page at all times */
 #main-new-game-button {
     font-size: 1.7vmax;
     width: 70%;
 }
+/* how to play button beneath new game button
+marginally smaller so that new game button stands out more */
 #how-to-play-button {
     font-size: 1.25vmax;
     width: 60%;
     margin-top: 0.65vmax;
 }
-
+/* go back button, present when instructions div is on screen */
 #go-back-button {
     font-size: 1.25vmax;
     width: 40%;
     margin-left: 30%
 }
-
+/* how to play start button, same as go back button above */
 #how-to-play-start-button {
     width: 60%;
     margin-left: 20%;
 }
-
+/* styling for new game button to position in middle
+of outcome star */
 #new-game-button {
     position: absolute;
     top: 52%;
@@ -220,7 +228,7 @@ button:hover {
     transform: translateY(-50%) translateX(-50%);
     display: none;
 }
-
+/* div where game status ie players turn is displayed */
 #game-status-div{
     width: 75%;
     margin-bottom: 30px;
@@ -233,12 +241,13 @@ button:hover {
 #game-status-div p{
     margin: 4px;
 }
+/* span below is where JS updates scores to */
 #game-status-div span{
     color: #E9D358;
     font-size: 5vmax;
     font-weight: bold;
 }
-
+/* area where player's turn and scores are displayed */
 #player-info-area {
     display: flex;
     flex-direction: column;
@@ -248,7 +257,8 @@ button:hover {
     justify-content: center;
     align-items: center;
 }
-
+/* area for scores to be displayed with flex display
+which will be changed to row for different media queries */
 #scores-area {
     display: flex;
     flex-direction: column;
@@ -258,16 +268,16 @@ button:hover {
     width:100%;
     visibility: hidden;
 }
-
+/* title for player scores */
 .player-scores-title {
-    /* margin: 1.6vmax 0 0 1.5vmax; */
     margin: 0;
     text-align: center;
     font-size: 1.6vmax;
     line-height: 3.2vmax;
     display: inline-block;
 }
-
+/* player scores which is updated based on status of game
+and resizes dynamically based on screen size */
 .player-scores {
     display: inline-block;
     font-family: 'Raleway' , sans-serif;
@@ -287,7 +297,7 @@ button:hover {
     grid-area: a1;
 }
 
-#wyn-b1 {
+#card-b1 {
     grid-area: b1;
 }
 
@@ -303,7 +313,7 @@ button:hover {
     grid-area: a2;
 }
 
-#wyn-b2 {
+#card-b2 {
     grid-area: b2;
 }
 
@@ -318,7 +328,7 @@ button:hover {
     grid-area: a3;
 }
 
-#wyn-b3 {
+#card-b3 {
     grid-area: b3;
 }
 
@@ -334,7 +344,7 @@ button:hover {
     grid-area: a4;
 }
 
-#wyn-b4 {
+#card-b4 {
     grid-area: b4;
 }
 
@@ -392,12 +402,13 @@ justify-content: center;
     backface-visibility: hidden;
     z-index: 1;
 }
-
+/* pseudo class styling for hovering over cards */
 .card-reverse:hover {
     transform: scale(1.02);
     border-width: 3px;
 }
-
+/* margin bottom set to 0 to remove standard p bottom margin
+and align pawprints vertically in the middle of div */
 .card-reverse > p {
     margin-bottom: 0;
 }
@@ -423,12 +434,15 @@ justify-content: center;
     max-width: 90%;
     max-height: 90%;
 }
-
+/* card flip class called by JS code when cards are clicked
+to turn the around 180 deg in the y axis */
 .card.flip {
     transform: rotateY(180deg);
     transition-duration: 2s;
   }
-
+/* background for feedback star and message. Added to counter issue with 
+card z indices during transfirm causing them to appear on top of the star
+on Safari browser */
   #feedback-div {
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
@@ -458,6 +472,8 @@ justify-content: center;
     transform: translateZ(1000px);
     z-index: 99;
 }
+
+/* animation for the feedback star */
 @keyframes feedback-zoom {
     from {
         z-index: 98;
@@ -468,6 +484,7 @@ justify-content: center;
         transform: scale(1.5);
     }
 }
+/* position the p in the middle of screen using translate Y and X */
 #feedback p{
     position: absolute;
     top: 50%;
@@ -477,7 +494,7 @@ justify-content: center;
     color: #1B316D;
     font-size: 2.2rem;
 }
-
+/* footer with flex display in column direction to stack anchors */
 footer {
     display: flex;
     flex-direction: column;
@@ -499,16 +516,6 @@ font-family: 'Raleway', sans-serif;
 /* 
 Responsive styling for Media Screens
 */
-/* @media screen and (max-width:1200px) {
-
-    #how-to-play-button{
-        font-size: 1vmax;
-    }
-
-    #game-section{
-        height: 800px;
-    }
-} */
 
 @media screen and (max-width:1200px) {
 
