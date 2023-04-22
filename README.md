@@ -39,6 +39,9 @@ This website is showcasing Javascript, HTML and CSS design for Project Portfolio
   - [Bugs / Issues](#bugs--issues)
   - [Unresolved Bugs / Issues](#unresolved-bugs-or-issues)
 - [Deployment](#deployment)
+  - [Git Hub Pages](#github-pages)
+  - [Forking the GitHub Repository](#forking-the-github-repository)
+  - [Making a Local Clone](#making-a-local-clone)
 - [Credits](#credits)
   - [Content](#content)
   - [Media](#media)
@@ -107,6 +110,8 @@ The objective of the site is to create a two player memory card game directed to
 #### Typography
 - All fonts were sourced from Google Fonts. The main font used throughout is called *Love Ya Like A Sister* which was selected for it's fun characteristics that children can relate too even if they cannot read. *Raleway* was selected for the buttons' font to make it stand out to adults who will normally be controlling the game.<br><br>
 
+<a href="#top">BACK TO TOP 🔼</a>
+
 ## Features 
 
 ### Existing Features
@@ -157,7 +162,9 @@ The objective of the site is to create a two player memory card game directed to
   - Voice and/or animal sounds on a successful match.
   - Background music.
   - 1 player game against the computer.
-- In future versions of this game I would like to revisit these features and assess the feasiblity of implementing them.
+- In future versions of this game I would like to revisit these features and assess the feasiblity of implementing them.<br><br>
+
+<a href="#top">BACK TO TOP 🔼</a>
 ## Technologies Used
 ### Languages Used
 - HTML5
@@ -172,7 +179,9 @@ The objective of the site is to create a two player memory card game directed to
 - GitHub as cloud repository for Git version control.
 - Gitpod cloud based IDE used at the beginning of the project.
 - Codeanywhere cloud based IDE used during the project.
-- VSCode desktop based IDE used at the end of the project.
+- VSCode desktop based IDE used at the end of the project. <br><br>
+
+<a href="#top">BACK TO TOP 🔼</a>
 ## Testing 
 ### Development Testing
 
@@ -232,7 +241,10 @@ In order to test children's responses to the site, I asked my two daughters Isse
   - **I want to promote a fun online environment and game for parents and children to enjoy together.**
     - Based on feedback from my family, this game offers a fun online environment for both children and their parents.
   - **I want the game to be accessible to all users including those that are visually impaired.**
-    - Each card has an alt text attribute which was shown to display in the features section. 
+    - Each card has an alt text attribute which was shown to display in the features section. <br><br>
+
+<a href="#top">BACK TO TOP 🔼</a>
+
 ### Responsiveness Testing
 #### Physical Device
 - I first tested the game on my own phone - an iPhone 12 Pro Max. The responsive styling worked as expected for this screen size, implementing a flex column to the game section. 
@@ -293,7 +305,7 @@ In order to test children's responses to the site, I asked my two daughters Isse
   - Images alt text properties were checked using Chrome extension [Alt Text Checker.](https://chrome.google.com/webstore/detail/alt-text-tester/koldhcllpbdfcdpfpbldbicbgddglodk)
   ![Alt Text Checker](/assets/README-files/alt-text-checker.gif)<br><br>
  
-
+<a href="#top">BACK TO TOP 🔼</a>
 ### Bugs / Issues
 <table  width = 100% cellspacing="0" cellpadding="0">
   <tr>
@@ -355,19 +367,55 @@ In order to test children's responses to the site, I asked my two daughters Isse
   </table>
 
 ### Unresolved Bugs or Issues
-- The most time consuming error I encountered was an issue with scoring. For the first round the scores worked as expected. If a new game was started midway through an in progress game then the scores would increment by 2. If this happened again the score would increment by 3 and so on. The issue revolved around the Play Game function where it is waiting for two cards to be turned. If a new game is selected that particular function persists. I had a tutoring session but ran out of time. In order to progress, I changed the function call on click new game buttons to reload the window to commence a new game which removed the persistence. Although the bug was essentially resolved, it was not in a way that I was 100% happy with.
+- The most time consuming error I encountered was an issue with scoring. For the first round the scores worked as expected. If a new game was started midway through an in progress game then the scores would increment by 2. If this happened again the score would increment by 3 and so on. The issue revolved around the Play Game function where it is waiting for two cards to be turned. If a new game is selected that particular function persists. I had a tutoring session but ran out of time. In order to progress, I changed the function call on click new game buttons to reload the window to commence a new game which removed the persistence. Although the bug was essentially resolved, it was not in a way that I was 100% happy with. <br><br>
+<a href="#top">BACK TO TOP 🔼</a>
 
 ## Deployment
 
-- The site was deployed to GitHub pages. The steps to deploy are as follows: 
-  - Under the repository name, click ⚙ Settings. If you cannot see the "Settings" tab, select the  dropdown menu, then click Settings.
-  - In the "Code and automation" section of the sidebar, click  Pages
-  - Under "Build and deployment", under "Branch", use the None or Branch dropdown menu and select a publishing source.
-  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+### GitHub Pages
+The site was deployed to GitHub pages. The steps to deploy are as follows: 
+1. Log in to GitHub and locate the [GitHub Repository.](https://github.com/)
+2. Under the repository name, click ⚙ Settings. If you cannot see the "Settings" tab, select the  dropdown menu, then click Settings.
+3. In the "Code and automation" section of the sidebar, click  Pages
+4. Under "Build and deployment", under "Branch", use the None or Branch dropdown menu and select a publishing source.
+5. Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-The live link can be found [here.](https://johnamdickson.github.io/Portfolio-Project-1/index.html)
+The live link can be found [here.](https://johnamdickson.github.io/Portfolio-Project-2/index.html)
 
+### Forking the GitHub Repository
 
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps:
+
+1. Log in to GitHub and locate the [GitHub Repository.](https://github.com/johnamdickson/Portfolio-Project-2)
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+3. You should now have a copy of the original repository in your GitHub account.
+
+### Making a Local Clone
+
+1. Log in to GitHub and locate the [GitHub Repository.](https://github.com/johnamdickson/Portfolio-Project-2)
+2. Under the repository name, click "Clone or download".
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone`, and then paste the URL you copied in Step 3.
+
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+```
+
+7. Press Enter. Your local clone will be created.
+
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+> Cloning into `CI-Clone`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+```
+
+Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.<br><br>
+<a href="#top">BACK TO TOP 🔼</a>
 ## Credits 
 ### Content 
 NOTE: Specific links are included within the HTML, CSS or Javascript files. The list below summarises content credits in general.
