@@ -81,7 +81,7 @@ on completion of the game. */
 #game-outcome {
     text-align: center;
     color: #E9D358;
-    font-size: 25rem;
+    font-size: 22.5rem;
     position: relative;
     display: none;
     animation-name: outcome-zoom;

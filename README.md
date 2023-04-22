@@ -118,11 +118,11 @@ The objective of the site is to create a two player memory card game directed to
 - __The Game Instructions__ <br><br>
 ![Game-Instructions](/assets/README-files/game-instructions.jpg) 
 
-  - When the *How To Play* button is pressed two divs  - blurred and instructions - are made visible from their default hidden property. The blurred div covers the entire screen and creates a visual effect that accentuates the instructions div and contents and helps create a contrast against the backdrop of the game. The instructions div contains an `<ol>` of instructions followed by *New Game* and *Go Back* buttons. The former button completes the same action as its namesake described in Game Information above, whilst the latter returns the user to the current game. Both buttons return the two divs to their default visibility status of hidden.<br><br>
+  - When the *How To Play* button is pressed two divs  - blurred and instructions - are made visible from their default *visibility: hidden / display: none property*. The blurred div covers the entire screen and creates a visual effect that accentuates the instructions div and contents and helps create a contrast against the backdrop of the game. The instructions div contains an `<ol>` of instructions followed by *New Game* and *Go Back* buttons. The former button completes the same action as its namesake described in Game Information above, whilst the latter returns the user to the current game. Both buttons return the two divs to their default visibility status of hidden.<br><br>
 - __The Game Area__ <br><br>
 ![Game Area](/assets/README-files/game-area-flip-two-cards.gif)
     - The game area consists of a div of the site blue colour with embossed edges and rounded corners. A 4 x 4 grid element is contained within this div and holds all 16 of the game cards. 
-    - Each game card has two sides, the reverse side and the front side containing the animal pictures.
+    - Each game card has two sides, the reverse side with a paw print emblem and the front side containing the animal pictures.
     - When the user hovers over a card the cursor changes to a pointer. The card is responsively styled to marginally grow along with the border getting slightly thicker using the the hover pseudo element.
     - When an unsuccessful match is made, the cards turn back around and the turn changes to the alternate player.
     - When a successful match is made, a congratualtory message (described below) is displayed and the incumbent player gets another turn.
