@@ -291,7 +291,7 @@ In order to test children's responses to the site, I asked my two daughters Isse
 - Accessibility
   - Accessibility of the pages was checked using the lighthouse tool in devtools with a score within the 96 - 100% bracket for all metrics.
    ![Lighthouse Results](/assets/README-files/lighthouse-results.png)<br><br>
-  - The lighter colours Confetti and Powder Blue were checked against the Biscay colour using [contrast checker](https://webaim.org/resources/contrastchecker/).<br><br>
+  - The colour contrasts of Confetti background with a Biscay foreground Biscay background with Powder Blue foreground were checked and passed the applicable tests on Web AIM contrast checker.<br><br>
   
   <table  width = 100% height = 350px cellspacing="0" cellpadding="0">
   <tr>
@@ -426,6 +426,7 @@ NOTE: Specific links are included within the HTML, CSS or Javascript files. The 
 - Special thanks to my wife Sinéad and my daughters Issey and Sienna for their help in the inception of the project and all the way through to testing user stories.
 ### Media
 - The site logo was created using Hatchful, a free logo design service offered by [Shopify.](https://www.shopify.com/tools/logo-maker)
+- Colour contrast was checked using [contrast checker.](https://webaim.org/resources/contrastchecker/)
 - The site colour scheme pallete was generated using the palette creation tool in [Color Hex.](https://www.color-hex.com/) 
 - The site background image is from <a href="https://www.freepik.com/free-vector/wild-animal-cartoon-character-forest-scene_14801768.htm#query=cartoon%20jungle&position=49&from_view=search&track=ais">Freepik.</a>
 - Conversion of mp4s to GIFs using free service on the [ezgif.com](https://ezgif.com/video-to-gif) website.
