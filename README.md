@@ -289,8 +289,12 @@ In order to test children's responses to the site, I asked my two daughters Isse
   ![JSHint Validator Results](/assets/README-files/jshint.png)<br><br>
 
 - Accessibility
-  - Accessibility of the pages was checked using the lighthouse tool in devtools with a score within the 96 - 100% bracket for all metrics.
-   ![Lighthouse Results](/assets/README-files/lighthouse-results.png)<br><br>
+  - Accessibility of the page was checked using the lighthouse tool in devtools. The results were satisfactory for both desktop and mobile as shown below.
+     - Desktop results:
+     ![Lighthouse Desktop Results](/assets/README-files/lighthouse-results-desktop.png)
+     - Mobile results:
+     ![Lighthouse Desktop Results](/assets/README-files/lighthouse-results-mobile.png)
+<br><br>
   - The colour contrasts of Confetti background with a Biscay foreground Biscay background with Powder Blue foreground were checked and passed the applicable tests on Web AIM contrast checker.<br><br>
   
   <table  width = 100% height = 350px cellspacing="0" cellpadding="0">
