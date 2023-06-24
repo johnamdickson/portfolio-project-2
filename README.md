@@ -3,7 +3,7 @@
 
 Wild cards is a two player memory game designed for people of all ages but especially kids.
 
-This website is showcasing Javascript, HTML and CSS design for Project Portfolio 2 and can be accessed by following this [link.](https://johnamdickson.github.io/Portfolio-Project-2/)
+This website is showcasing Javascript, HTML and CSS design for Project Portfolio 2 and can be accessed by following this [link.](https://johnamdickson.github.io/portfolio-project-2/)
 
 ![Responsive Mockup Screenshot](/assets/README-files/am-i-responsive.png)
 
@@ -388,19 +388,19 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
 4. Under "Build and deployment", under "Branch", use the None or Branch dropdown menu and select a publishing source.
 5. Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-The live link can be found [here.](https://johnamdickson.github.io/Portfolio-Project-2/index.html)
+The live link can be found [here.](https://johnamdickson.github.io/portfolio-project-2/index.html)
 
 ### Forking the GitHub Repository
 
 By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps:
 
-1. Log in to GitHub and locate the [GitHub Repository.](https://github.com/johnamdickson/Portfolio-Project-2)
+1. Log in to GitHub and locate the [GitHub Repository.](https://github.com/johnamdickson/portfolio-project-2)
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. You should now have a copy of the original repository in your GitHub account.
 
 ### Making a Local Clone
 
-1. Log in to GitHub and locate the [GitHub Repository.](https://github.com/johnamdickson/Portfolio-Project-2)
+1. Log in to GitHub and locate the [GitHub Repository.](https://github.com/johnamdickson/portfolio-project-2)
 2. Under the repository name, click "Clone or download".
 3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
 4. Open Git Bash
